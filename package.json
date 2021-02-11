@@ -10,7 +10,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "build-gh-pages": "npm run build && cp public docs",
+    "build-gh-pages": "npm run build && mv public docs",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
