@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/about-me.js"],"names":["AboutMe"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-about-me-js-201ce005263733915938.js","sourcesContent":["import React from \"react\"\n\nexport default function AboutMe() {\n  return <p>All About Me</p>\n}"],"sourceRoot":""}
