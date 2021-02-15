@@ -1,12 +1,34 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
+
+const navItems = [
+  { href: "/", label: "Home"},
+  { href: "/about-me", label: "About Me"},
+  { href: "/services-and-pricing", label: "Services and Pricing"},
+  { href: "/areas", label: "Areas Covered"},
+  { href: "/contact-me", label: "Contact Me"},
+]
 
 export default function Navigation() {
-  return <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about-me">About Me</Link>
-        <Link to="/services-and-pricing">Services And Pricing</Link>
-        <Link to="/areas">Areas Covered</Link>
-        <Link to="/contact-me">Contact Me</Link>
-  </nav>
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Tabs value={navItems.findIndex(x => x.href === window.location.pathname)}>
+          {navItems.map(navItem => <Tab {...navItem} key={navItem.href}></Tab>)}
+        </Tabs>
+      </AppBar>
+    </div>
+  );
 }
