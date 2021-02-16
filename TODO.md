@@ -8,3 +8,4 @@
 
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
 - showcase, any ideas? https://www.gatsbyjs.com/showcase/?
+- remove pathprefix
