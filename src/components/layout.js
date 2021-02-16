@@ -4,7 +4,7 @@ import Navigation from "../components/navigation";
 import "./layout.module.scss";
 import { Container, CssBaseline } from "@material-ui/core";
 
-export default function Layout({ children }) {
+export default function Layout({ children, currentPath }) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     <>
       <CssBaseline />
       <Container>
-        <Navigation></Navigation>
+        <Navigation currentPath={currentPath}></Navigation>
         {data.site.siteMetadata.siteUrl}
         {children}
       </Container>

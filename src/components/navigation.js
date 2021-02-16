@@ -19,13 +19,13 @@ const navItems = [
   { href: "/contact-me", label: "Contact Me"},
 ]
 
-export default function Navigation() {
+export default function Navigation({currentPath}) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={navItems.findIndex(x => x.href === window.location.pathname)}>
+        <Tabs value={navItems.findIndex(x => x.href === currentPath)}>
           {navItems.map(navItem => <Tab {...navItem} key={navItem.href}></Tab>)}
         </Tabs>
       </AppBar>
