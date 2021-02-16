@@ -11,6 +11,10 @@ jobs:
         run: |
           npm install
           npm run build --prefix-paths
+      
+      - name: Test 🧪
+        run: |
+          npm run test
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
