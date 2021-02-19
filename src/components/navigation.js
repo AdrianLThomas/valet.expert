@@ -12,16 +12,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const navItems = [
-  { href: "", label: "Home"},
-  { href: "about-me", label: "About Me"},
-  { href: "services-and-pricing", label: "Services and Pricing"},
-  { href: "areas", label: "Areas Covered"},
-  { href: "contact-me", label: "Contact Me"},
+  { href: "/", label: "Home"},
+  { href: "/about-me", label: "About Me"},
+  { href: "/services-and-pricing", label: "Services and Pricing"},
+  { href: "/areas", label: "Areas Covered"},
+  { href: "/contact-me", label: "Contact Me"},
 ]
 
 export function GetCleanPath(path) {
   const splitPath = path.split('/');
-  return splitPath[splitPath.length - 1];
+  return `/${splitPath[splitPath.length - 2]}`;
 }
 
 export default function Navigation({currentPath}) {

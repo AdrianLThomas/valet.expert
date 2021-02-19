@@ -1,15 +1,8 @@
-import React from "react"
+import * as React from "react"
+import Layout from "../components/layout"
 
-export default function AboutMe({ data }) {
-  return <p>All About Me - {data.site.siteMetadata.title}</p>
+export default function AboutMe({ location }) {
+  return (<Layout currentPath={location.pathname}>   
+      
+  </Layout>)
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

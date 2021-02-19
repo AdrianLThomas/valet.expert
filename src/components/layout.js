@@ -22,7 +22,7 @@ export default function Layout({ children, currentPath }) {
       <CssBaseline />
       <Container>
         <Navigation currentPath={currentPath}></Navigation>
-        {data.site.siteMetadata.siteUrl}
+        {/* {data.site.siteMetadata.siteUrl} */}
         {children}
       </Container>
     </>
