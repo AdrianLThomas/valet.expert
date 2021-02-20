@@ -2,20 +2,14 @@ import React from "react";
 import css from "./navigation.module.scss";
 
 const navItems = [
-  { href: "/about-me", label: "About Me" },
-  { href: "/services-and-pricing", label: "Services and Pricing" },
-  { href: "/areas", label: "Areas Covered" },
-  { href: "/contact-me", label: "Contact Me" },
+  { href: "/about-me/", label: "About Me" },
+  { href: "/services-and-pricing/", label: "Services and Pricing" },
+  { href: "/areas/", label: "Areas Covered" },
+  { href: "/contact-me/", label: "Contact Me" },
 ]
 
-export function GetCleanPath(path) {
-  const splitPath = path.split('/');
-  return `/${splitPath[splitPath.length - 2]}`;
-}
-
 export default function Navigation({ currentPath }) {
-  const selectedPath = GetCleanPath(currentPath);
-  const isSelected = (href) => href === selectedPath ? css.selected : ''
+  const isSelected = (href) => href === currentPath ? css.selected : ''
   return (
     <header>
       <h1>{"Matty's Mobile Valeting & Detailing"}</h1>
