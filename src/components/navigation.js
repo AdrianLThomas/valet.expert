@@ -16,8 +16,8 @@ export default function Navigation({ currentPath }) {
         <li><a className={css.headerText} href="/" >{"Matty's Mobile Valeting & Detailing"}</a></li>
         {navItems.map(navItem => (
           <li className={isSelected(navItem.href)} key={navItem.href}>
-            <a href={navItem.href} 
-                  className={css.navItem}
+            <a href={navItem.href}
+                  className={`${isSelected(navItem.href)} ${css.navItem}`}
                   >{navItem.label}</a>
           </li>
         ))}
