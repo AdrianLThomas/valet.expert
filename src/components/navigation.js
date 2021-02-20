@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import css from "./navigation.module.scss";
 
@@ -20,12 +21,12 @@ export default function Navigation({ currentPath }) {
         </li>
         {navItems.map((navItem) => (
           <li className={isSelected(navItem.href)} key={navItem.href}>
-            <a
-              href={navItem.href}
+            <Link
+              to={navItem.href}
               className={`${isSelected(navItem.href)} ${css.navItem}`}
             >
               {navItem.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
