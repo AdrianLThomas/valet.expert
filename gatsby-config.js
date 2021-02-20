@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/mmv`, // TODO remove me on 'proper'
   siteMetadata: {
     title: "Matty's Mobile Valeting",
-    siteUrl: "http://TODOUPDATEME.com"
+    siteUrl: "http://TODOUPDATEME.com",
   },
   plugins: [
     "gatsby-plugin-sass",

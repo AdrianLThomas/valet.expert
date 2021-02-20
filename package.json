@@ -12,7 +12,9 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "test": "jest"
+    "test": "jest",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "dependencies": {
     "@babel/core": "^7.12.16",
@@ -47,5 +49,8 @@
     "react-test-renderer": "^17.0.1",
     "sass": "^1.32.7",
     "sharp": "^0.27.1"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }
