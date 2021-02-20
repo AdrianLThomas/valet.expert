@@ -24,6 +24,7 @@
     "@mdx-js/react": "^1.6.22",
     "@types/jest": "^26.0.20",
     "babel-jest": "^26.6.3",
+    "babel-preset-gatsby": "^0.12.1",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-google-analytics": "^2.11.0",
@@ -38,10 +39,12 @@
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "gatsby-transformer-sqip": "^2.0.15",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-test-renderer": "^17.0.1",
     "sass": "^1.32.7",
     "sharp": "^0.27.1"
   }
