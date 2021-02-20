@@ -50,7 +50,6 @@ const NotFoundPage = () => {
           <Link to="/">Go home</Link>.
         </p>
       </main>
-
     </Layout>
   );
 };

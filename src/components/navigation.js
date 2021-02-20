@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import React from "react";
 import css from "./navigation.module.scss";
 
@@ -10,7 +10,8 @@ const navItems = [
 ];
 
 export default function Navigation({ currentPath }) {
-  const isSelected = (href) => (href === currentPath ? css.selected : "");
+  const isSelected = (href) =>
+    withPrefix(href) === currentPath ? css.selected : "";
   return (
     <header>
       <ul>

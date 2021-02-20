@@ -83,9 +83,10 @@ export default function AboutMe({ location }) {
       </p>
 
       <p>
-        It's now {new Date().getFullYear()} and I've been running my own business for around 17 years,
-        operating within the area to provide a high quality, professional
-        valeting service for thousands of customers throughout the region.
+        It's now {new Date().getFullYear()} and I've been running my own
+        business for around 17 years, operating within the area to provide a
+        high quality, professional valeting service for thousands of customers
+        throughout the region.
       </p>
 
       <div className={classes.root}>
