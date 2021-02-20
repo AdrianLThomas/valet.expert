@@ -3,15 +3,23 @@
     text-decoration: none;
 }
 
-$selectedColor: green;
+$headerColor: rgb(211, 52, 81);
+
+.headerText{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navItem:hover {
+    color: $headerColor;
+}
 
 .selected {
-    color: $selectedColor;
+    color: $headerColor;
 }
 
 li.selected {
-
-    border-top: 4px solid $selectedColor;
+    border-top: 4px solid $headerColor;
 }
 
 header {
@@ -26,14 +34,10 @@ ul {
 
 ul > li {
     display: inline-block;
-    padding: 15px;
+    padding: 0 15px 0 15px;
     line-height: 40px;
     font-weight: bold;
     text-align: center;
-}
-
-a:hover {
-    color: rgb(211, 52, 81);
 }
 
 h1 {
