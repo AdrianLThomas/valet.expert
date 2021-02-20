@@ -16,9 +16,9 @@ export default function Navigation({ currentPath }) {
     <header>
       <ul>
         <li>
-          <a className={css.headerText} href="/">
+          <Link className={css.headerText} to="/">
             {"Matty's Mobile Valeting & Detailing"}
-          </a>
+          </Link>
         </li>
         {navItems.map((navItem) => (
           <li className={isSelected(navItem.href)} key={navItem.href}>
