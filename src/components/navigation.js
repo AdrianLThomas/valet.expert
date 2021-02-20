@@ -4,7 +4,7 @@ import css from "./navigation.module.scss";
 const navItems = [
   { href: "/about-me/", label: "About Me" },
   { href: "/services-and-pricing/", label: "Services and Pricing" },
-  { href: "/areas/", label: "Areas Covered" },
+  { href: "/areas-covered/", label: "Areas Covered" },
   { href: "/contact-me/", label: "Contact Me" },
 ];
 

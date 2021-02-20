@@ -3,7 +3,7 @@
 - Redirects
   -- /about -> /about-me
   -- /services -> /services-and-pricing
-  -- /areas -> /areas-and-postcodes-covered
+  -- /areas -> /areas-covered
   -- /contact -> /contact-me
 
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
