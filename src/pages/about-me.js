@@ -2,8 +2,7 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { makeStyles } from "@material-ui/core/styles";
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
+import { Grid } from "@material-ui/core";
 import Layout from "../components/layout";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,81 +12,43 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     overflow: "hidden",
   },
-  gridList: {
-    width: "100%",
-  },
 }));
-
-// const tileData = [
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 2,
-//   },
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 1,
-//   },
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 1,
-//   },
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 1,
-//   },
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 1,
-//   },
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 1,
-//   },
-//   {
-//     img: "https://source.unsplash.com/random/150x150",
-//     title: "Image",
-//     author: "author",
-//     cols: 2,
-//   },
-// ];
 
 export default function AboutMe({ location }) {
   const classes = useStyles();
 
   const data = useStaticQuery(graphql`
-  query {
-    allFile(
-      sort: {fields: relativePath, order: DESC},
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "vans" }
-      }
-    ) {
-      edges {
-        node {
-          base
-          childImageSharp {
-            fluid(maxWidth: 450, maxHeight: 250, quality: 45) {
-              ...GatsbyImageSharpFluid
-            },
+    query {
+      allFile(
+        sort: { fields: relativePath, order: DESC }
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "vans" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(maxWidth: 450, maxHeight: 250, quality: 45) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
-  }
   `);
+
+  const featuredTile = {
+    ...data.allFile.edges[0],
+    featured: true,
+  };
+  const remainingTiles = data.allFile.edges.slice(1);
+  const isOddRemaining = !!(remainingTiles.length % 2);
+  if (isOddRemaining) {
+    remainingTiles[0].featured = true;
+  }
 
   return (
     <Layout currentPath={location.pathname}>
@@ -113,16 +74,29 @@ export default function AboutMe({ location }) {
       </p>
 
       <div className={classes.root}>
-        <GridList cellHeight={"auto"} className={classes.gridList} cols={4}>
-          {data.allFile.edges.map((tile) => (
-            <GridListTile key={tile.img} cols={tile.cols || 1}>
+        <Grid container spacing={2}>
+          <Grid container item xs={12} sm={6}>
+            <Grid item xs={12}>
               <Img
-                fluid={{...tile.node.childImageSharp.fluid}}
-                alt={tile.node.base.split(".")[0]}
+                fluid={{ ...featuredTile.node.childImageSharp.fluid }}
+                alt={featuredTile.node.base.split(".")[0]}
               />
-            </GridListTile>
-          ))}
-        </GridList>
+            </Grid>
+          </Grid>
+          <Grid container item spacing={2} xs={12} sm={6}>
+            {remainingTiles.map((tile) => (
+              <Grid item xs={6} sm={3}>
+                <Img
+                  fluid={{
+                    ...tile.node.childImageSharp.fluid,
+                    aspectRatio: 0.85,
+                  }}
+                  alt={tile.node.base.split(".")[0]}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
       </div>
     </Layout>
   );
