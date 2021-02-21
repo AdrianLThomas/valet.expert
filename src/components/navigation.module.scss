@@ -10,6 +10,11 @@ $headerColor: rgb(211, 52, 81);
   font-size: 20px;
 }
 
+.navItem {
+  display: block;
+  width: 150px;
+}
+
 .navItem:hover {
   color: $headerColor;
 }
