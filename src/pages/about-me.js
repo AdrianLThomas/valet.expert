@@ -12,11 +12,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
-    backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 1000,
-    height: 450,
+    width: "100%",
   },
 }));
 
@@ -69,25 +67,26 @@ export default function AboutMe({ location }) {
   const classes = useStyles();
 
   const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-          relativeDirectory: { eq: "vans" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(maxWidth: 250, quality: 45) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+  query {
+    allFile(
+      sort: {fields: relativePath, order: DESC},
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "vans" }
+      }
+    ) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fluid(maxWidth: 450, maxHeight: 250, quality: 45) {
+              ...GatsbyImageSharpFluid
+            },
           }
         }
       }
     }
+  }
   `);
 
   return (
@@ -114,11 +113,11 @@ export default function AboutMe({ location }) {
       </p>
 
       <div className={classes.root}>
-        <GridList className={classes.gridList} cols={3}>
+        <GridList cellHeight={"auto"} className={classes.gridList} cols={4}>
           {data.allFile.edges.map((tile) => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>
               <Img
-                fluid={tile.node.childImageSharp.fluid}
+                fluid={{...tile.node.childImageSharp.fluid}}
                 alt={tile.node.base.split(".")[0]}
               />
             </GridListTile>
