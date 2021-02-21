@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
@@ -66,8 +68,36 @@ const tileData = [
 export default function AboutMe({ location }) {
   const classes = useStyles();
 
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "vans" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(maxWidth: 250, quality: 45) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout currentPath={location.pathname}>
+      {data.allFile.edges.map((image) => (
+        <Img
+          fluid={image.node.childImageSharp.fluid}
+          alt={image.node.base.split(".")[0]}
+        />
+      ))}
       <h1>{"About Matty's Mobile Valeting & Detailing, est. 2004"}</h1>
       <p>
         My business was established in 2004 in the vibrant seaside town of
