@@ -20,50 +20,50 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const tileData = [
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 2,
-  },
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 1,
-  },
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 1,
-  },
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 1,
-  },
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 1,
-  },
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 1,
-  },
-  {
-    img: "https://source.unsplash.com/random/150x150",
-    title: "Image",
-    author: "author",
-    cols: 2,
-  },
-];
+// const tileData = [
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 2,
+//   },
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 1,
+//   },
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 1,
+//   },
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 1,
+//   },
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 1,
+//   },
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 1,
+//   },
+//   {
+//     img: "https://source.unsplash.com/random/150x150",
+//     title: "Image",
+//     author: "author",
+//     cols: 2,
+//   },
+// ];
 
 export default function AboutMe({ location }) {
   const classes = useStyles();
@@ -92,12 +92,6 @@ export default function AboutMe({ location }) {
 
   return (
     <Layout currentPath={location.pathname}>
-      {data.allFile.edges.map((image) => (
-        <Img
-          fluid={image.node.childImageSharp.fluid}
-          alt={image.node.base.split(".")[0]}
-        />
-      ))}
       <h1>{"About Matty's Mobile Valeting & Detailing, est. 2004"}</h1>
       <p>
         My business was established in 2004 in the vibrant seaside town of
@@ -120,10 +114,13 @@ export default function AboutMe({ location }) {
       </p>
 
       <div className={classes.root}>
-        <GridList cellHeight={160} className={classes.gridList} cols={3}>
-          {tileData.map((tile) => (
+        <GridList className={classes.gridList} cols={3}>
+          {data.allFile.edges.map((tile) => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>
-              <img src={tile.img} alt={tile.title} />
+              <Img
+                fluid={tile.node.childImageSharp.fluid}
+                alt={tile.node.base.split(".")[0]}
+              />
             </GridListTile>
           ))}
         </GridList>
