@@ -5,6 +5,14 @@ module.exports = {
     siteUrl: "http://TODOUPDATEME.com",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-google-analytics",

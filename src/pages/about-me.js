@@ -30,7 +30,7 @@ export default function AboutMe({ location }) {
           node {
             base
             childImageSharp {
-              fluid(maxWidth: 450, maxHeight: 250, quality: 45) {
+              fluid(maxWidth: 450, maxHeight: 250, quality: 75) {
                 ...GatsbyImageSharpFluid
               }
             }
