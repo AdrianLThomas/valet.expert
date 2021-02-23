@@ -1,5 +1,8 @@
 name: Build, Test and Deploy
-on: [push]
+on:
+  push:
+    paths-ignore:
+    - 'designs/**'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
