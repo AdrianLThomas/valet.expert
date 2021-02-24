@@ -1,16 +1,16 @@
-import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
-import Layout from "../components/layout";
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
+import Layout from '../components/layout';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
   },
 }));
 
@@ -79,19 +79,19 @@ export default function AboutMe({ location }) {
             <Grid item xs={12}>
               <Img
                 fluid={{ ...featuredTile.node.childImageSharp.fluid }}
-                alt={featuredTile.node.base.split(".")[0]}
+                alt={featuredTile.node.base.split('.')[0]}
               />
             </Grid>
           </Grid>
           <Grid container item spacing={2} xs={12} sm={6}>
             {remainingTiles.map((tile) => (
-              <Grid item xs={6} sm={3}>
+              <Grid item xs={6} sm={3} key={tile.node.base}>
                 <Img
                   fluid={{
                     ...tile.node.childImageSharp.fluid,
                     aspectRatio: 0.85,
                   }}
-                  alt={tile.node.base.split(".")[0]}
+                  alt={tile.node.base.split('.')[0]}
                 />
               </Grid>
             ))}

@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/mmv`,
   siteMetadata: {
     title: "Matty's Mobile Valeting",
-    siteUrl: "http://TODOUPDATEME.com",
+    siteUrl: 'http://TODOUPDATEME.com',
   },
   plugins: [
     {
@@ -13,33 +13,33 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "GA_TRACKING_ID",
+        trackingId: 'GA_TRACKING_ID',
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-mdx',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
 };
