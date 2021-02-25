@@ -9,7 +9,8 @@
 
 .container {
     @include full-width;
-    background: url(../images/Hero.jpg) center no-repeat;
-    background-size: cover;
-    height: 250px;
+}
+
+.background {
+    height: 400px;
 }
