@@ -1,5 +1,5 @@
 import * as React from 'react';
-import StyledBackgroundSection from './background';
+import Background from './background';
 import css from './hero.module.scss';
 import { graphql, useStaticQuery } from 'gatsby'
 import './layout.module.scss';
@@ -10,7 +10,7 @@ export default function Hero({ children }) {
       query {
         desktop: file(relativePath: { eq: "Hero.jpg" }) {
           childImageSharp {
-            fluid(quality: 75, maxWidth: 1920) {
+            fluid(quality: 75, maxWidth: 2160) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -21,7 +21,9 @@ export default function Hero({ children }) {
 
   return (
     <div className={css.container}>
-      <StyledBackgroundSection className={css.background} imageData={data.desktop.childImageSharp.fluid}></StyledBackgroundSection>
+      <Background className={css.background} imageData={data.desktop.childImageSharp.fluid}>
+        {children}
+      </Background>
     </div>
   );
 }
