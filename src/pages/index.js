@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   heroSpacing: {
     marginTop: '0px',
-  }
+  },
 }));
 
 export default function Home({ location }) {
@@ -15,10 +15,9 @@ export default function Home({ location }) {
 
   return (
     <Layout currentPath={location.pathname}>
-      <Hero>
-      </Hero>
-      
-      <Introduction className={classes.heroSpacing}/>
+      <Hero></Hero>
+
+      <Introduction className={classes.heroSpacing} />
     </Layout>
   );
 }

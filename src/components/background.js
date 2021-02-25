@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import css from './background.module.scss';
 
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from 'gatsby-background-image';
 
 const Background = ({ className, imageData, children }) => {
   return (
@@ -12,7 +12,7 @@ const Background = ({ className, imageData, children }) => {
     >
       {children}
     </BackgroundImage>
-  )
-}
+  );
+};
 
-export default Background
+export default Background;

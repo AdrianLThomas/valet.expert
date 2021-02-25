@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Background from './background';
 import css from './hero.module.scss';
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby';
 import './layout.module.scss';
 
 export default function Hero({ children }) {
@@ -17,11 +17,14 @@ export default function Hero({ children }) {
         }
       }
     `
-  )
+  );
 
   return (
     <div className={css.container}>
-      <Background className={css.background} imageData={data.desktop.childImageSharp.fluid}>
+      <Background
+        className={css.background}
+        imageData={data.desktop.childImageSharp.fluid}
+      >
         {children}
       </Background>
     </div>
