@@ -1,28 +1,23 @@
+$linkColor: rgb(33,33,33);
+$standardFontSize: 14px;
+
 body {
-  // background-image: url(../images/backgrounds/Beading.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  font-family: "Slabo 13px";
 }
 
-@media screen and (min-width: 0px) and (max-width: 1024px) {
-  body {
-    background: url(../images/backgrounds/Beading_1024.jpg) center no-repeat
-      fixed;
-  }
+h1 {
+  font-size: $standardFontSize + 4px;
+  width: 240px;
+  text-align: left;
 }
-@media screen and (min-width: 1024px) and (max-width: 2048px) {
-  body {
-    background: url(../images/backgrounds/Beading_2048.jpg) center no-repeat
-      fixed;
-  }
-}
-@media screen and (min-width: 2048px) {
-  body {
-    background: url(../images/backgrounds/Beading_4096.jpg) center no-repeat
-      fixed;
-  }
+
+a,p {
+  color: $linkColor;
+  font-size: $standardFontSize;
 }
 
 body,

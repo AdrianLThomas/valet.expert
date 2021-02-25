@@ -17,7 +17,7 @@ export default function Navigation({ currentPath }) {
       <ul>
         <li>
           <Link className={css.headerText} to="/">
-            {"Matty's Mobile Valeting & Detailing"}
+            <h1>{"Matty's Mobile Valeting & Detailing"}</h1>
           </Link>
         </li>
         {navItems.map((navItem) => (
