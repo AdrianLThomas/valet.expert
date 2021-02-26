@@ -20,3 +20,6 @@
 - remove pathprefix when publishing to root
 - adjust robots.txt
 - GA tracking code
+
+# Notes
+- Funnel: Home Page > Services > Contact

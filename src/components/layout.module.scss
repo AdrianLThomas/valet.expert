@@ -1,5 +1,4 @@
 $linkColor: rgb(33,33,33);
-$standardFontSize: 14px;
 
 body {
   background-repeat: no-repeat;
@@ -9,15 +8,9 @@ body {
   font-family: "Slabo 13px";
 }
 
-h1 {
-  font-size: $standardFontSize + 4px;
-  width: 240px;
-  text-align: left;
-}
-
 a,p {
   color: $linkColor;
-  font-size: $standardFontSize;
+  font-size: 14px;
 }
 
 body,
