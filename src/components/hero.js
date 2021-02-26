@@ -2,7 +2,6 @@ import * as React from 'react';
 import Background from './background';
 import css from './hero.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
-import './layout.module.scss';
 
 export default function Hero({ children }) {
   const data = useStaticQuery(
@@ -25,7 +24,9 @@ export default function Hero({ children }) {
         className={css.background}
         imageData={data.desktop.childImageSharp.fluid}
       >
-        {children}
+        <div className={css.heroTextbox}>
+          {children}
+        </div>
       </Background>
     </div>
   );

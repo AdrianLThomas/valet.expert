@@ -52,7 +52,7 @@ export default function ({ className }) {
         'Established in 2004 in the vibrant seaside town of Scarborough.',
       icon: <ThumbUpIcon fontSize={fontSize} className={classes.iconSize} />,
       buttonText: 'About Me',
-      buttonVariant: 'contained',
+      buttonVariant: 'outlined',
     },
     {
       title: 'Flexible',
@@ -60,7 +60,7 @@ export default function ({ className }) {
         "I can come to you, whether it's your place of work, study or home.",
       icon: <MapIcon fontSize={fontSize} className={classes.iconSize} />,
       buttonText: 'Areas Covered',
-      buttonVariant: 'contained',
+      buttonVariant: 'outlined',
     },
     {
       title: 'My Services',
@@ -68,7 +68,7 @@ export default function ({ className }) {
         ' sasasa sasas sa sa saas sa sa as sa sa sa saa sas assa sa saas as as',
       icon: <SettingsIcon fontSize={fontSize} className={classes.iconSize} />,
       buttonText: 'Services & Pricing',
-      buttonVariant: 'contained',
+      buttonVariant: 'outlined',
     },
     {
       title: 'Contact Me',
@@ -76,7 +76,7 @@ export default function ({ className }) {
         "I'm easy to get hold of, just call or message at your convenience.",
       icon: <ChatIcon fontSize={fontSize} className={classes.iconSize} />,
       buttonText: 'Contact Me',
-      buttonVariant: 'contained',
+      buttonVariant: 'outlined',
     },
   ];
 
