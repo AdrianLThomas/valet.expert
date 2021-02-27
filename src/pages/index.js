@@ -13,10 +13,6 @@ const useStyles = makeStyles(() => ({
     color: 'white',
     fontSize: '32px',
   },
-  heroParagraph: {
-    fontSize: '15px',
-    color: 'black'
-  }
 }));
 
 export default function Home({ location }) {
@@ -28,9 +24,9 @@ export default function Home({ location }) {
         <h1 className={classes.heroTitle}>Friendly. Professional. Reliable.</h1>
       </Hero>
 
-      <p className={classes.heroParagraph}>
+      {/* <p className={classes.heroParagraph}>
         A mobile valeting service in Scarborough that will arrive to your location; using the most advanced cleaning products available, ensuring your pride and joy looks as good as the day it left the showroom.
-      </p>
+      </p> */}
 
       <Introduction className={classes.heroSpacing} />
     </Layout>
