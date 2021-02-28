@@ -2,11 +2,10 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   Grid,
   Typography,
 } from '@material-ui/core';
-import { Link, withPrefix } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -25,7 +24,7 @@ const useStyles = makeStyles(() => ({
   cardHeader: {
     textAlign: 'center',
     fontSize: '1.4em',
-    margin: '10px 0 15px 0'
+    margin: '10px 0 15px 0',
   },
   cardBackground: {},
   button: {
@@ -37,9 +36,9 @@ const useStyles = makeStyles(() => ({
     fontWeight: 'bold',
     '&:hover': {
       border: '2px solid black',
-      margin: '-1px'
-   },
-  }
+      margin: '-1px',
+    },
+  },
 }));
 
 export default function ({ className }) {
@@ -98,7 +97,9 @@ export default function ({ className }) {
               </ul>
             </CardContent>
             <CardActions>
-              <Link to={tile.href} className={classes.button}>{tile.buttonText}</Link>
+              <Link to={tile.href} className={classes.button}>
+                {tile.buttonText}
+              </Link>
             </CardActions>
           </Card>
         </Grid>
