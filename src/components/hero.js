@@ -24,9 +24,7 @@ export default function Hero({ children }) {
         className={css.background}
         imageData={data.desktop.childImageSharp.fluid}
       >
-        <div className={css.heroTextbox}>
-          {children}
-        </div>
+        <div className={css.heroTextbox}>{children}</div>
       </Background>
     </div>
   );

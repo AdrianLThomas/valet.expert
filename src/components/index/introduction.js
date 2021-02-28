@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   '@global': {
     ul: {
       margin: 0,
@@ -20,14 +20,13 @@ const useStyles = makeStyles((theme) => ({
   },
   cardText: {
     padding: 0,
-    height: '170px'
+    height: '170px',
   },
   cardHeader: {
     textAlign: 'center',
-    fontSize: '500px'
+    fontSize: '500px',
   },
-  cardBackground: {
-  },
+  cardBackground: {},
   iconSize: {
     fontSize: '2em',
   },
@@ -41,8 +40,9 @@ export default function ({ className }) {
   const tiers = [
     {
       title: 'Reputable',
-      description:
-        `Established in ${established}, I have been detailing for customers in Scarborough for over ${now - established} years. The quality of my work is reflected by my 5 star reviews on Google and Facebook.`,
+      description: `Established in ${established}, I have been detailing for customers in Scarborough for over ${
+        now - established
+      } years. The quality of my work is reflected by my 5 star reviews on Google and Facebook.`,
       buttonText: 'About Me',
       buttonVariant: 'contained',
     },
@@ -79,7 +79,7 @@ export default function ({ className }) {
             <CardHeader
               title={tile.title}
               className={classes.cardHeader}
-              titleTypographyProps={{variant:'h4'}}
+              titleTypographyProps={{ variant: 'h4' }}
             />
             <CardContent className={classes.cardText}>
               <ul>

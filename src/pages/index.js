@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
   },
   introSpacing: {
     marginTop: 0,
-  }
+  },
 }));
 
 export default function Home({ location }) {
@@ -24,7 +24,7 @@ export default function Home({ location }) {
         <h1 className={classes.heroTitle}>Friendly. Professional. Reliable.</h1>
       </Hero>
 
-      <Introduction className={classes.introSpacing}/>
+      <Introduction className={classes.introSpacing} />
     </Layout>
   );
 }
