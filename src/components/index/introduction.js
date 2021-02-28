@@ -1,5 +1,4 @@
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
@@ -7,6 +6,7 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core';
+import { Link, withPrefix } from 'gatsby';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -24,12 +24,22 @@ const useStyles = makeStyles(() => ({
   },
   cardHeader: {
     textAlign: 'center',
-    fontSize: '500px',
+    fontSize: '1.4em',
+    margin: '10px 0 15px 0'
   },
   cardBackground: {},
-  iconSize: {
-    fontSize: '2em',
-  },
+  button: {
+    textAlign: 'center',
+    fontSize: '1em',
+    border: '1px solid black',
+    padding: '10px',
+    width: '100%',
+    fontWeight: 'bold',
+    '&:hover': {
+      border: '2px solid black',
+      margin: '-1px'
+   },
+  }
 }));
 
 export default function ({ className }) {
@@ -45,6 +55,15 @@ export default function ({ className }) {
       } years. The quality of my work is reflected by my 5 star reviews on Google and Facebook.`,
       buttonText: 'About Me',
       buttonVariant: 'contained',
+      href: '/about-me/',
+    },
+    {
+      title: 'My Services',
+      description:
+        'I provide a range of services: mini valet, full valet, hand & wax, machine polish and ceramic coating. With the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
+      buttonText: 'Services & Pricing',
+      buttonVariant: 'contained',
+      href: '/services-and-pricing/',
     },
     {
       title: 'Flexible',
@@ -53,21 +72,15 @@ export default function ({ className }) {
 
       buttonText: 'Areas Covered',
       buttonVariant: 'contained',
-    },
-    {
-      title: 'My Services',
-      description:
-        'I provide a range of services: mini valet, full valet, hand & wax, machine polish and ceramic coating. With the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
-      buttonText: 'Services & Pricing',
-      buttonVariant: 'contained',
+      href: '/areas-covered/',
     },
     {
       title: 'Contact Me',
       description:
         "I'm easy to get hold of, just call or leave me a message at your convenience.",
-
       buttonText: 'Contact Me',
       buttonVariant: 'contained',
+      href: '/contact-me/',
     },
   ];
 
@@ -76,11 +89,7 @@ export default function ({ className }) {
       {tiers.map((tile) => (
         <Grid item key={tile.title} xs={12} sm={6} md={3}>
           <Card className={classes.cardBackground} variant="outlined">
-            <CardHeader
-              title={tile.title}
-              className={classes.cardHeader}
-              titleTypographyProps={{ variant: 'h4' }}
-            />
+            <h4 className={classes.cardHeader}>{tile.title}</h4>
             <CardContent className={classes.cardText}>
               <ul>
                 <Typography component="li" variant="subtitle1" align="center">
@@ -89,9 +98,7 @@ export default function ({ className }) {
               </ul>
             </CardContent>
             <CardActions>
-              <Button fullWidth variant={tile.buttonVariant} color="primary">
-                {tile.buttonText}
-              </Button>
+              <Link to={tile.href} className={classes.button}>{tile.buttonText}</Link>
             </CardActions>
           </Card>
         </Grid>
