@@ -50,6 +50,13 @@ export default function AboutMe({ location }) {
     remainingTiles[0].featured = true;
   }
 
+  const now = new Date();
+  const dateStartedInTrade = new Date(1999, 1);
+  const yearsInTrade = now.getFullYear() - dateStartedInTrade.getFullYear();
+
+  const dateBusinessStarted = new Date(2004, 1);
+  const yearsRunning = now.getFullYear() - dateBusinessStarted.getFullYear();
+
   return (
     <Layout currentPath={location.pathname}>
       <p>
@@ -58,7 +65,7 @@ export default function AboutMe({ location }) {
       </p>
 
       <p>
-        I have been in the trade for around 22 years, starting off as a valeter
+        I have been in the trade for around {yearsInTrade} years, starting off as a valeter
         for Arundale Peugeot, Scarborough. I then assisted the running of a
         local valeting business, before seeing the opportunity to work for
         myself as a mobile valeter. The business has gone from strength to
@@ -66,11 +73,13 @@ export default function AboutMe({ location }) {
       </p>
 
       <p>
-        It's now {new Date().getFullYear()} and I've been running my own
-        business for around 17 years, operating within the area to provide a
+        It's now {now.getFullYear()} and I've been running my own
+        business for around {yearsRunning} years, operating within the area to provide a
         high quality, professional valeting service for thousands of customers
         throughout the region.
       </p>
+
+      <p>TODO! Google and FB reviews?</p>
 
       <div className={classes.root}>
         <Grid container spacing={2}>
