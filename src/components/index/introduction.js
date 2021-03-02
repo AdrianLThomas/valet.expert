@@ -37,7 +37,10 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       border: '2px solid black',
       margin: '-1px',
+      transform: 'translateY(3px)',
     },
+    transition: 'transform 500ms',
+    willChange: 'transform',
   },
 }));
 
