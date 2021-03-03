@@ -19,14 +19,15 @@ const useStyles = makeStyles(() => ({
   },
   cardText: {
     padding: 0,
-    height: '170px',
   },
   cardHeader: {
     textAlign: 'center',
     fontSize: '1.4em',
     margin: '10px 0 15px 0',
   },
-  cardBackground: {},
+  cardBackground: {
+    height: '100%'
+  },
   button: {
     textAlign: 'center',
     fontSize: '1em',
@@ -62,7 +63,7 @@ export default function ({ className }) {
     {
       title: 'My Services',
       description:
-        'I provide a range of services: mini valet, full valet, hand & wax, machine polish and ceramic coating. With the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
+        'I provide a range of services and with the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
       buttonText: 'Services & Pricing',
       buttonVariant: 'contained',
       href: '/services-and-pricing/',
