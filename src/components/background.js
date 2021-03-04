@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-}
+  },
 });
 
 const Background = ({ className, imageData, children }) => {

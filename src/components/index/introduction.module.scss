@@ -1,0 +1,43 @@
+.root {
+  max-width: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.media {
+  height: 140;
+}
+
+.cardContent {
+  padding: 10px;
+}
+
+.cardHeader {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.button {
+  text-align: center;
+  font-size: 1em;
+  border: 1px solid black;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  transition: transform 500ms;
+  will-change: transform;
+}
+
+.button:hover {
+    border: 2px solid black;
+    margin: -1px;
+    transform: translateY(3px);
+}
+
+.icon {
+  display: block;
+  margin: auto;
+  font-size: 100;
+}

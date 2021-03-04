@@ -7,54 +7,13 @@ import {
 } from '@material-ui/core';
 import { Link } from 'gatsby';
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import MapIcon from '@material-ui/icons/Map';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ChatIcon from '@material-ui/icons/Chat';
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: '345px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
-  },
-  media: {
-    height: 140,
-  },
-  cardContent: {
-    padding: '10px',
-  },
-  cardHeader: {
-    textAlign: 'center',
-    fontSize: '1.4em',
-  },
-  button: {
-    textAlign: 'center',
-    fontSize: '1em',
-    border: '1px solid black',
-    padding: '10px',
-    width: '100%',
-    fontWeight: 'bold',
-    '&:hover': {
-      border: '2px solid black',
-      margin: '-1px',
-      transform: 'translateY(3px)',
-    },
-    transition: 'transform 500ms',
-    willChange: 'transform',
-  },
-  icon: {
-    display: 'block',
-    margin: 'auto',
-    fontSize: 100,
-  },
-});
+import classes from './introduction.module.scss';
 
 export default function ({ className }) {
-  const classes = useStyles();
   const established = 2004;
   const now = new Date().getFullYear();
 
