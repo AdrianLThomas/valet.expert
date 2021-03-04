@@ -90,7 +90,12 @@ export default function ({ className }) {
         <Grid item key={tile.title} xs={12} sm={6} md={3}>
           <Card className={classes.root}>
             <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h5" component="h2" className={classes.cardHeader}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                className={classes.cardHeader}
+              >
                 {tile.title}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
@@ -99,7 +104,7 @@ export default function ({ className }) {
             </CardContent>
             <CardActions>
               <Link to={tile.href} className={classes.button}>
-                  {tile.buttonText}
+                {tile.buttonText}
               </Link>
             </CardActions>
           </Card>
