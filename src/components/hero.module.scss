@@ -9,6 +9,9 @@
 
 .container {
     @include full-width;
+    $border: 1px solid #8cb4ff;
+    border-top: $border;
+    border-bottom: $border;
 }
 
 .background {
