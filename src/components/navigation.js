@@ -1,6 +1,7 @@
 import { Link, withPrefix } from 'gatsby';
 import React from 'react';
 import css from './navigation.module.scss';
+import '@fontsource/bangers';
 
 const navItems = [
   { href: '/about-me/', label: 'About Me' },
