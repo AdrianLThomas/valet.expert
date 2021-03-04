@@ -10,6 +10,10 @@ import {
 import { Link } from 'gatsby';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import MapIcon from '@material-ui/icons/Map';
+import SettingsIcon from '@material-ui/icons/Settings';
+import ChatIcon from '@material-ui/icons/Chat';
 
 const useStyles = makeStyles({
   root: {
@@ -44,6 +48,11 @@ const useStyles = makeStyles({
     transition: 'transform 500ms',
     willChange: 'transform',
   },
+  icon: {
+    display: 'block',
+    margin: 'auto',
+    fontSize: 100,
+  }
 });
 
 export default function ({ className }) {
@@ -59,6 +68,7 @@ export default function ({ className }) {
       } years. The quality of my work is reflected by my 5 star reviews on Google and Facebook.`,
       buttonText: 'About Me',
       href: '/about-me/',
+      icon: <ThumbUpIcon className={classes.icon}/>
     },
     {
       title: 'My Services',
@@ -66,6 +76,7 @@ export default function ({ className }) {
         'I provide a range of services and with the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
       buttonText: 'Services & Pricing',
       href: '/services-and-pricing/',
+      icon: <MapIcon className={classes.icon}/>
     },
     {
       title: 'Flexible',
@@ -74,6 +85,8 @@ export default function ({ className }) {
 
       buttonText: 'Areas Covered',
       href: '/areas-covered/',
+      icon: <SettingsIcon className={classes.icon}/>
+
     },
     {
       title: 'Contact Me',
@@ -81,6 +94,8 @@ export default function ({ className }) {
         "I'm easy to get hold of, just call or leave me a message at your convenience.",
       buttonText: 'Contact Me',
       href: '/contact-me/',
+      icon: <ChatIcon className={classes.icon}/>
+
     },
   ];
 
@@ -90,6 +105,7 @@ export default function ({ className }) {
         <Grid item key={tile.title} xs={12} sm={6} md={3}>
           <Card className={classes.root}>
             <CardContent className={classes.cardContent}>
+              {tile.icon}
               <Typography
                 gutterBottom
                 variant="h5"

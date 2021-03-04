@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
     fontSize: '32px',
   },
   introSpacing: {
-    marginTop: 0,
+    marginTop: 10,
   },
 }));
 
