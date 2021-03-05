@@ -1,7 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -21,19 +19,19 @@ const useStyles = makeStyles((theme) => ({
       float: 'left',
     },
     [theme.breakpoints.down('md')]: {
-      textAlign: 'center'
+      textAlign: 'center',
     },
-    paddingLeft: '1.5rem'
+    paddingLeft: '1.5rem',
   },
   right: {
     [theme.breakpoints.up('md')]: {
       float: 'right',
     },
     [theme.breakpoints.down('md')]: {
-      textAlign: 'center'
+      textAlign: 'center',
     },
-    paddingRight: '1.5rem'
-  }
+    paddingRight: '1.5rem',
+  },
 }));
 
 export default function Footer() {
@@ -42,10 +40,16 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <p className={classes.left}>{`© ${yearNow} - Matty's Mobile Valeting & Detailing, Scarborough, est. 2004`}</p>
+      <p
+        className={classes.left}
+      >{`© ${yearNow} - Matty's Mobile Valeting & Detailing, Scarborough, est. 2004`}</p>
       <p className={classes.right}>
         {`Developed & Designed by `}
-        <a href="https://www.adrian-thomas.com" target="_blank">
+        <a
+          href="https://www.adrian-thomas.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           Adrian L Thomas
         </a>
       </p>
