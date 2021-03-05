@@ -11,6 +11,7 @@
 - Page titles
 - Favicon
 - Metadata, worth it?
+- Review accessibility
 
 # General
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
