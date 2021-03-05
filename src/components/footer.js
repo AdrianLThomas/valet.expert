@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     },
     paddingRight: '1.5rem',
   },
+  link: {
+    color: 'darkred',
+  }
 }));
 
 export default function Footer() {
@@ -49,6 +52,7 @@ export default function Footer() {
           href="https://www.adrian-thomas.com"
           target="_blank"
           rel="noreferrer"
+          className={classes.link}
         >
           Adrian L Thomas
         </a>
