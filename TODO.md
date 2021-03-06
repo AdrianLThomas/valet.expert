@@ -14,10 +14,6 @@
 - app manifest, worth it?
 - Review accessibility
 
-# Issues
-- Footer spacing: scrollbar even though there's enough room.
-- Wide mobile view - cards aren't full width?
-
 # General
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
 - Maintain SEO: https://moz.com/blog/how-to-avoid-an-seo-disaster-when-changing-your-website

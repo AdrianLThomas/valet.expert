@@ -1,5 +1,4 @@
 .root {
-  max-width: 345px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,8 +26,6 @@
 }
 
 .button:hover {
-    border: 2px solid black;
-    margin: -1px;
     transform: translateY(3px);
 }
 
