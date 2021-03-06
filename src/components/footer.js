@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     bottom: 0,
     height: '2.5rem',
-    marginBottom: '-2.5rem',
+    marginBottom: '-3rem',
     borderTop: '1px lightgrey solid',
   },
   left: {
