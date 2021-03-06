@@ -9,10 +9,11 @@
 - Recreate sub-pages
 - SEO / metadata tags throughout
 - Check sitemap.xml
-- Page titles
+- Page titles (include 'Scarborough')
 - Favicon
 - app manifest, worth it?
 - Review accessibility
+- Facebook & Instagram links
 
 # General
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
