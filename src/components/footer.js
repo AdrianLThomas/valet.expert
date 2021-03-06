@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     color: 'darkred',
-  }
+  },
 }));
 
 export default function Footer() {

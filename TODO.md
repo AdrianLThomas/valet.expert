@@ -6,11 +6,11 @@
   -- /contact -> /contact-me
 
 - Recreate sub-pages
-- SEO tags throughout
+- SEO / metadata tags throughout
 - Check sitemap.xml
 - Page titles
 - Favicon
-- Metadata, worth it?
+- app manifest, worth it?
 - Review accessibility
 
 # Issues
