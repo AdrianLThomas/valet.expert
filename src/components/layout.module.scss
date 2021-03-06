@@ -1,11 +1,14 @@
 $linkColor: rgb(33,33,33);
+* {
+  text-decoration: none;
+  font-family: -apple-system, Roboto, sans-serif, serif;
+}
 
 body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  font-family: -apple-system, Roboto, sans-serif, serif;
 }
 
 a,p {

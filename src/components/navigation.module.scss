@@ -1,22 +1,17 @@
-* {
-  text-decoration: none;
-}
-
 $navSelected: 1px solid black;
 $navBorder: 1px solid transparent;
 
 .headerText > h1 {
-  font-size: 1.8em; 
-  line-height: 5px;
+  font-size: 1.5em; 
   font-family: "Bangers";
-  
 }
 
 .navItem {
-  display: block;
-  width: 150px;
-  padding: 0 0 5px 0;
+  padding: 7px 0 0 0;
   border-top: $navBorder;
+  display: block;
+  text-align: center;
+  font-stretch: 115%;
 }
 
 .navItem:hover {
@@ -25,10 +20,6 @@ $navBorder: 1px solid transparent;
 
 .navItem.selected {
   border-top: $navSelected;
-}
-
-header {
-  display: flex;
 }
 
 ul {

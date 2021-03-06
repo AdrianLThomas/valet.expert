@@ -2,6 +2,7 @@ import { Link, withPrefix } from 'gatsby';
 import React from 'react';
 import css from './navigation.module.scss';
 import '@fontsource/bangers';
+import { Grid } from '@material-ui/core';
 
 const navItems = [
   { href: '/about-me/', label: 'About Me' },
@@ -15,23 +16,23 @@ export default function Navigation({ currentPath }) {
     withPrefix(href) === currentPath ? css.selected : '';
   return (
     <header>
-      <ul>
-        <li>
+      <Grid container spacing={1} alignItems="center">
+        <Grid item xs={12} sm={4} md={4}>
           <Link className={css.headerText} to="/">
             <h1>{"Matty's Mobile Valeting & Detailing"}</h1>
           </Link>
-        </li>
+        </Grid>
         {navItems.map((navItem) => (
-          <li className={isSelected(navItem.href)} key={navItem.href}>
-            <Link
-              to={navItem.href}
-              className={`${isSelected(navItem.href)} ${css.navItem}`}
-            >
-              {navItem.label}
-            </Link>
-          </li>
+          <Grid item xs={6} sm={2} md={2} key={navItem.href}>
+              <Link
+                to={navItem.href}
+                className={`${isSelected(navItem.href)} ${css.navItem}`}
+              >
+                {navItem.label}
+              </Link>
+          </Grid>
         ))}
-      </ul>
+      </Grid>
     </header>
   );
 }
