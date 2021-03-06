@@ -1,16 +1,19 @@
 $navSelected: 1px solid black;
 $navBorder: 1px solid transparent;
 
+header {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .headerText > h1 {
   font-size: 1.5em; 
   font-family: "Bangers";
 }
 
 .navItem {
-  padding: 7px 0 0 0;
   border-top: $navBorder;
   display: block;
-  text-align: center;
   font-stretch: 115%;
 }
 
@@ -20,17 +23,4 @@ $navBorder: 1px solid transparent;
 
 .navItem.selected {
   border-top: $navSelected;
-}
-
-ul {
-  list-style-type: none;
-  vertical-align: center;
-  margin: 0;
-}
-
-ul > li {
-  display: inline-block;
-  padding: 0 15px 0 15px;
-  line-height: 40px;
-  text-align: center;
-}
+} 

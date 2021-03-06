@@ -6,7 +6,7 @@ import { Grid } from '@material-ui/core';
 
 const navItems = [
   { href: '/about-me/', label: 'About Me' },
-  { href: '/services-and-pricing/', label: 'Services and Pricing' },
+  { href: '/services-and-pricing/', label: 'Services & Pricing' },
   { href: '/areas-covered/', label: 'Areas Covered' },
   { href: '/contact-me/', label: 'Contact Me' },
 ];
@@ -16,7 +16,7 @@ export default function Navigation({ currentPath }) {
     withPrefix(href) === currentPath ? css.selected : '';
   return (
     <header>
-      <Grid container spacing={1} alignItems="center">
+      <Grid container spacing={3} alignItems="center">
         <Grid item xs={12} sm={4} md={4}>
           <Link className={css.headerText} to="/">
             <h1>{"Matty's Mobile Valeting & Detailing"}</h1>
@@ -24,12 +24,12 @@ export default function Navigation({ currentPath }) {
         </Grid>
         {navItems.map((navItem) => (
           <Grid item xs={6} sm={2} md={2} key={navItem.href}>
-              <Link
-                to={navItem.href}
-                className={`${isSelected(navItem.href)} ${css.navItem}`}
-              >
-                {navItem.label}
-              </Link>
+            <Link
+              to={navItem.href}
+              className={`${isSelected(navItem.href)} ${css.navItem}`}
+            >
+              {navItem.label}
+            </Link>
           </Grid>
         ))}
       </Grid>
