@@ -5,6 +5,7 @@
   -- /areas -> /areas-covered
   -- /contact -> /contact-me
 
+- Mobile header
 - Recreate sub-pages
 - SEO / metadata tags throughout
 - Check sitemap.xml
