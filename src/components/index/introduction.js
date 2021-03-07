@@ -19,7 +19,7 @@ import {
   button,
 } from './introduction.module.scss';
 
-export default function Introduction({ className }) {
+export default function ({ className }) {
   const established = 2004;
   const now = new Date().getFullYear();
 
