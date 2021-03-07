@@ -12,7 +12,6 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
