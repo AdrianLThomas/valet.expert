@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/mmv`,
   siteMetadata: {
     title: "Matty's Mobile Valeting",
     siteUrl: 'http://TODOUPDATEME.com',
