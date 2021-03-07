@@ -27,6 +27,12 @@
  - e2e
  - SEO / lighthouse baseline?
 
+ # Tech Debt
+ - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
+to "gatsby-plugin-image" for better performance and a simpler API. See
+https://gatsby.dev/migrate-images to learn how.
+  - Also, see: https://github.com/timhagn/gatsby-background-image/issues/147
+
 # General Notes
 - Funnel: Home Page > Services > Contact
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
