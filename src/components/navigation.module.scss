@@ -11,16 +11,16 @@ header {
   font-family: "Bangers";
 }
 
-.navItem {
+.navLink {
   border-top: $navBorder;
   display: block;
   font-stretch: 115%;
 }
 
-.navItem:hover {
+.navLink:hover {
   border-top: $navSelected;
 }
 
-.navItem.selected {
+.navLink.selected {
   border-top: $navSelected;
 } 

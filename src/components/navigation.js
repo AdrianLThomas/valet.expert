@@ -1,6 +1,6 @@
 import { Link, withPrefix } from 'gatsby';
 import React from 'react';
-import { selected, headerText } from './navigation.module.scss';
+import { selected, headerText, navLink } from './navigation.module.scss';
 import '@fontsource/bangers';
 import { Grid } from '@material-ui/core';
 
@@ -26,7 +26,7 @@ export default function Navigation({ currentPath }) {
           <Grid item xs={6} sm={2} md={2} key={navItem.href}>
             <Link
               to={navItem.href}
-              className={`${isSelected(navItem.href)} ${navItem}`}
+              className={`${isSelected(navItem.href)} ${navLink}`}
             >
               {navItem.label}
             </Link>
