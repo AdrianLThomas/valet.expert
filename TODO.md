@@ -30,5 +30,10 @@
 - Lighthouse - new vs old
 - SEO scan comparison
 
+# Post Go Live
+- regression testing:
+ - e2e
+ - SEO / lighthouse baseline?
+
 # Notes
 - Funnel: Home Page > Services > Contact
