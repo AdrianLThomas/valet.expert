@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Background from './background';
-import css from './hero.module.scss';
+import { container, background, heroTextbox } from './hero.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
 
 export default function Hero({ children }) {
@@ -19,12 +19,12 @@ export default function Hero({ children }) {
   );
 
   return (
-    <div className={css.container}>
+    <div className={container}>
       <Background
-        className={css.background}
+        className={background}
         imageData={data.desktop.childImageSharp.fluid}
       >
-        <div className={css.heroTextbox}>{children}</div>
+        <div className={heroTextbox}>{children}</div>
       </Background>
     </div>
   );
