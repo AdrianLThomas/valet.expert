@@ -1,0 +1,22 @@
+$linkColor: rgb(33,33,33);
+* {
+  text-decoration: none;
+  font-family: -apple-system, Roboto, sans-serif, serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a,p {
+  color: $linkColor;
+  font-size: 14px;
+}
+
+.container {
+  position: relative;
+  min-height: 94vh;
+}
