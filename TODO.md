@@ -19,6 +19,7 @@
 - GA tracking code
 - Lighthouse - new vs old
 - SEO scan comparison
+- Rich results https://search.google.com/test/rich-results
 
 # Post Go Live
 - regression testing:
