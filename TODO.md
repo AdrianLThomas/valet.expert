@@ -24,6 +24,7 @@
 - regression testing:
  - e2e
  - SEO / lighthouse baseline?
+ - google web developer, checks ok? sitemap.xml etc.
 
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
