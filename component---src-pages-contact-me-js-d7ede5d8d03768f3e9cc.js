@@ -1,2 +1,0 @@
-(self.webpackChunkmmv=self.webpackChunkmmv||[]).push([[170],{5046:function(e,n,t){"use strict";t.r(n),t.d(n,{default:function(){return a}});var r=t(7294),u=t(1920);function a(e){var n=e.location;return r.createElement(u.Z,{currentPath:n.pathname},r.createElement("p",null,"Hello"))}}}]);
-//# sourceMappingURL=component---src-pages-contact-me-js-d7ede5d8d03768f3e9cc.js.map

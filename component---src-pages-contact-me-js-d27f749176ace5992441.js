@@ -1,0 +1,2 @@
+(self.webpackChunkmmv=self.webpackChunkmmv||[]).push([[170],{5046:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return c}});var r=n(7294),a=n(4601);function c(e){var t=e.location;return r.createElement(a.Z,{currentPath:t.pathname},r.createElement("p",null,"todo"),r.createElement("p",null,"https://schema.org/address"),r.createElement("p",null,"https://schema.org/openingHoursSpecification "))}}}]);
+//# sourceMappingURL=component---src-pages-contact-me-js-d27f749176ace5992441.js.map
