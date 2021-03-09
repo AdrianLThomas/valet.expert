@@ -4,19 +4,19 @@ import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const query = graphql`
-query SEO {
-  site {
-    siteMetadata {
-      defaultTitle: title
-      defaultDescription: description
-      defaultImage: image
-      siteUrl
-      contact {
-        instagram
-        facebook
-        email
-        phone
-      }
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        defaultDescription: description
+        defaultImage: image
+        siteUrl
+        contact {
+          instagram
+          facebook
+          email
+          phone
+        }
       }
     }
   }
@@ -24,7 +24,8 @@ query SEO {
 
 const SEO = () => {
   const { pathname } = useLocation();
-  const pageName = pathname.replaceAll('/', '')
+  const pageName = pathname
+    .replaceAll('/', '')
     .replaceAll('-', ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase());
   const { site } = useStaticQuery(query);
@@ -69,7 +70,10 @@ const SEO = () => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
-      <meta property="article:author" content={`https://www.facebook.com/${seo.facebook}`} />
+      <meta
+        property="article:author"
+        content={`https://www.facebook.com/${seo.facebook}`}
+      />
 
       <script type="application/ld+json">
         {`

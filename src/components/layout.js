@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 export default function Layout({ children, currentPath }) {
   return (
     <>
-      <SEO/>
+      <SEO />
       <Container className={container}>
         <Navigation currentPath={currentPath}></Navigation>
         {children}
