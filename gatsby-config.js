@@ -1,8 +1,10 @@
 module.exports = {
   pathPrefix: `/mmv`,
   siteMetadata: {
-    title: "Matty's Mobile Valeting",
     siteUrl: 'https://www.valet.expert',
+    title: "Matty's Mobile Valeting & Detailing in Scarborough",
+    description: "A mobile valeting service in Scarborough that will arrive to your location; ensuring your pride and joy looks as good as the day it left the showroom.",
+    image: "/images/Van.jpg"
   },
   plugins: [
     {
