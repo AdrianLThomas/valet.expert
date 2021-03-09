@@ -3,10 +3,6 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
-// facebookUsername
-// instagramUsername
-// titleTemplate
-// defaultDescription: description
 const query = graphql`
 query SEO {
   site {
@@ -15,14 +11,20 @@ query SEO {
       defaultDescription: description
       defaultImage: image
       siteUrl
+      contact {
+        instagram
+        facebook
+        email
+        phone
+      }
       }
     }
   }
 `;
 
 const SEO = () => {
-  const pageName = useLocation()
-    .pathname.replaceAll('/', '')
+  const { pathname } = useLocation();
+  const pageName = pathname.replaceAll('/', '')
     .replaceAll('-', ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase());
   const { site } = useStaticQuery(query);
@@ -31,16 +33,18 @@ const SEO = () => {
     defaultDescription,
     defaultImage,
     siteUrl,
-    // titleTemplate,
-    // facebookUsername,
-    // instagramUsername,
+    contact,
   } = site.siteMetadata;
 
   const seo = {
     title: pageName,
     description: defaultDescription,
     image: `${siteUrl}${defaultImage}`,
-    // url: `${siteUrl}${pathname}`,
+    url: `${siteUrl}${pathname}`,
+    facebook: contact.facebook,
+    instagram: contact.instagram,
+    phone: contact.phone,
+    email: contact.email,
   };
 
   return (
@@ -52,41 +56,34 @@ const SEO = () => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
 
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
 
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "${seo.url}",
+          "name": "${seo.title}",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "${contact.phone}",
+            "contactType": "Enquiries",
+            "email": "${contact.email},
+            "areaServed": "Scarborough and surrounding areas",
+          }
+        }
+      `}
+      </script>
     </Helmet>
-    //   {seo.url && <meta property="og:url" content={seo.url} />}
-    //   {(article ? true : null) && <meta property="og:type" content="article" />}
-    //   {seo.title && <meta property="og:title" content={seo.title} />}
-    //   {seo.description && (
-    //     <meta property="og:description" content={seo.description} />
-    //   )}
-    //   {seo.image && <meta property="og:image" content={seo.image} />}
-    //   <meta name="twitter:card" content="summary_large_image" />
-    //   {/* {twitterUsername && (
-    //         <meta name="twitter:creator" content={twitterUsername} />
-    //       )} */}
-    //   {seo.title && <meta name="twitter:title" content={seo.title} />}
-    //   {seo.description && (
-    //     <meta name="twitter:description" content={seo.description} />
-    //   )}
-    //   {seo.image && <meta name="twitter:image" content={seo.image} />}
-    //   <script type="application/ld+json">
-    //     {`
-    //     {
-    //       "@context": "https://schema.org",
-    //       "@type": "Organization",
-    //       "url": "https://www.spookytech.com",
-    //       "name": "Spooky technologies",
-    //       "contactPoint": {
-    //         "@type": "ContactPoint",
-    //         "telephone": "+5-601-785-8543",
-    //         "contactType": "Customer Support"
-    //       }
-    //     }
-    //   `}
-    //   </script>
-    // </Helmet>
   );
 };
 
