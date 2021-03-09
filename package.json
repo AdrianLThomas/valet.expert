@@ -6,10 +6,8 @@
   "keywords": [
     "gatsby"
   ],
-  {
-    "engines": {
-      "node": ">=15"
-    }
+  "engines": {
+    "node": ">=15"
   },
   "scripts": {
     "develop": "gatsby develop",
