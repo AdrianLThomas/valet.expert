@@ -13,6 +13,9 @@
 - Review accessibility
 - Facebook & Instagram links
 
+# Issues
+- Page title with prefix (/mmv) isn't formatting right.
+
 # Before Go Live
 - remove pathprefix when publishing to root
 - adjust robots.txt
