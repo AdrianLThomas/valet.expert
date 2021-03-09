@@ -56,15 +56,20 @@ const SEO = () => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
+      <meta name="robots" content="INDEX, FOLLOW" />
+
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
+      <meta property="og:locale" content="en_GB" />
 
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+
+      <meta property="article:author" content={`https://www.facebook.com/${seo.facebook}`} />
 
       <script type="application/ld+json">
         {`
