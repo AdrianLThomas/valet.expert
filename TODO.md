@@ -1,15 +1,10 @@
 # TODO
-- Redirects
-  -- /about -> /about-me
-  -- /services -> /services-and-pricing
-  -- /areas -> /areas-covered
-  -- /contact -> /contact-me
-
 - Recreate sub-pages
 - Favicon
 - app manifest, worth it?
 - Review accessibility
 - Facebook & Instagram links
+- style 404 page
 
 # Issues
 - nav links on mobile
@@ -27,6 +22,7 @@
  - e2e
  - SEO / lighthouse baseline?
  - google web developer, checks ok? sitemap.xml etc.
+ - set reminder: remove redirect pages from /static after 6 months.
 
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
