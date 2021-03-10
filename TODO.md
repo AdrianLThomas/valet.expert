@@ -6,9 +6,6 @@
 - Facebook & Instagram links
 - style 404 page
 
-# Issues
-- nav links on mobile
-
 # Before Go Live
 - remove pathprefix when publishing to root
 - adjust robots.txt
