@@ -15,6 +15,7 @@
 
 # Issues
 - Page title with prefix (/mmv) isn't formatting right.
+- nav links on mobile
 
 # Before Go Live
 - remove pathprefix when publishing to root

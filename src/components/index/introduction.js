@@ -7,19 +7,28 @@ import {
 } from '@material-ui/core';
 import { Link } from 'gatsby';
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import MapIcon from '@material-ui/icons/Map';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ChatIcon from '@material-ui/icons/Chat';
 import {
-  icon,
   root,
   cardContent,
   cardHeader,
   button,
 } from './introduction.module.scss';
 
+const useStyles = makeStyles({
+  icon: {
+    display: 'block',
+    margin: 'auto',
+    fontSize: 50,
+  },
+});
+
 export default function ({ className }) {
+  const { icon } = useStyles();
   const established = 2004;
   const now = new Date().getFullYear();
 
