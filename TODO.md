@@ -6,15 +6,12 @@
   -- /contact -> /contact-me
 
 - Recreate sub-pages
-- SEO / metadata tags throughout
-- Page titles (include 'Scarborough')
 - Favicon
 - app manifest, worth it?
 - Review accessibility
 - Facebook & Instagram links
 
 # Issues
-- Page title with prefix (/mmv) isn't formatting right.
 - nav links on mobile
 
 # Before Go Live

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, withPrefix } from 'gatsby';
 
 const query = graphql`
   query SEO {
@@ -23,12 +23,14 @@ const query = graphql`
 `;
 
 const SEO = () => {
+  const { site } = useStaticQuery(query);
+
   const { pathname } = useLocation();
   const pageName = pathname
+    .replace(withPrefix('/'), '')
     .replaceAll('/', '')
     .replaceAll('-', ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase());
-  const { site } = useStaticQuery(query);
   const {
     defaultTitle,
     defaultDescription,
