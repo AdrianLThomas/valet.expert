@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 
 const useStyles = makeStyles({
   root: {
@@ -10,30 +10,41 @@ const useStyles = makeStyles({
     left: 0,
     bottom: 0,
     width: '100%',
+    borderTop: '1px lightgrey solid',
+    padding: 0,
+  },
+  action: {
+    padding: 0,
   },
 });
 
-export default function FloatingNavigation({ navigationItems, className }) {
+export default function FloatingNavigation({
+  currentPath,
+  navigationItems,
+  className,
+}) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(currentPath);
 
   return (
     <BottomNavigation
       value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
+      onChange={(_, newPath) => {
+        setValue(newPath);
       }}
       showLabels
       className={`${classes.root} ${className}`}
     >
       {navigationItems.map((nav) => (
-        <Link to={nav.href} key={nav.href}>
-          <BottomNavigationAction
-            icon={nav.icon}
-            label={nav.label}
-            showLabel={true}
-          />
-        </Link>
+        <BottomNavigationAction
+          className={classes.action}
+          key={nav.href}
+          component={Link}
+          to={nav.href}
+          icon={nav.icon}
+          label={nav.shortLabel}
+          value={withPrefix(nav.href)}
+        />
       ))}
     </BottomNavigation>
   );

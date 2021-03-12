@@ -9,9 +9,8 @@ header {
   font-size: 1.7em;
   font-family: "Bangers";
 
-  // tighten logo against menu items - on mobile only
-  @media only screen and (max-width: 600px) {
-    margin-bottom: -12px;
+  @media only screen and (max-width: 600px) { // mobile only
+    font-size: 6.5vw;
   }
 }
 

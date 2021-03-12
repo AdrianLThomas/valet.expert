@@ -37,15 +37,31 @@ const useStyles = makeStyles((theme) => {
 });
 
 const navItems = [
-  { href: '/', label: 'Home', icon: <HomeIcon /> },
-  { href: '/about-me/', label: 'About Me', icon: <InfoIcon /> },
+  { href: '/', label: 'Home', shortLabel: 'Home', icon: <HomeIcon /> },
+  {
+    href: '/about-me/',
+    label: 'About Me',
+    shortLabel: 'About',
+    icon: <InfoIcon />,
+  },
   {
     href: '/services-and-pricing/',
     label: 'Services & Pricing',
+    shortLabel: 'Pricing',
     icon: <PaymentIcon />,
   },
-  { href: '/areas-covered/', label: 'Areas Covered', icon: <MapIcon /> },
-  { href: '/contact-me/', label: 'Contact Me', icon: <ContactPhoneIcon /> },
+  {
+    href: '/areas-covered/',
+    label: 'Areas Covered',
+    shortLabel: 'Areas',
+    icon: <MapIcon />,
+  },
+  {
+    href: '/contact-me/',
+    label: 'Contact Me',
+    shortLabel: 'Contact',
+    icon: <ContactPhoneIcon />,
+  },
 ];
 
 export default function Layout({ children, currentPath }) {
@@ -65,6 +81,7 @@ export default function Layout({ children, currentPath }) {
       </Container>
       <FloatingNavigation
         className={classes.bottomNav}
+        currentPath={currentPath}
         navigationItems={navItems}
       />
     </>
