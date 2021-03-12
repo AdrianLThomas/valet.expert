@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => {
     socialIcon: {
       padding: '10px 20px 10px 20px',
       '&:hover': {
-          transform: 'translateY(3px)',
+        transform: 'translateY(3px)',
       },
       transition: 'transform 500ms',
       willChange: 'transform',
