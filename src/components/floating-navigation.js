@@ -14,7 +14,14 @@ const useStyles = makeStyles({
     padding: 0,
   },
   action: {
+    '&$selected': {
+      color: 'black',
+    },
     padding: 0,
+  },
+  selected: {
+    // intentionally empty
+    // generated to work with DOM
   },
 });
 
@@ -38,6 +45,7 @@ export default function FloatingNavigation({
       {navigationItems.map((nav) => (
         <BottomNavigationAction
           className={classes.action}
+          classes={{ selected: classes.selected }}
           key={nav.href}
           component={Link}
           to={nav.href}
