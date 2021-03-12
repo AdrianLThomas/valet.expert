@@ -1,7 +1,6 @@
 # TODO
 - Recreate sub-pages
 - Review accessibility
-- Facebook & Instagram links
 - style 404 page
 
 # Before Go Live

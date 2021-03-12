@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => {
   return {
     container: {
       [mobile]: {
-        marginBottom: '10rem',
+        marginBottom: '13rem',
       },
     },
     topNav: {
