@@ -1,7 +1,5 @@
 # TODO
 - Recreate sub-pages
-- Favicon
-- app manifest, worth it?
 - Review accessibility
 - Facebook & Instagram links
 - style 404 page
