@@ -1,4 +1,4 @@
-$navSelected: 1px solid black;
+$navSelected: 5px solid black;
 $navBorder: 1px solid transparent;
 
 header {
@@ -20,6 +20,8 @@ header {
   font-family: "DM Sans";
   font-size: 1em;
   padding: 0.2em;
+  will-change: auto;
+  transition: border-width 0.2s linear;
 }
 
 .navLink:hover {
