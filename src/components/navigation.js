@@ -14,7 +14,7 @@ export default function Navigation({
     withPrefix(href) === currentPath ? selected : '';
   return (
     <header className={className}>
-      <Grid container spacing={3} alignItems="center">
+      <Grid container alignItems="center">
         <Grid item xs={12} sm={4} md={4}>
           <Link className={headerText} to="/">
             <h1>{"Matty's Mobile Valeting & Detailing"}</h1>

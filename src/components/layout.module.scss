@@ -9,6 +9,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  margin: 0;
 }
 
 a,p {
@@ -17,6 +18,16 @@ a,p {
 }
 
 .container {
-  position: relative;
-  min-height: 94vh;
+  flex: 1;
+}
+
+.root {
+  display: flex;
+  min-height: 98vh;
+  min-width: 98vw; // little scroll bar?
+  @media only screen and (max-width: 600px) {
+    // make room for nav on mobile
+    min-height: 95vh;
+  }
+  flex-direction: column;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
-import { container } from './layout.module.scss';
+import { container, root } from './layout.module.scss';
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
@@ -16,11 +16,6 @@ const useStyles = makeStyles((theme) => {
   const mobile = theme.breakpoints.down('xs');
   const notMobile = theme.breakpoints.up('sm');
   return {
-    container: {
-      [mobile]: {
-        marginBottom: '13rem',
-      },
-    },
     topNav: {
       [mobile]: {
         '& #top-nav-links': {
@@ -70,15 +65,16 @@ export default function Layout({ children, currentPath }) {
   return (
     <>
       <SEO />
-      <Container className={`${container} ${classes.container}`}>
+      <div className={root}>
         <Navigation
           className={classes.topNav}
           currentPath={currentPath}
           navigationItems={navItems.slice(1)}
         ></Navigation>
-        {children}
+
+        <Container className={container}>{children}</Container>
         <Footer />
-      </Container>
+      </div>
       <FloatingNavigation
         className={classes.bottomNav}
         currentPath={currentPath}

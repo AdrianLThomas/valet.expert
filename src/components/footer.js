@@ -4,18 +4,14 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const useStyles = makeStyles((theme) => {
   const border = '1px lightgrey solid';
+  const mobile = theme.breakpoints.down('xs');
   return {
     footer: {
-      width: '100vw',
-      left: '50%',
-      right: '50%',
-      marginLeft: '-50vw',
-      marginRight: '-50vw',
-      position: 'absolute',
-      bottom: 0,
-      height: '2.5rem',
-      marginBottom: '-3rem',
       borderTop: border,
+      [mobile]: {
+        // push up footer when mobile nav hides it
+        marginBottom: '3rem',
+      },
     },
     divider: {
       borderTop: border,

@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     width: '100%',
     borderTop: '1px lightgrey solid',
     padding: 0,
+    margin: 0,
   },
   action: {
     '&$selected': {
