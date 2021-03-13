@@ -121,6 +121,8 @@ const SEO = () => {
       />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
+
+      <html lang="en" />
     </Helmet>
   );
 };

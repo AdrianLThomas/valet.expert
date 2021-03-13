@@ -2,14 +2,14 @@
 - Recreate sub-pages
 - Review accessibility
   - tab navigation
-  
+  - social links do not have discernable name  
+
 - style 404 page
 
 # Before Go Live
 - remove pathprefix when publishing to root
 - adjust robots.txt
 - GA tracking code
-- Lighthouse - new vs old
 - SEO scan comparison
 - Rich results https://search.google.com/test/rich-results
 
