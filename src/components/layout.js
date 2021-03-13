@@ -66,13 +66,14 @@ export default function Layout({ children, currentPath }) {
     <>
       <SEO />
       <div className={root}>
-        <Navigation
-          className={classes.topNav}
-          currentPath={currentPath}
-          navigationItems={navItems.slice(1)}
-        ></Navigation>
-
-        <Container className={container}>{children}</Container>
+        <Container className={container}>
+          <Navigation
+            className={classes.topNav}
+            currentPath={currentPath}
+            navigationItems={navItems.slice(1)}
+          ></Navigation>
+          {children}
+        </Container>
         <Footer />
       </div>
       <FloatingNavigation
