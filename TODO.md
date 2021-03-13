@@ -1,6 +1,8 @@
 # TODO
 - Recreate sub-pages
 - Review accessibility
+  - tab navigation
+  
 - style 404 page
 
 # Before Go Live

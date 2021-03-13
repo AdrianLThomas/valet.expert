@@ -21,7 +21,7 @@ export default function Home({ location }) {
   return (
     <Layout currentPath={location.pathname}>
       <Hero>
-        <h1 className={classes.heroTitle}>Friendly. Professional. Reliable.</h1>
+        <h2 className={classes.heroTitle}>Friendly. Professional. Reliable.</h2>
       </Hero>
 
       <Introduction className={classes.introSpacing} />
