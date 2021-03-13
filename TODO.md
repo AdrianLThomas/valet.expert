@@ -11,9 +11,6 @@
 - SEO scan comparison
 - Rich results https://search.google.com/test/rich-results
 
-# Issues 
-- Spacing on tablet/desktop (tablet overlaps, desktop scrolls) - rewrite/rethink this section? css overload..
-
 # Post Go Live
 - regression testing:
  - e2e
