@@ -22,9 +22,9 @@
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
 to "gatsby-plugin-image" for better performance and a simpler API. See
 https://gatsby.dev/migrate-images to learn how.
-  - Also, see: https://github.com/timhagn/gatsby-background-image/issues/147
+   - Also, see: https://github.com/timhagn/gatsby-background-image/issues/147
 - Material UI issues with Gatsby v3 (material UI)
-  - https://github.com/hupe1980/gatsby-plugin-material-ui/issues/65
+   - https://github.com/hupe1980/gatsby-plugin-material-ui/issues/65
 # General Notes
 - Funnel: Home Page > Services > Contact
 - SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
