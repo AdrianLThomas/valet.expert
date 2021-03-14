@@ -13,6 +13,9 @@
 - SEO scan comparison
 - Rich results https://search.google.com/test/rich-results
 
+# Issues
+- FOUC, font mostly, I suspect: https://www.gatsbyjs.com/plugins/gatsby-plugin-material-ui/
+
 # Post Go Live
 - regression testing:
  - e2e
