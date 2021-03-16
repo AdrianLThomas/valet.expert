@@ -12,11 +12,7 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import MapIcon from '@material-ui/icons/Map';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ChatIcon from '@material-ui/icons/Chat';
-import {
-  root,
-  cardHeader,
-  button,
-} from './introduction.module.scss';
+import { root, cardHeader, button } from './introduction.module.scss';
 
 const useStyles = makeStyles({
   icon: {

@@ -1,10 +1,5 @@
 # TODO
 - Recreate sub-pages
-- Review accessibility
-  - tab navigation
-  - social links do not have discernable name  
-
-- style 404 page
 
 # Before Go Live
 - remove pathprefix when publishing to root
@@ -13,15 +8,19 @@
 - SEO scan comparison
 - Rich results https://search.google.com/test/rich-results
 
-# Issues
-- FOUC, font mostly, I suspect: https://www.gatsbyjs.com/plugins/gatsby-plugin-material-ui/
-
 # Post Go Live
 - regression testing:
  - e2e
  - SEO / lighthouse baseline?
  - google web developer, checks ok? sitemap.xml etc.
  - set reminder: remove redirect pages from /static after 6 months.
+
+ # Post Go Live Improvements
+ - Review accessibility
+  - tab navigation
+  - social links do not have discernable name  
+
+- style 404 page
 
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
