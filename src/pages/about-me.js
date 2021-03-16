@@ -79,8 +79,6 @@ export default function AboutMe({ location }) {
         throughout the region.
       </p>
 
-      <p>TODO! Google and FB reviews?</p>
-
       <div className={classes.root}>
         <Grid container spacing={2}>
           <Grid container item xs={12} sm={6}>
