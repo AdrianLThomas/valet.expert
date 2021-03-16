@@ -73,7 +73,7 @@ export default function ({ className }) {
       {tiers.map((tile) => (
         <Grid item key={tile.title} xs={12} sm={6} md={3}>
           <Card className={root}>
-            <CardContent className={cardContent}>
+            <CardContent>
               {tile.icon}
               <Typography
                 gutterBottom
