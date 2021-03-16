@@ -14,7 +14,6 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import ChatIcon from '@material-ui/icons/Chat';
 import {
   root,
-  cardContent,
   cardHeader,
   button,
 } from './introduction.module.scss';
