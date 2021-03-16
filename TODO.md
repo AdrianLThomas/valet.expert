@@ -10,10 +10,10 @@
 
 # Post Go Live
 - regression testing:
- - e2e
- - SEO / lighthouse baseline?
+ - e2e?
  - google web developer, checks ok? sitemap.xml etc.
  - set reminder: remove redirect pages from /static after 6 months.
+ - automate lighthouse score in GHA pipeline - nightly job?
 
  # Post Go Live Improvements
  - Review accessibility
@@ -31,8 +31,4 @@ https://gatsby.dev/migrate-images to learn how.
    - https://github.com/hupe1980/gatsby-plugin-material-ui/issues/65
 # General Notes
 - Funnel: Home Page > Services > Contact
-- SEO tips: https://www.gatsbyjs.com/docs/tutorial/part-eight/
 - Maintain SEO: https://moz.com/blog/how-to-avoid-an-seo-disaster-when-changing-your-website
-- showcase, any ideas? https://www.gatsbyjs.com/showcase/?
-- Footer https://material-ui.com/getting-started/templates/sticky-footer/
-- Hero ideas: https://www.optimizely.com/uk/optimization-glossary/hero-image/
