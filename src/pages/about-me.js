@@ -59,6 +59,7 @@ export default function AboutMe({ location }) {
 
   return (
     <Layout currentPath={location.pathname}>
+      <h1>{"About Matty's Mobile Valeting & Detailing, est. 2004"}</h1>
       <p>
         My business was established in 2004 in the vibrant seaside town of
         Scarborough.
