@@ -5,19 +5,49 @@ import {
   Grid,
   Button,
   Typography,
+  ThemeProvider,
+  createMuiTheme,
 } from '@material-ui/core';
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import { yellow } from '@material-ui/core/colors';
 import { Link } from 'gatsby';
 
 const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
-    background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
     height: '100%',
+    '& h4': {
+      textAlign: 'center',
+      fontSize: '1.5em',
+      margin: 0,
+    }
+  },
+  cardContent: {
+    width: '100%',
+  },
+  header: {
+    textAlign: 'center',
+    borderBottom: '1px grey solid',
+    color: '#ffeb3b',
+    textShadow: '1px 1px black',
+    fontWeight: 'bold',
+    letterSpacing: '0.1em',
+    paddingBottom: '0.5em',
+    textTransform: 'uppercase'
+  },
+  description: {
+    borderBottom: '1px grey solid',
+    paddingBottom: '1em',
   },
 }));
+
+const buttonTheme = createMuiTheme({
+  palette: {
+    primary: yellow,
+  },
+});
 
 const services = [
   {
@@ -27,7 +57,7 @@ const services = [
       xs: 12,
       sm: 6,
       md: 4,
-      lg: 3,
+      lg: 4,
     },
     description: (
       <>
@@ -55,11 +85,14 @@ const services = [
       xs: 12,
       sm: 6,
       md: 4,
-      lg: 3,
+      lg: 4,
     },
     description: (
       <>
         <h4>Starting from £70</h4>
+        <p>
+          <strong>Includes Mini Valet</strong>, plus:
+        </p>
         <ul>
           <li>{'Glove compartment'}</li>
           <li>{'Carpets, door cards & rooflining all shampooed and dried'}</li>
@@ -83,7 +116,7 @@ const services = [
       xs: 12,
       sm: 6,
       md: 4,
-      lg: 3,
+      lg: 4,
     },
     description: (
       <>
@@ -188,21 +221,36 @@ export default function Services() {
       {services.map((service) => {
         return (
           <Grid item {...service.size} key={service.name}>
-            <Card className={classes.root}>
-              <CardContent>
-                <Typography variant="h5" component="h2">
-                  {service.name}
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {service.description}
-                </Typography>
-                <CardActions>
-                  <Button size="small" component={Link} to="/contact-me">
-                    {service.contactMessage}
-                  </Button>
-                </CardActions>
-              </CardContent>
-            </Card>
+            <ThemeProvider theme={buttonTheme}>
+              <Card className={classes.root}>
+                <CardContent className={classes.cardContent}>
+                  <Typography
+                    variant="h5"
+                    component="h2"
+                    className={classes.header}
+                  >
+                    {service.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    component="p"
+                    className={classes.description}
+                  >
+                    {service.description}
+                  </Typography>
+                  <CardActions>
+                    <Button
+                      component={Link}
+                      to="/contact-me"
+                      variant="contained"
+                      color="primary"
+                    >
+                      {service.contactMessage}
+                    </Button>
+                  </CardActions>
+                </CardContent>
+              </Card>
+            </ThemeProvider>
           </Grid>
         );
       })}
