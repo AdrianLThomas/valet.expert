@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
       textAlign: 'center',
       fontSize: '1.5em',
       margin: 0,
-    }
+    },
   },
   cardContent: {
     width: '100%',
@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 'bold',
     letterSpacing: '0.1em',
     paddingBottom: '0.5em',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
   description: {
     borderBottom: '1px grey solid',
