@@ -1,18 +1,10 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  Grid,
-  Typography,
-} from '@material-ui/core';
-import { Link } from 'gatsby';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import MapIcon from '@material-ui/icons/Map';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ChatIcon from '@material-ui/icons/Chat';
-import { root, cardHeader, button } from './introduction.module.scss';
+import CardGrid from '../card-grid.js';
 
 const useStyles = makeStyles({
   icon: {
@@ -27,6 +19,11 @@ export default function ({ className }) {
   const established = 2004;
   const now = new Date().getFullYear();
 
+  const size = {
+    xs: 12,
+    sm: 6,
+    md: 3,
+  };
   const tiers = [
     {
       title: 'Reputable',
@@ -36,6 +33,7 @@ export default function ({ className }) {
       buttonText: 'About Me',
       href: '/about-me/',
       icon: <ThumbUpIcon className={icon} />,
+      size,
     },
     {
       title: 'My Services',
@@ -44,6 +42,7 @@ export default function ({ className }) {
       buttonText: 'Services & Pricing',
       href: '/services-and-pricing/',
       icon: <MapIcon className={icon} />,
+      size,
     },
     {
       title: 'Flexible',
@@ -53,6 +52,7 @@ export default function ({ className }) {
       buttonText: 'Areas Covered',
       href: '/areas-covered/',
       icon: <SettingsIcon className={icon} />,
+      size,
     },
     {
       title: 'Contact Me',
@@ -61,36 +61,9 @@ export default function ({ className }) {
       buttonText: 'Contact Me',
       href: '/contact-me/',
       icon: <ChatIcon className={icon} />,
+      size,
     },
   ];
 
-  return (
-    <Grid container spacing={1} alignItems="stretch" className={className}>
-      {tiers.map((tile) => (
-        <Grid item key={tile.title} xs={12} sm={6} md={3}>
-          <Card className={root}>
-            <CardContent>
-              {tile.icon}
-              <Typography
-                gutterBottom
-                variant="h5"
-                component="h2"
-                className={cardHeader}
-              >
-                {tile.title}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {tile.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Link to={tile.href} className={button}>
-                {tile.buttonText}
-              </Link>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-  );
+  return <CardGrid className={className} cards={tiers} />;
 }
