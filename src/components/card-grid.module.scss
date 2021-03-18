@@ -1,8 +1,11 @@
+@use './colours.scss';
+
 .root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  // background-color: colours.$level2;
 }
 
 .cardHeader {
@@ -12,12 +15,12 @@
 .button {
   text-align: center;
   font-size: 1em;
-  border: 1px solid black;
   padding: 10px;
   width: 100%;
   font-weight: bold;
   transition: transform 500ms;
   will-change: transform;
+  border: 1px solid colours.$level8;
 }
 
 .button:hover {
