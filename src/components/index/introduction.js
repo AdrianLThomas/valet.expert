@@ -24,14 +24,13 @@ export default function ({ className }) {
     sm: 6,
     md: 3,
   };
-  const tiers = [
+  const items = [
     {
       title: 'Reputable',
       description: `Established in ${established}, I have been detailing for customers in Scarborough for over ${
         now - established
       } years. The quality of my work is reflected by my 5 star reviews on Google and Facebook.`,
-      buttonText: 'About Me',
-      href: '/about-me/',
+      button: { text: 'About Me', href: '/about-me/' },
       icon: <ThumbUpIcon className={icon} />,
       size,
     },
@@ -39,8 +38,7 @@ export default function ({ className }) {
       title: 'My Services',
       description:
         'I provide a range of services and with the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
-      buttonText: 'Services & Pricing',
-      href: '/services-and-pricing/',
+      button: { text: 'Services & Pricing', href: '/services-and-pricing/' },
       icon: <MapIcon className={icon} />,
       size,
     },
@@ -49,8 +47,7 @@ export default function ({ className }) {
       description:
         "I can come to you, whether it's your place of work or home. I'm available Monday - Saturday and I cover the entire Scarborough area, including most of North Yorkshire.",
 
-      buttonText: 'Areas Covered',
-      href: '/areas-covered/',
+      button: { text: 'Areas Covered', href: '/areas-covered/' },
       icon: <SettingsIcon className={icon} />,
       size,
     },
@@ -58,12 +55,11 @@ export default function ({ className }) {
       title: 'Contact Me',
       description:
         "I'm easy to get hold of, just call or leave me a message at your convenience.",
-      buttonText: 'Contact Me',
-      href: '/contact-me/',
+      button: { text: 'Contact Me', href: '/contact-me/' },
       icon: <ChatIcon className={icon} />,
       size,
     },
   ];
 
-  return <CardGrid className={className} cards={tiers} />;
+  return <CardGrid className={className} cards={items} />;
 }

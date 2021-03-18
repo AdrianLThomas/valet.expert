@@ -1,58 +1,11 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  Grid,
-  Button,
-  Typography,
-  ThemeProvider,
-  createMuiTheme,
-} from '@material-ui/core';
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
-import { yellow } from '@material-ui/core/colors';
-import { Link } from 'gatsby';
-
-const useStyles = makeStyles(() => ({
-  root: {
-    display: 'flex',
-    height: '100%',
-    '& h4': {
-      textAlign: 'center',
-      fontSize: '1.5em',
-      margin: 0,
-    },
-  },
-  cardContent: {
-    width: '100%',
-  },
-  header: {
-    textAlign: 'center',
-    borderBottom: '1px grey solid',
-    color: '#ffeb3b',
-    textShadow: '1px 1px black',
-    fontWeight: 'bold',
-    letterSpacing: '0.1em',
-    paddingBottom: '0.5em',
-    textTransform: 'uppercase',
-  },
-  description: {
-    borderBottom: '1px grey solid',
-    paddingBottom: '1em',
-  },
-}));
-
-const buttonTheme = createMuiTheme({
-  palette: {
-    primary: yellow,
-  },
-});
+import CardGrid from '../card-grid';
 
 const services = [
   {
-    name: 'Mini Valet',
-    contactMessage: 'Book a mini valet',
+    title: 'Mini Valet',
+    button: { text: 'Book a mini valet', href: '/contact-me/' },
     size: {
       xs: 12,
       sm: 6,
@@ -79,8 +32,8 @@ const services = [
     ),
   },
   {
-    name: 'Full Valet',
-    contactMessage: 'Book a full valet',
+    title: 'Full Valet',
+    button: { text: 'Book a full valet', href: '/contact-me/' },
     size: {
       xs: 12,
       sm: 6,
@@ -110,8 +63,8 @@ const services = [
     ),
   },
   {
-    name: 'Hand Polishing & Waxing',
-    contactMessage: 'Book a hand polish & wax',
+    title: 'Hand Polishing & Waxing',
+    button: { text: 'Book a hand polish & wax', href: '/contact-me/' },
     size: {
       xs: 12,
       sm: 6,
@@ -130,8 +83,8 @@ const services = [
     ),
   },
   {
-    name: 'Machine Polish',
-    contactMessage: 'Book a machine polish',
+    title: 'Machine Polish',
+    button: { text: 'Book a machine polish', href: '/contact-me/' },
     size: {
       xs: 12,
       sm: 6,
@@ -150,7 +103,7 @@ const services = [
     ),
   },
   {
-    name: 'Ultimate Paint and Fabric Protection',
+    title: 'Ultimate Paint and Fabric Protection',
     size: {
       xs: 12,
       sm: 6,
@@ -159,6 +112,7 @@ const services = [
     },
     description: (
       <>
+        <h4>Please contact me for prices</h4>
         <p>
           Paint and fabric protection from premium valeting product
           manufacturers
@@ -170,14 +124,13 @@ const services = [
           <li>GEN-3 Glasscoat</li>
           <li>Gtechniq Hybrid Coating</li>
         </ul>
-        <p>Please contact me for prices</p>
       </>
     ),
-    contactMessage: 'Book paint & fabric protection',
+    button: { text: 'Book paint & fabric protection', href: '/contact-me/' },
   },
   {
-    name: 'Engine Bay Steam Clean & Detail',
-    contactMessage: 'Book an engine bay steam clean & detail',
+    title: 'Engine Bay Steam Clean & Detail',
+    button: { text: 'Book an engine bay steam clean', href: '/contact-me/' },
     size: {
       xs: 12,
       sm: 6,
@@ -196,8 +149,8 @@ const services = [
     ),
   },
   {
-    name: 'Other',
-    contactMessage: 'Contact me',
+    title: 'Other',
+    button: { text: 'Contact me', href: '/contact-me/' },
     size: {
       xs: 12,
       sm: 12,
@@ -214,46 +167,5 @@ const services = [
 ];
 
 export default function Services() {
-  const classes = useStyles();
-
-  return (
-    <Grid container spacing={2} direction="row">
-      {services.map((service) => {
-        return (
-          <Grid item {...service.size} key={service.name}>
-            <ThemeProvider theme={buttonTheme}>
-              <Card className={classes.root}>
-                <CardContent className={classes.cardContent}>
-                  <Typography
-                    variant="h5"
-                    component="h2"
-                    className={classes.header}
-                  >
-                    {service.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    component="p"
-                    className={classes.description}
-                  >
-                    {service.description}
-                  </Typography>
-                  <CardActions>
-                    <Button
-                      component={Link}
-                      to="/contact-me"
-                      variant="contained"
-                      color="primary"
-                    >
-                      {service.contactMessage}
-                    </Button>
-                  </CardActions>
-                </CardContent>
-              </Card>
-            </ThemeProvider>
-          </Grid>
-        );
-      })}
-    </Grid>
-  );
+  return <CardGrid cards={services} />;
 }

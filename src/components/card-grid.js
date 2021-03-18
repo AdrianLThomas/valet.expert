@@ -25,13 +25,13 @@ export default function CardGrid({ className, cards }) {
               >
                 {card.title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" component="p">
                 {card.description}
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to={card.href} className={button}>
-                {card.buttonText}
+              <Link to={card.button.href} className={button}>
+                {card.button.text}
               </Link>
             </CardActions>
           </Card>
