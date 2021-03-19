@@ -20,7 +20,7 @@ export default function Home({ location }) {
 
   return (
     <Layout currentPath={location.pathname}>
-      <Hero>
+      <Hero type="van">
         <h2 className={classes.heroTitle}>Friendly. Professional. Reliable.</h2>
       </Hero>
 

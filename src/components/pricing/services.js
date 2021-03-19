@@ -1,18 +1,9 @@
 import React from 'react';
 import CardGrid from '../card-grid';
-import MapIcon from '@material-ui/icons/Map';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 
-export default function Services() {
-  const useStyles = makeStyles({
-    icon: {
-      display: 'block',
-      margin: 'auto',
-      fontSize: 50,
-    },
-  });
-
-  const { icon } = useStyles();
+export default function Services({ className }) {
+  // const { icon } = useStyles();
 
   const services = [
     {
@@ -39,7 +30,7 @@ export default function Services() {
             <li>{'Pockets & ash trays'}</li>
             <li>{'Air freshener'}</li>
           </ul>
-  
+
           <span>4x4 and 7 seaters start from £55.</span>
         </>
       ),
@@ -62,7 +53,9 @@ export default function Services() {
           </p>
           <ul>
             <li>{'Glove compartment'}</li>
-            <li>{'Carpets, door cards & rooflining all shampooed and dried'}</li>
+            <li>
+              {'Carpets, door cards & rooflining all shampooed and dried'}
+            </li>
             <li>
               {
                 'Seats shampooed and dried, or if leather interior, then a luxorious leather treatment is applied'
@@ -71,7 +64,7 @@ export default function Services() {
             <li>{'Full car deodorising system'}</li>
             <li>{'Outside polished/waxed'}</li>
           </ul>
-  
+
           <span>4x4 and 7 seaters start from £90.</span>
         </>
       ),
@@ -159,8 +152,8 @@ export default function Services() {
         <>
           <h4>Starting from £40</h4>
           <p>
-            The engine bay is steam cleaned and dressed to a high standard. Whilst
-            the upmost care is taken to ensure electrical components are
+            The engine bay is steam cleaned and dressed to a high standard.
+            Whilst the upmost care is taken to ensure electrical components are
             protected, it is the customers risk to undertake this procedure.
           </p>
         </>
@@ -179,10 +172,15 @@ export default function Services() {
       description: (
         <p>
           Can't find what you're looking for? I offer a variety of valeting and
-          detailing services, so don't hestiate to contact me for further details.
+          detailing services, so don't hestiate to contact me for further
+          details.
         </p>
       ),
     },
   ];
-  return <CardGrid cards={services} />;
+  return (
+    <div className={className}>
+      <CardGrid cards={services} />
+    </div>
+  );
 }

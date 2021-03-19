@@ -18,7 +18,7 @@ const Background = ({ className, imageData, children }) => {
   return (
     <BackgroundImage
       Tag="section"
-      className={`${className} ${classes.background}`}
+      className={`${classes.background} ${className}`}
       fluid={imageData}
     >
       {children}

@@ -3,13 +3,20 @@ import Background from './background';
 import { container, background, heroTextbox } from './hero.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
 
-export default function Hero({ children }) {
+export default function Hero({ children, type, classOverride }) {
   const data = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "Hero.jpg" }) {
+        van: file(relativePath: { eq: "Hero.jpg" }) {
           childImageSharp {
             fluid(quality: 75, maxWidth: 2160) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        beading: file(relativePath: { eq: "Beading.jpg" }) {
+          childImageSharp {
+            fluid(quality: 75, maxWidth: 2160, maxHeight: 350) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -17,12 +24,11 @@ export default function Hero({ children }) {
       }
     `
   );
-
   return (
     <div className={container}>
       <Background
-        className={background}
-        imageData={data.desktop.childImageSharp.fluid}
+        className={classOverride ? classOverride : background}
+        imageData={data[type].childImageSharp.fluid}
       >
         <div className={heroTextbox}>{children}</div>
       </Background>
