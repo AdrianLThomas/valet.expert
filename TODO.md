@@ -1,6 +1,7 @@
 # TODO
 - Recreate sub-pages
 - Any metadata / seo that can be applied specifically to contact / pricing etc to help bots?
+- hero images
 
 # Before Go Live
 - remove pathprefix when publishing to root
