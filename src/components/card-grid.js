@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Card,
   CardActions,
@@ -7,6 +8,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import { Link } from 'gatsby';
+
 import { root, cardHeader, button } from './card-grid.module.scss';
 
 export default function CardGrid({ className, cards }) {

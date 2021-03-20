@@ -1,8 +1,10 @@
 import * as React from 'react';
-import Layout from '../components/layout';
+
+import { makeStyles } from '@material-ui/core/styles';
+
 import Hero from '../components/hero';
 import Introduction from '../components/index/introduction';
-import { makeStyles } from '@material-ui/core/styles';
+import Layout from '../components/layout';
 
 const useStyles = makeStyles(() => ({
   heroTitle: {

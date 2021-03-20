@@ -1,7 +1,9 @@
 import * as React from 'react';
+
+import { graphql, useStaticQuery } from 'gatsby';
+
 import Background from './background';
 import { container, background, heroTextbox } from './hero.module.scss';
-import { graphql, useStaticQuery } from 'gatsby';
 
 export default function Hero({ children, type, classOverride }) {
   const data = useStaticQuery(

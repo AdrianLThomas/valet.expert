@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 
+import { makeStyles } from '@material-ui/core/styles';
 import BackgroundImage from 'gatsby-background-image';
 
 const useStyles = makeStyles({

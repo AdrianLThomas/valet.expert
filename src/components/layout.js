@@ -1,16 +1,18 @@
 import React from 'react';
-import Navigation from '../components/navigation';
-import Footer from '../components/footer';
-import { container, root } from './layout.module.scss';
+
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
-import PaymentIcon from '@material-ui/icons/Payment';
 import MapIcon from '@material-ui/icons/Map';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import PaymentIcon from '@material-ui/icons/Payment';
+
+import Footer from '../components/footer';
+import Navigation from '../components/navigation';
 import SEO from '../components/seo';
 import FloatingNavigation from './floating-navigation';
+import { container, root } from './layout.module.scss';
 
 const useStyles = makeStyles((theme) => {
   const mobile = theme.breakpoints.down('xs');

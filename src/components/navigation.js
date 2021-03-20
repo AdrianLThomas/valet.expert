@@ -1,9 +1,12 @@
-import { Link, withPrefix } from 'gatsby';
 import React from 'react';
+
+import { Grid } from '@material-ui/core';
+import { Link, withPrefix } from 'gatsby';
+
 import { selected, headerText, navLink } from './navigation.module.scss';
+
 import '@fontsource/bangers';
 import '@fontsource/dm-sans';
-import { Grid } from '@material-ui/core';
 
 export default function Navigation({
   currentPath,

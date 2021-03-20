@@ -1,7 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql, withPrefix } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const query = graphql`
   query SEO {

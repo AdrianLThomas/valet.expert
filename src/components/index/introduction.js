@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import ChatIcon from '@material-ui/icons/Chat';
 import MapIcon from '@material-ui/icons/Map';
 import SettingsIcon from '@material-ui/icons/Settings';
-import ChatIcon from '@material-ui/icons/Chat';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+
 import CardGrid from '../card-grid.js';
 
 const useStyles = makeStyles({

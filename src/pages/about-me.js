@@ -1,8 +1,10 @@
 import * as React from 'react';
+
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
+
 import Layout from '../components/layout';
 
 const useStyles = makeStyles(() => ({

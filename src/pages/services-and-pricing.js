@@ -1,8 +1,10 @@
 import * as React from 'react';
+
+import { makeStyles } from '@material-ui/core/styles';
+
+import Hero from '../components/hero';
 import Layout from '../components/layout';
 import Services from '../components/pricing/services';
-import Hero from '../components/hero';
-import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   heroTitle: {
