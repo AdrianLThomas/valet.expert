@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
+import buttonStyle from '../components/styles/button'
 
 const useStyles = makeStyles({
   root: {
@@ -20,23 +21,11 @@ const useStyles = makeStyles({
   cardHeader: {
     textAlign: 'center',
   },
-  button: {
-    textAlign: 'center',
-    fontSize: '1em',
-    padding: '10px',
-    width: '100%',
-    fontWeight: 'bold',
-    transition: 'transform 500ms',
-    willChange: 'transform',
-    border: '1px solid black',
-    '&:hover': {
-      transform: 'translateY(3px)',
-    },
-  },
+  button: buttonStyle,
 });
 
 export default function CardGrid({ className, cards }) {
-  const { root, cardHeader, button } = useStyles();
+  const { root, cardHeader, button} = useStyles();
 
   return (
     <Grid container spacing={1} alignItems="stretch" className={className}>

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Layout from '../components/layout';
 
-export default function Home({ location }) {
+export default function ContactMe({ location }) {
   return (
     <Layout currentPath={location.pathname}>
       <p>todo</p>

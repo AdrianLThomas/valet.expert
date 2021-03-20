@@ -15,7 +15,9 @@
  - google web developer, checks ok? sitemap.xml etc.
  - set reminder: remove redirect pages from /static after 6 months.
  - automate lighthouse score in GHA pipeline - nightly job?
-
+- UX
+ - pop of colour on pages
+ - shade footer slightly different colour?
  # Post Go Live Improvements
  - Review accessibility
   - tab navigation

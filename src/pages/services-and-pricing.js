@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Home({ location }) {
+export default function ServicesAndPricing({ location }) {
   const classes = useStyles();
   return (
     <Layout currentPath={location.pathname}>
