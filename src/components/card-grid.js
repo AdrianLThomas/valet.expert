@@ -7,9 +7,8 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core';
-import { Link } from 'gatsby';
-
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles({
   root: {
@@ -31,8 +30,8 @@ const useStyles = makeStyles({
     willChange: 'transform',
     border: '1px solid black',
     '&:hover': {
-      transform: 'translateY(3px)'
-    }
+      transform: 'translateY(3px)',
+    },
   },
 });
 
