@@ -1,5 +1,6 @@
 # TODO
-- Recreate sub-pages
+- service page, icons? something missing... headers?
+- service page, too many buttons? just one at the end?
 - Any metadata / seo that can be applied specifically to contact / pricing etc to help bots?
 - hero images
 - check em/rem usage - is it right? am I respecting user preferences? (fonts should be rem, margins/padding probably px)

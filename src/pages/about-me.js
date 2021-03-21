@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
+import Hero from '../components/hero';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -13,6 +14,14 @@ const useStyles = makeStyles(() => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
+  },
+  heroTitle: {
+    color: 'white',
+    fontSize: '32px',
+  },
+  hero: {
+    height: '100px',
+    position: 'relative',
   },
 }));
 
@@ -61,7 +70,9 @@ export default function AboutMe({ location }) {
 
   return (
     <Layout currentPath={location.pathname}>
-      <h1>{"About Matty's Mobile Valeting & Detailing, est. 2004"}</h1>
+      <Hero type="beading" classOverride={classes.hero}>
+        <h1 className={classes.heroTitle}>{"About Matty's Mobile Valeting & Detailing, est. 2004"}</h1>
+      </Hero>
       <p>
         My business was established in 2004 in the vibrant seaside town of
         Scarborough.
