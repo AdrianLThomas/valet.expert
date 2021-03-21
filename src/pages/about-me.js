@@ -71,9 +71,7 @@ export default function AboutMe({ location }) {
   return (
     <Layout currentPath={location.pathname}>
       <Hero type="beading" classOverride={classes.hero}>
-        <h1 className={classes.heroTitle}>
-          {"About Me"}
-        </h1>
+        <h1 className={classes.heroTitle}>{'About Me'}</h1>
       </Hero>
       <p>
         My business was established in 2004 in the vibrant seaside town of
