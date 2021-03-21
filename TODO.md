@@ -2,6 +2,7 @@
 - Recreate sub-pages
 - Any metadata / seo that can be applied specifically to contact / pricing etc to help bots?
 - hero images
+- check em/rem usage - is it right? am I respecting user preferences? (fonts should be rem, margins/padding probably px)
 
 # Before Go Live
 - remove pathprefix when publishing to root
