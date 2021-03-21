@@ -10,22 +10,20 @@
 - SEO scan comparison
 - Rich results https://search.google.com/test/rich-results
 
-# Post Go Live
+# Post Go Live Improvements
+ - set reminder: remove redirect pages from /static after 6 months.
+- style 404 page
 - regression testing:
  - e2e?
  - google web developer, checks ok? sitemap.xml etc.
- - set reminder: remove redirect pages from /static after 6 months.
  - automate lighthouse score in GHA pipeline - nightly job?
 - UX
  - pop of colour on pages
  - shade footer slightly different colour?
  - tidy up README.md
- # Post Go Live Improvements
  - Review accessibility
   - tab navigation
   - social links do not have discernable name  
-
-- style 404 page
 
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
