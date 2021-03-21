@@ -6,7 +6,6 @@
 
 # Before Go Live
 - remove pathprefix when publishing to root
-- adjust robots.txt
 - GA tracking code
 - SEO scan comparison
 - Rich results https://search.google.com/test/rich-results
