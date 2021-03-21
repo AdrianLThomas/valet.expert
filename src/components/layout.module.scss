@@ -1,6 +1,7 @@
 @use './colours.scss';
 
 $linkColor: rgb(33,33,33);
+$defaultFontSize: 14px;
 * {
   text-decoration: none;
   font-family: -apple-system, Roboto, sans-serif, serif;
@@ -16,7 +17,11 @@ body {
 
 a,p {
   color: $linkColor;
-  font-size: 14px;
+  font-size: $defaultFontSize;
+}
+
+span {
+  font-size: $defaultFontSize;
 }
 
 .container {
@@ -26,7 +31,7 @@ a,p {
 .root {
   display: flex;
   min-height: 98vh;
-  min-width: 98vw; // little scroll bar?
+  min-width: 98vw;
   @media only screen and (max-width: 600px) {
     // make room for nav on mobile
     min-height: 95vh;

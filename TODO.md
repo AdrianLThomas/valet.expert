@@ -20,6 +20,7 @@
 - UX
  - pop of colour on pages
  - shade footer slightly different colour?
+ - tidy up README.md
  # Post Go Live Improvements
  - Review accessibility
   - tab navigation
