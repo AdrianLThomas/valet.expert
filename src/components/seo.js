@@ -85,6 +85,8 @@ const SEO = () => {
           "@type": "Organization",
           "url": "${seo.url}",
           "name": "${seo.title}",
+          "email": "mailto:${contact.email}",
+          "telephone": "${contact.phone}",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "${contact.phone}",

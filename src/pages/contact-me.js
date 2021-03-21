@@ -83,9 +83,6 @@ export default function ContactMe({ location }) {
       <Hero type="beading" classOverride={css.hero}>
         <h1 className={css.heroTitle}>{'Contact Matty'}</h1>
       </Hero>
-      {/* <p>todo</p>
-      <p>https://schema.org/address</p>
-      <p>https://schema.org/openingHoursSpecification </p> */}
 
       <address className={css.address}>
         <p>
