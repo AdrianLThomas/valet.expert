@@ -81,7 +81,7 @@ export default function ContactMe({ location }) {
   return (
     <Layout currentPath={location.pathname}>
       <Hero type="beading" classOverride={css.hero}>
-        <h1 className={css.heroTitle}>{'Contact Matty'}</h1>
+        <h1 className={css.heroTitle}>{'Contact Me'}</h1>
       </Hero>
 
       <address className={css.address}>
