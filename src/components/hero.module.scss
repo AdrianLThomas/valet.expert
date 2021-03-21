@@ -11,7 +11,7 @@
 
 .container {
     @include full-width;
-    $border: 1px solid colours.$level4;
+    $border: 1px solid colours.$level8;
     border-top: $border;
     border-bottom: $border;
 }

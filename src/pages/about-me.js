@@ -5,8 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import Layout from '../components/layout';
 import Hero from '../components/hero';
+import Layout from '../components/layout';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -71,7 +71,9 @@ export default function AboutMe({ location }) {
   return (
     <Layout currentPath={location.pathname}>
       <Hero type="beading" classOverride={classes.hero}>
-        <h1 className={classes.heroTitle}>{"About Matty's Mobile Valeting & Detailing, est. 2004"}</h1>
+        <h1 className={classes.heroTitle}>
+          {"About Matty's Mobile Valeting & Detailing, est. 2004"}
+        </h1>
       </Hero>
       <p>
         My business was established in 2004 in the vibrant seaside town of
