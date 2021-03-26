@@ -1,7 +1,4 @@
 # TODO
-- service page, icons? something missing... headers?
-- service page, too many buttons? just one at the end?
-- check em/rem usage - is it right? am I respecting user preferences? (fonts should be rem, margins/padding probably px)
 
 # Before Go Live
 - remove pathprefix when publishing to root
@@ -23,6 +20,7 @@
  - Review accessibility
   - tab navigation
   - social links do not have discernable name  
+- check em/rem usage - is it right? am I respecting user preferences? (fonts should be rem, margins/padding probably px)
 
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch

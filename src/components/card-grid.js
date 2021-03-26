@@ -18,9 +18,13 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100%',
+    boxShadow: '0 5px 8px 0 rgba(0, 0, 0, 0.3)',
+    backgroundColor: '#fafafa',
   },
   cardHeader: {
     textAlign: 'center',
+    letterSpacing: '0.1em',
+    fontWeight: 600,
   },
   button: buttonStyle,
 });

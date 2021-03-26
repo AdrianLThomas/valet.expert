@@ -1,15 +1,11 @@
 import React from 'react';
 
 import CardGrid from '../card-grid';
-// import { makeStyles } from '@material-ui/core/styles';
 
 export default function Services({ className }) {
-  // const { icon } = useStyles();
-
   const services = [
     {
       title: 'Mini Valet',
-      //icon: <MapIcon className={icon} />,
       button: { text: 'Book a mini valet', href: '/contact-me/' },
       size: {
         xs: 12,
@@ -38,7 +34,6 @@ export default function Services({ className }) {
     },
     {
       title: 'Full Valet',
-      //icon: <MapIcon className={icon} />,
       button: { text: 'Book a full valet', href: '/contact-me/' },
       size: {
         xs: 12,
@@ -72,7 +67,6 @@ export default function Services({ className }) {
     },
     {
       title: 'Hand Polishing & Waxing',
-      //icon: <MapIcon className={icon} />,
       button: { text: 'Book a hand polish & wax', href: '/contact-me/' },
       size: {
         xs: 12,
@@ -93,7 +87,6 @@ export default function Services({ className }) {
     },
     {
       title: 'Machine Polish',
-      //icon: <MapIcon className={icon} />,
       button: { text: 'Book a machine polish', href: '/contact-me/' },
       size: {
         xs: 12,
@@ -114,7 +107,6 @@ export default function Services({ className }) {
     },
     {
       title: 'Ultimate Paint and Fabric Protection',
-      //icon: <MapIcon className={icon} />,
       size: {
         xs: 12,
         sm: 6,
@@ -141,7 +133,6 @@ export default function Services({ className }) {
     },
     {
       title: 'Engine Bay Steam Clean & Detail',
-      // //icon: <MapIcon className={icon} />,
       button: { text: 'Book an engine bay steam clean', href: '/contact-me/' },
       size: {
         xs: 12,
@@ -162,7 +153,6 @@ export default function Services({ className }) {
     },
     {
       title: 'Other',
-      // //icon: <MapIcon className={icon} />,
       button: { text: 'Contact me', href: '/contact-me/' },
       size: {
         xs: 12,
