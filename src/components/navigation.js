@@ -5,7 +5,6 @@ import { Link, withPrefix } from 'gatsby';
 
 import { selected, headerText, navLink } from './navigation.module.scss';
 
-import '@fontsource/bangers';
 import '@fontsource/dm-sans';
 
 export default function Navigation({

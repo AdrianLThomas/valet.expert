@@ -1,12 +1,15 @@
+@import "~@fontsource/oswald/index.css"; // Weight 400.
+
 $navSelected: 5px solid black;
 $navBorder: 1px solid transparent;
-
 header {
   text-align: center;
 }
 
 .headerText > h1 {
-  font-family: "Bangers";
+  font-family: "Oswald";
+  font-weight: 200;
+  line-height: 0.7;
 
   @media only screen and (max-width: 600px) { // mobile only
     font-size: 6.5vw;
