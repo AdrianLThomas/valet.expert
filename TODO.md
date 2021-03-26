@@ -1,6 +1,4 @@
 # TODO
-- SEO scan comparison
-
 # Before Go Live
 - remove pathprefix when publishing to root
 - GA tracking code
@@ -8,6 +6,7 @@
 # Post Go Live Improvements
  - set reminder: remove redirect pages from /static after 6 months.
 - Rich results https://search.google.com/test/rich-results
+- SEO scan - top improvements?
 - style 404 page
 - regression testing:
  - e2e?
