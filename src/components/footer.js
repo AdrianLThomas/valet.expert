@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.down('md')]: {
         textAlign: 'center',
       },
-      paddingLeft: '1.5rem',
+      paddingLeft: '20px',
     },
     right: {
       [theme.breakpoints.up('md')]: {
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.down('md')]: {
         textAlign: 'center',
       },
-      paddingRight: '1.5rem',
+      paddingRight: '20px',
     },
     link: {
       color: 'darkred',
