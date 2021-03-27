@@ -1,4 +1,8 @@
 # TODO
+- 'contact me' twice?
+- inherit anchor colours rather than override
+- funnel - Think about pages and direction to push in (contact) 
+
 # Before Go Live
 - remove pathprefix when publishing to root
 - GA tracking code
