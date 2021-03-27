@@ -13,6 +13,7 @@
 - Manifest OK
 - GA OK
 - Search result links work ok - site:www.valet.expert
+- Rename repo from mmv to valet.expert
 
 # Post Go Live Improvements
  - set reminder: remove redirect pages from /static after 6 months.
