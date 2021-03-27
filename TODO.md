@@ -12,6 +12,8 @@
 - Robots.txt OK
 - Rich results https://search.google.com/test/rich-results
 - Manifest OK
+- GA OK
+- Search result links work ok - site:www.valet.expert
 
 # Post Go Live Improvements
  - set reminder: remove redirect pages from /static after 6 months.
@@ -36,5 +38,3 @@ https://gatsby.dev/migrate-images to learn how.
    - Also, see: https://github.com/timhagn/gatsby-background-image/issues/147
 - Material UI issues with Gatsby v3 (material UI)
    - https://github.com/hupe1980/gatsby-plugin-material-ui/issues/65
-# General Notes
-- Maintain SEO: https://moz.com/blog/how-to-avoid-an-seo-disaster-when-changing-your-website
