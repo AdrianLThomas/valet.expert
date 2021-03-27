@@ -7,9 +7,14 @@
 - remove pathprefix when publishing to root
 - GA tracking code
 
+# Post Go live checks
+- Check redirects OK
+- Robots.txt OK
+- Rich results https://search.google.com/test/rich-results
+- Manifest OK
+
 # Post Go Live Improvements
  - set reminder: remove redirect pages from /static after 6 months.
-- Rich results https://search.google.com/test/rich-results
 - SEO scan - top improvements?
 - style 404 page
 - regression testing:

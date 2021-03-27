@@ -1,4 +1,9 @@
-# MMV Rewrite
+# valet.expert
+Website code for [valet.expert](https:/www.valet.expert).
 
-Commands in `package.json`
-`http://localhost:8000/___graphql` is handy for writing queries.
+```
+npm install
+npm start
+# or 
+npm run build && npm run serve
+```
