@@ -1,7 +1,7 @@
 # TODO
 - 'contact me' twice?
 - inherit anchor colours rather than override
-- funnel - Think about pages and direction to push in (contact) 
+- Funnel: Home Page > Services > Contact
 
 # Before Go Live
 - remove pathprefix when publishing to root
@@ -24,7 +24,6 @@
 - UX
  - pop of colour on pages
  - shade footer slightly different colour?
- - tidy up README.md
  - Review accessibility
   - tab navigation
   - social links do not have discernable name  
@@ -38,5 +37,4 @@ https://gatsby.dev/migrate-images to learn how.
 - Material UI issues with Gatsby v3 (material UI)
    - https://github.com/hupe1980/gatsby-plugin-material-ui/issues/65
 # General Notes
-- Funnel: Home Page > Services > Contact
 - Maintain SEO: https://moz.com/blog/how-to-avoid-an-seo-disaster-when-changing-your-website

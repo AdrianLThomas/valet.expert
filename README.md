@@ -1,5 +1,5 @@
 # valet.expert
-Website code for [valet.expert](https:/www.valet.expert).
+Gatsby app for [valet.expert](https:/www.valet.expert).
 
 ```
 npm install
