@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => {
       marginTop: '10px',
       [mobile]: {
         // push up footer when mobile nav hides it
-        marginBottom: '3rem',
+        marginBottom: '50px',
       },
     },
     divider: {

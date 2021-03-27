@@ -1,6 +1,6 @@
 export default {
   textAlign: 'center',
-  fontSize: '1em',
+  fontSize: '1rem',
   padding: '10px',
   width: '100%',
   fontWeight: 'bold',

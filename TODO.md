@@ -1,7 +1,3 @@
-# TODO
-- inherit anchor colours rather than override
-- Funnel: Home Page > Services > Contact
-
 # Before Go Live
 - remove pathprefix when publishing to root
 - GA tracking code
@@ -30,6 +26,8 @@
   - tab navigation
   - social links do not have discernable name  
 - check em/rem usage - is it right? am I respecting user preferences? (fonts should be rem, margins/padding probably px)
+- inherit anchor colours rather than override
+- Funnel: Home Page > Services > Contact
 
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
