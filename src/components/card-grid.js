@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
   cardHeader: {
     textAlign: 'center',
-    letterSpacing: '0.1em',
+    letterSpacing: '0.1rem',
     fontWeight: 600,
   },
   button: buttonStyle,
