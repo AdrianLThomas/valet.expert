@@ -25,7 +25,6 @@
  - Review accessibility
   - tab navigation
   - social links do not have discernable name  
-- check em/rem usage - is it right? am I respecting user preferences? (fonts should be rem, margins/padding probably px)
 - inherit anchor colours rather than override
 - Funnel: Home Page > Services > Contact
 
