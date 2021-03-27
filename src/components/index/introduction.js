@@ -54,7 +54,7 @@ export default function ({ className }) {
       size,
     },
     {
-      title: 'Contact Me',
+      title: 'Get In Touch',
       description:
         "I'm easy to get hold of, just call or leave me a message at your convenience.",
       button: { text: 'Contact Me', href: '/contact-me/' },

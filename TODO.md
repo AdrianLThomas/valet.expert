@@ -1,5 +1,4 @@
 # TODO
-- 'contact me' twice?
 - inherit anchor colours rather than override
 - Funnel: Home Page > Services > Contact
 
