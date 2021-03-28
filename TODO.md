@@ -1,18 +1,7 @@
-# Before Go Live
-- DONE: remove pathprefix when publishing to root
-- DONE: GA tracking code
-
 # Post Go live checks
-- Check redirects OK
-- Robots.txt OK
 - Rich results https://search.google.com/test/rich-results
-- Manifest OK
-- GA OK
-- Search result links work ok - site:www.valet.expert
-- Rename repo from mmv to valet.expert
 
 # Post Go Live Improvements
- - set reminder: remove redirect pages from /static after 6 months.
 - SEO scan - top improvements?
 - style 404 page
 - regression testing:
