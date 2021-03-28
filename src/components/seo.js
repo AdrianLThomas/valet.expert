@@ -92,7 +92,7 @@ const SEO = () => {
             "telephone": "${contact.phone}",
             "contactType": "Enquiries",
             "email": "${contact.email},
-            "areaServed": "Scarborough and surrounding areas",
+            "areaServed": "Scarborough and surrounding areas"
           }
         }
       `}
