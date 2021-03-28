@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/mmv`,
+  // pathPrefix: `/mmv`,
   siteMetadata: {
     siteUrl: 'https://www.valet.expert',
     title: "Matty's Mobile Valeting & Detailing, Scarborough",
@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'GA_TRACKING_ID',
+        trackingId: 'UA-134101854-1',
       },
     },
     'gatsby-plugin-sharp',

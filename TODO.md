@@ -1,6 +1,6 @@
 # Before Go Live
-- remove pathprefix when publishing to root
-- GA tracking code
+- DONE: remove pathprefix when publishing to root
+- DONE: GA tracking code
 
 # Post Go live checks
 - Check redirects OK
