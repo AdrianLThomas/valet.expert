@@ -1,7 +1,5 @@
-# Post Go live checks
-- Rich results https://search.google.com/test/rich-results
-
 # Post Go Live Improvements
+- Lighthouse improvements
 - SEO scan - top improvements?
 - style 404 page
 - regression testing:
@@ -14,7 +12,6 @@
  - Review accessibility
   - tab navigation
   - social links do not have discernable name  
-- inherit anchor colours rather than override
 - Funnel: Home Page > Services > Contact
 
  # Tech Debt
