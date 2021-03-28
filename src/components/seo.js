@@ -91,7 +91,7 @@ const SEO = () => {
             "@type": "ContactPoint",
             "telephone": "${contact.phone}",
             "contactType": "Enquiries",
-            "email": "${contact.email},
+            "email": "${contact.email}",
             "areaServed": "Scarborough and surrounding areas"
           }
         }
