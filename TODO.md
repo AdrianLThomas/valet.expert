@@ -1,8 +1,5 @@
 # Post Go Live Improvements
 - style 404 page
-- regression testing:
- - e2e?
- - automate lighthouse score in GHA pipeline - nightly job?
 - UX
  - pop of colour on pages
  - shade footer slightly different colour?
