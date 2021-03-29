@@ -2,7 +2,6 @@
 - style 404 page
 - regression testing:
  - e2e?
- - google web developer, checks ok? sitemap.xml etc.
  - automate lighthouse score in GHA pipeline - nightly job?
 - UX
  - pop of colour on pages
