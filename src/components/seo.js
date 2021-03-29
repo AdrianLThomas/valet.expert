@@ -23,7 +23,7 @@ const query = graphql`
   }
 `;
 
-const SEO = () => {
+const SEO = ({ descriptionOverride }) => {
   const { site } = useStaticQuery(query);
 
   const { pathname } = useLocation();
@@ -42,7 +42,7 @@ const SEO = () => {
 
   const seo = {
     title: pageName,
-    description: defaultDescription,
+    description: descriptionOverride || defaultDescription,
     image: `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname}`,
     facebook: contact.facebook,

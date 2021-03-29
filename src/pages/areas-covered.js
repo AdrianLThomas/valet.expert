@@ -44,9 +44,13 @@ const postcodes = [
 export default function AreasCovered({ location }) {
   const { heroTitle, hero, map, button } = useStyles();
   return (
-    <Layout currentPath={location.pathname}>
+    <Layout
+      currentPath={location.pathname}
+      description="I am based in Scarborough but also cover Filey, Whitby, Pickering,
+    Malton, Bridlington and the majority of North Yorkshire. Please feel free to get in touch."
+    >
       <Hero type="beading" classOverride={hero}>
-        <h1 className={heroTitle}>{'Areas Covered'}</h1>
+        <h2 className={heroTitle}>{'Areas Covered'}</h2>
       </Hero>
 
       <p>

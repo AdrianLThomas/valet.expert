@@ -23,9 +23,12 @@ const useStyles = makeStyles(() => ({
 export default function ServicesAndPricing({ location }) {
   const classes = useStyles();
   return (
-    <Layout currentPath={location.pathname}>
+    <Layout
+      currentPath={location.pathname}
+      description="I offer a variety of services for your vehicle, such as: mini valet, full valet, hand polishing and waxing, machine polish, ceramic coating and engine bay/steam cleaning."
+    >
       <Hero type="beading" classOverride={classes.hero}>
-        <h1 className={classes.heroTitle}>{'Services & Pricing'}</h1>
+        <h2 className={classes.heroTitle}>{'Services & Pricing'}</h2>
       </Hero>
       <Services className={classes.service} />
     </Layout>

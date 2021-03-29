@@ -1,6 +1,5 @@
 # Post Go Live Improvements
 - Lighthouse improvements
-- SEO scan - top improvements?
 - style 404 page
 - regression testing:
  - e2e?
@@ -21,3 +20,4 @@ https://gatsby.dev/migrate-images to learn how.
    - Also, see: https://github.com/timhagn/gatsby-background-image/issues/147
 - Material UI issues with Gatsby v3 (material UI)
    - https://github.com/hupe1980/gatsby-plugin-material-ui/issues/65
+np

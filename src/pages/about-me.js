@@ -69,9 +69,13 @@ export default function AboutMe({ location }) {
   const yearsRunning = now.getFullYear() - dateBusinessStarted.getFullYear();
 
   return (
-    <Layout currentPath={location.pathname}>
+    <Layout
+      currentPath={location.pathname}
+      description="My business was established in 2004 in the vibrant seaside town of
+    Scarborough. The quality of my work is reflected by my 5 star reviews on Google and Facebook."
+    >
       <Hero type="beading" classOverride={classes.hero}>
-        <h1 className={classes.heroTitle}>{'About Me'}</h1>
+        <h2 className={classes.heroTitle}>{'About Me'}</h2>
       </Hero>
       <p>
         My business was established in 2004 in the vibrant seaside town of

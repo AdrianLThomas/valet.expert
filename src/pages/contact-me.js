@@ -79,9 +79,12 @@ export default function ContactMe({ location }) {
   );
 
   return (
-    <Layout currentPath={location.pathname}>
+    <Layout
+      currentPath={location.pathname}
+      description="Feel free to get in touch via email, phone, WhatsApp or Facebook messenger. Please check out the website for opening hours and more."
+    >
       <Hero type="beading" classOverride={css.hero}>
-        <h1 className={css.heroTitle}>{'Contact Me'}</h1>
+        <h2 className={css.heroTitle}>{'Contact Me'}</h2>
       </Hero>
 
       <address className={css.address}>

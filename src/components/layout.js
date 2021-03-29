@@ -61,12 +61,12 @@ const navItems = [
   },
 ];
 
-export default function Layout({ children, currentPath }) {
+export default function Layout({ children, currentPath, description }) {
   const classes = useStyles();
 
   return (
     <>
-      <SEO />
+      <SEO descriptionOverride={description} />
       <div className={root}>
         <Container className={container}>
           <Navigation
