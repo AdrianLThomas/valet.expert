@@ -73,6 +73,8 @@ const SEO = ({ descriptionOverride }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
+      <meta property="fb:app_id" content="1401488693436528" />
+
       <meta
         property="article:author"
         content={`https://www.facebook.com/${seo.facebook}`}

@@ -1,5 +1,4 @@
 # Post Go Live Improvements
-- Lighthouse improvements
 - style 404 page
 - regression testing:
  - e2e?
@@ -10,9 +9,7 @@
  - shade footer slightly different colour?
  - Review accessibility
   - tab navigation
-  - social links do not have discernable name  
 - Funnel: Home Page > Services > Contact
-
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
 to "gatsby-plugin-image" for better performance and a simpler API. See
