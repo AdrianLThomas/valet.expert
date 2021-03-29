@@ -1,11 +1,9 @@
 # Post Go Live Improvements
 - style 404 page
 - UX
- - pop of colour on pages
  - shade footer slightly different colour?
- - Review accessibility
-  - tab navigation
-- Funnel: Home Page > Services > Contact
+ - Review accessibility - tab navigation accessibility
+  
  # Tech Debt
  - warn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now deprecated. Switch
 to "gatsby-plugin-image" for better performance and a simpler API. See
