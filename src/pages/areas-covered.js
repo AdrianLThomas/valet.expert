@@ -58,7 +58,7 @@ export default function AreasCovered({ location }) {
         Malton, Bridlington and the majority of North Yorkshire
       </p>
 
-      <Button to="/contact-me" className={button} component={Link}>
+      <Button to="/contact-me/" className={button} component={Link}>
         Contact me to make a booking »
       </Button>
       <div>
