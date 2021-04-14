@@ -15,7 +15,6 @@
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "test": "jest",
-    "cypress": "cypress run --env endpoint=http://localhost:9000",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lighthouse": "lighthouse https://www.valet.expert --output-path='./lighthouse.html' --view"
@@ -56,7 +55,6 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
-    "cypress": "^7.1.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",

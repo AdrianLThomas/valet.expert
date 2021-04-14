@@ -31,10 +31,6 @@ jobs:
         run: |
           npm run test -- --passWithNoTests
 
-      - name: Cypress Test 🇨🇾
-        run: |
-          npm run serve --prefix-paths && npm run cypress
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
