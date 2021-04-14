@@ -27,10 +27,6 @@ jobs:
         run: |
           npm run lint
 
-      - name: Test 🧪
-        run: |
-          npm run test -- --passWithNoTests
-
       - name: Cypress Test 🇨🇾
         run: |
           npm run serve --prefix-paths && npm run cypress
