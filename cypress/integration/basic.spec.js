@@ -9,7 +9,7 @@ describe('Basic Build Check', () => {
     cy.visit(Cypress.env('endpoint'));
     cy.contains('About Me').click();
     cy.url().should('include', '/about-me/');
-    cy.contains('My business was established in 2004')
+    cy.contains('My business was established in 2004');
   });
 
   it('Services & Pricing', () => {
@@ -17,7 +17,7 @@ describe('Basic Build Check', () => {
 
     cy.contains('Services & Pricing').click();
     cy.url().should('include', '/services-and-pricing/');
-    cy.contains('Mini Valet')
+    cy.contains('Mini Valet');
   });
 
   it('Areas Covered', () => {
@@ -25,7 +25,7 @@ describe('Basic Build Check', () => {
 
     cy.contains('Areas Covered').click();
     cy.url().should('include', '/areas-covered/');
-    cy.contains('YO12')
+    cy.contains('YO12');
   });
 
   it('Services & Pricing', () => {
@@ -33,6 +33,6 @@ describe('Basic Build Check', () => {
 
     cy.contains('Contact Me').click();
     cy.url().should('include', '/contact-me/');
-    cy.contains('MattysMobileValeting@hotmail.com')
+    cy.contains('MattysMobileValeting@hotmail.com');
   });
 });
