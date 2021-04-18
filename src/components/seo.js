@@ -29,8 +29,8 @@ const SEO = ({ descriptionOverride }) => {
   const { pathname } = useLocation();
   const pageName = pathname
     .replace(withPrefix('/'), '')
-    .replaceAll('/', '')
-    .replaceAll('-', ' ')
+    .replace(/\//g, '')
+    .replace(/-/g, ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase());
   const {
     defaultTitle,

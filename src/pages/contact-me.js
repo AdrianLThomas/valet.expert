@@ -54,7 +54,7 @@ export default function ContactMe({ location }) {
       },
     },
   } = useStaticQuery(query);
-  const phoneInternational = `+44${phone.replaceAll(' ', '').slice(1)}`;
+  const phoneInternational = `+44${phone.replace(/ /g, '').slice(1)}`;
 
   const svgSize = 38;
   const messengerSvg = (
