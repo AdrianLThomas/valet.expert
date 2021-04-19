@@ -1,8 +1,11 @@
 describe('Basic Build Check', () => {
-  it('Home Page', () => {
+  it.only('Home Page', () => {
     cy.visit(Cypress.env('endpoint'));
 
     cy.contains("Matty's Mobile Valeting & Detailing");
+    cy.get('body')
+      .find('img[data-main-image]')
+      .should('have.attr', 'alt', 'Hero Image');
   });
 
   it('About Me', () => {
