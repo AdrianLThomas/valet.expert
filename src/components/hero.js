@@ -1,35 +1,23 @@
 import * as React from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 import { container, background, heroTextbox } from './hero.module.scss';
 
 export default function Hero({ children, type, classOverride }) {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        van: file(relativePath: { eq: "Hero.jpg" }) {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        beading: file(relativePath: { eq: "Beading.jpg" }) {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    `
-  );
+  const getHeroImage = () => {
+    switch(type) {
+      case 'van':
+        return <StaticImage className={classOverride ? classOverride : background} src="../images/Hero.jpg" alt="Hero image of my van"/>
+    }
+
+    return <StaticImage className={classOverride ? classOverride : background} src="../images/Beading.jpg" alt="Hero image of beading"/>
+  }
 
   return (
     <div className={container}>
-      <GatsbyImage
-        className={classOverride ? classOverride : background}
-        image={data[type].childImageSharp.gatsbyImageData}
-        alt="Hero Image"
-      />
+      {getHeroImage()}
       <div className={heroTextbox}>{children}</div>
     </div>
   );

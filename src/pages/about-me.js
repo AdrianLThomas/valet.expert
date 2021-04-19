@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
 import Hero from '../components/hero';
 import Layout from '../components/layout';
@@ -30,11 +30,6 @@ export default function AboutMe({ location }) {
 
   const data = useStaticQuery(graphql`
     query {
-      featured: file(relativePath: { eq: "vans/2020 Custom Transit.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(quality: 75)
-        }
-      }
       allFile(
         sort: { fields: relativePath, order: DESC }
         filter: {
@@ -53,19 +48,11 @@ export default function AboutMe({ location }) {
       }
     }
   `);
-  const featuredTile = {
-    image: data.featured.childImageSharp.gatsbyImageData,
-    alt: data.featured.base,
-    featured: true,
-  };
+
   const remainingTiles = data.allFile.edges.slice(1).map((x) => ({
     image: x.node.childImageSharp.gatsbyImageData,
     alt: x.node.base,
   }));
-  const isOddRemaining = !!(remainingTiles.length % 2);
-  if (isOddRemaining) {
-    remainingTiles[0].featured = true;
-  }
 
   const now = new Date();
   const dateStartedInTrade = new Date(1999, 1);
@@ -107,7 +94,7 @@ export default function AboutMe({ location }) {
         <Grid container spacing={2}>
           <Grid container item xs={12} sm={6}>
             <Grid item xs={12}>
-              <GatsbyImage {...featuredTile} />
+              <StaticImage src="../images/vans/2020 Custom Transit.jpg" alt="My 2020 Custom Transit" />
             </Grid>
           </Grid>
           <Grid container item spacing={2} xs={12} sm={6}>
