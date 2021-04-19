@@ -13,6 +13,7 @@ export default function Hero({ children, type, classOverride }) {
             className={classOverride ? classOverride : background}
             src="../images/Hero.jpg"
             alt="Hero image of my van"
+            quality={80}
           />
         );
     }
