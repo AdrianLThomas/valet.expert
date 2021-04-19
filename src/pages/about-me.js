@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Hero from '../components/hero';
 import Layout from '../components/layout';
@@ -30,6 +30,11 @@ export default function AboutMe({ location }) {
 
   const data = useStaticQuery(graphql`
     query {
+      featured: file(relativePath: { eq: "vans/2020 Custom Transit.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 75)
+        }
+      }
       allFile(
         sort: { fields: relativePath, order: DESC }
         filter: {
@@ -41,21 +46,22 @@ export default function AboutMe({ location }) {
           node {
             base
             childImageSharp {
-              fluid(maxWidth: 450, maxHeight: 250, quality: 75) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(aspectRatio: 0.85, quality: 15)
             }
           }
         }
       }
     }
   `);
-
   const featuredTile = {
-    ...data.allFile.edges[0],
+    image: data.featured.childImageSharp.gatsbyImageData,
+    alt: data.featured.base,
     featured: true,
   };
-  const remainingTiles = data.allFile.edges.slice(1);
+  const remainingTiles = data.allFile.edges.slice(1).map((x) => ({
+    image: x.node.childImageSharp.gatsbyImageData,
+    alt: x.node.base,
+  }));
   const isOddRemaining = !!(remainingTiles.length % 2);
   if (isOddRemaining) {
     remainingTiles[0].featured = true;
@@ -101,22 +107,13 @@ export default function AboutMe({ location }) {
         <Grid container spacing={2}>
           <Grid container item xs={12} sm={6}>
             <Grid item xs={12}>
-              <Img
-                fluid={{ ...featuredTile.node.childImageSharp.fluid }}
-                alt={featuredTile.node.base.split('.')[0]}
-              />
+              <GatsbyImage {...featuredTile} />
             </Grid>
           </Grid>
           <Grid container item spacing={2} xs={12} sm={6}>
             {remainingTiles.map((tile) => (
-              <Grid item xs={6} sm={3} key={tile.node.base}>
-                <Img
-                  fluid={{
-                    ...tile.node.childImageSharp.fluid,
-                    aspectRatio: 0.85,
-                  }}
-                  alt={tile.node.base.split('.')[0]}
-                />
+              <Grid item xs={6} sm={3} key={tile.alt}>
+                <GatsbyImage {...tile} />
               </Grid>
             ))}
           </Grid>
