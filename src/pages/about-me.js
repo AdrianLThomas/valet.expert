@@ -94,7 +94,10 @@ export default function AboutMe({ location }) {
         <Grid container spacing={2}>
           <Grid container item xs={12} sm={6}>
             <Grid item xs={12}>
-              <StaticImage src="../images/vans/2020 Custom Transit.jpg" alt="My 2020 Custom Transit" />
+              <StaticImage
+                src="../images/vans/2020 Custom Transit.jpg"
+                alt="My 2020 Custom Transit"
+              />
             </Grid>
           </Grid>
           <Grid container item spacing={2} xs={12} sm={6}>
