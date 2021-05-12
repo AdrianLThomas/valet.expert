@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme) => {
     footer: {
       borderTop: border,
       marginTop: '10px',
+      backgroundColor: '#f5f5f5',
+
       [mobile]: {
         // push up footer when mobile nav hides it
         marginBottom: '50px',
