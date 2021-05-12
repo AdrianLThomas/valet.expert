@@ -32,13 +32,8 @@ const SEO = ({ descriptionOverride }) => {
     .replace(/\//g, '')
     .replace(/-/g, ' ')
     .replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase());
-  const {
-    defaultTitle,
-    defaultDescription,
-    defaultImage,
-    siteUrl,
-    contact,
-  } = site.siteMetadata;
+  const { defaultTitle, defaultDescription, defaultImage, siteUrl, contact } =
+    site.siteMetadata;
 
   const seo = {
     title: pageName,
