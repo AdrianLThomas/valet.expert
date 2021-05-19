@@ -1,57 +1,33 @@
 import * as React from 'react';
 
-import { Link } from 'gatsby';
+import { makeStyles } from '@material-ui/core/styles';
 
+import Hero from '../components/hero';
 import Layout from '../components/layout';
 
-// styles
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
+const useStyles = makeStyles(() => ({
+  heroTitle: {
+    color: 'white',
+    fontSize: '32px',
+  },
+  hero: {
+    height: '100px',
+    position: 'relative',
+  },
+}));
 
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
+const NotFoundPage = ({ location }) => {
+  const classes = useStyles();
 
-// markup
-const NotFoundPage = () => {
   return (
-    <Layout>
-      <main style={pageStyles}>
-        <title>Not found</title>
-        <h1 style={headingStyles}>Page not found</h1>
-        <p style={paragraphStyles}>
-          Sorry{' '}
-          <span role="img" aria-label="Pensive emoji">
-            😔
-          </span>{' '}
-          we couldn’t find what you were looking for.
-          <br />
-          {process.env.NODE_ENV === 'development' ? (
-            <>
-              <br />
-              Try creating a page in <code style={codeStyles}>src/pages/</code>.
-              <br />
-            </>
-          ) : null}
-          <br />
-          <Link to="/">Go home</Link>.
-        </p>
-      </main>
+    <Layout currentPath={location.pathname} description="404 page not found">
+      <Hero type="beading" classOverride={classes.hero}>
+        <h2 className={classes.heroTitle}>{'404 page not found'}</h2>
+      </Hero>
+      <p>
+        Sorry, we couldn’t find what you were looking for. Please try one of the
+        links in the navigation bar.
+      </p>
     </Layout>
   );
 };
