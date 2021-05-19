@@ -38,4 +38,10 @@ describe('Basic Build Check', () => {
     cy.url().should('include', '/contact-me/');
     cy.contains('MattysMobileValeting@hotmail.com');
   });
+
+  it('404', () => {
+    cy.visit(Cypress.env('endpoint') + '/some-rubbish');
+
+    cy.contains('Sorry, we couldn’t find what you were looking for.');
+  });
 });
