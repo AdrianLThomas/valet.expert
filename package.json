@@ -21,15 +21,15 @@
     "lighthouse": "lighthouse https://www.valet.expert --output-path='./lighthouse.html' --view"
   },
   "dependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.4",
-    "@babel/preset-react": "^7.13.13",
-    "@fontsource/dm-sans": "^4.4.2",
-    "@fontsource/oswald": "^4.4.2",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@fontsource/dm-sans": "^4.4.5",
+    "@fontsource/oswald": "^4.4.5",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "@types/jest": "^26.0.23",
-    "babel-jest": "^27.0.2",
+    "babel-jest": "^27.0.5",
     "babel-preset-gatsby": "^1.8.0",
     "gatsby": "^3.6.2",
     "gatsby-image": "^3.6.0",
@@ -46,12 +46,12 @@
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-transformer-sharp": "^3.6.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.0.4",
+    "jest": "^27.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-test-renderer": "^17.0.2",
-    "sass": "^1.34.1"
+    "sass": "^1.35.1"
   },
   "devDependencies": {
     "cypress": "^7.6.0",
