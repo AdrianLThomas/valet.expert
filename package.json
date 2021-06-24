@@ -30,7 +30,7 @@
     "@material-ui/icons": "^4.11.2",
     "@types/jest": "^26.0.23",
     "babel-jest": "^27.0.2",
-    "babel-preset-gatsby": "^1.6.0",
+    "babel-preset-gatsby": "^1.8.0",
     "gatsby": "^3.6.2",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-google-analytics": "^3.6.0",
