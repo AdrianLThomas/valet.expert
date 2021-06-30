@@ -1,7 +1,13 @@
-describe('Basic Build Check', () => {
-  it.only('Home Page', () => {
-    cy.visit(Cypress.env('endpoint'));
+const { cyan } = require("@material-ui/core/colors");
 
+describe('Basic Build Check', () => {
+  const url = Cypress.env('endpoint')
+
+  beforeEach(() => {
+    cy.visit(url);
+  })
+
+  it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
     cy.get('body')
       .find('img[data-main-image]')
@@ -9,39 +15,35 @@ describe('Basic Build Check', () => {
   });
 
   it('About Me', () => {
-    cy.visit(Cypress.env('endpoint'));
     cy.contains('About Me').click();
     cy.url().should('include', '/about-me/');
     cy.contains('My business was established in 2004');
   });
 
   it('Services & Pricing', () => {
-    cy.visit(Cypress.env('endpoint'));
-
     cy.contains('Services & Pricing').click();
     cy.url().should('include', '/services-and-pricing/');
     cy.contains('Mini Valet');
   });
 
   it('Areas Covered', () => {
-    cy.visit(Cypress.env('endpoint'));
-
     cy.contains('Areas Covered').click();
     cy.url().should('include', '/areas-covered/');
     cy.contains('YO12');
   });
 
   it('Services & Pricing', () => {
-    cy.visit(Cypress.env('endpoint'));
-
     cy.contains('Contact Me').click();
     cy.url().should('include', '/contact-me/');
-    cy.contains('MattysMobileValeting@hotmail.com');
+    cy.contains('@hotmail.com');
   });
 
   it('404', () => {
-    cy.visit(Cypress.env('endpoint') + '/some-rubbish');
-
+    cy.visit(`${url}/some-rubbish`, {failOnStatusCode: false});
     cy.contains('Sorry, we couldn’t find what you were looking for.');
+  });
+
+  it('robots.txt', () => {
+    cy.request(`${url}/robots.txt`).its('body').should('include', 'Allow: /')
   });
 });
