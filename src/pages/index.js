@@ -24,6 +24,7 @@ export default function Home({ location }) {
     <Layout currentPath={location.pathname}>
       <Hero type="van">
         <h2 className={classes.heroTitle}>Friendly. Professional. Reliable.</h2>
+        <p>Good change, but should never be deployed from PR.</p>
       </Hero>
 
       <Introduction className={classes.introSpacing} />
