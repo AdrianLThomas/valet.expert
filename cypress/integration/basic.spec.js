@@ -1,11 +1,9 @@
-const { cyan } = require("@material-ui/core/colors");
-
 describe('Basic Build Check', () => {
-  const url = Cypress.env('endpoint')
+  const url = Cypress.env('endpoint');
 
   beforeEach(() => {
     cy.visit(url);
-  })
+  });
 
   it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
@@ -39,11 +37,11 @@ describe('Basic Build Check', () => {
   });
 
   it('404', () => {
-    cy.visit(`${url}/some-rubbish`, {failOnStatusCode: false});
+    cy.visit(`${url}/some-rubbish`, { failOnStatusCode: false });
     cy.contains('Sorry, we couldn’t find what you were looking for.');
   });
 
   it('robots.txt', () => {
-    cy.request(`${url}/robots.txt`).its('body').should('include', 'Allow: /')
+    cy.request(`${url}/robots.txt`).its('body').should('include', 'Allow: /');
   });
 });
