@@ -65,6 +65,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "lighthouse": "^8.0.0",
     "prettier": "^2.3.2",
-    "start-server-and-test": "^1.12.5"
+    "start-server-and-test": "^1.12.6"
   }
 }
