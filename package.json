@@ -34,7 +34,7 @@
     "gatsby": "^3.8.1",
     "gatsby-image": "^3.8.0",
     "gatsby-plugin-google-analytics": "^3.9.0",
-    "gatsby-plugin-image": "^1.8.0",
+    "gatsby-plugin-image": "^1.9.0",
     "gatsby-plugin-manifest": "^3.9.0",
     "gatsby-plugin-material-ui": "^3.0.1",
     "gatsby-plugin-react-helmet": "^4.8.0",
@@ -55,7 +55,7 @@
     "sass": "^1.35.1"
   },
   "devDependencies": {
-    "cypress": "^7.6.0",
+    "cypress": "^7.7.0",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
