@@ -8,7 +8,7 @@ on:
       - "**.md"
       - "**.bmpr"
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -31,10 +31,13 @@ jobs:
       - name: Cypress Test 🇨🇾
         run: |
           npm run cypress:ci
-
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
-        if: github.ref == 'refs/heads/main'
+        needs: build
         with:
           branch: gh-pages
           folder: public
