@@ -14,7 +14,7 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "cypress:run": "cypress run --browser chrome:canary --headless",
+    "cypress:run": "cypress run --browser chrome --headless",
     "cypress:open": "cypress open",
     "cypress:ci": "npx start-server-and-test serve http://localhost:9000 cypress:run",
     "lint": "eslint .",

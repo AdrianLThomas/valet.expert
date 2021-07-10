@@ -3,5 +3,9 @@ beforeEach(() => {
 });
 
 it('should pass the audits', function () {
-  cy.lighthouse(); // configured in `cypress.json`
+  // configured in `cypress.json`
+  // as I'm at the mercy of GHA cloud runners
+  // the performance baseline is much lower than reality
+  // to avoid frequent failing builds.
+  cy.lighthouse();
 });
