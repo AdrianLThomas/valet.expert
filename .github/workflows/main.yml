@@ -24,7 +24,11 @@ jobs:
         run: |
           npm ci
           npm run build --prefix-paths
-
+  test:
+    name: Test 🧪
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Lint 🧶
         run: |
           npm run lint
@@ -36,7 +40,7 @@ jobs:
     name: Deploy 🚀
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    needs: build
+    needs: test
     steps:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
