@@ -1,4 +1,5 @@
 {
+    "baseUrl": "http://localhost:9000",
     "lighthouse": {
       "performance": 100,
       "accessibility": 100,
@@ -8,5 +9,6 @@
       "largest-contentful-paint": 0,
       "first-meaningful-paint": 0,
       "speed-index": 0
-    }
+    },
+    "video": false
   }

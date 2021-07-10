@@ -1,7 +1,5 @@
-const url = Cypress.env('endpoint');
-
 beforeEach(() => {
-  cy.visit(url);
+  cy.visit('/');
 });
 
 it('should pass the audits', function () {
