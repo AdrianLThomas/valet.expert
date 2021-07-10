@@ -1,2 +1,1 @@
-// @ts-ignore
-import * as commands from './commands'
+import './commands';

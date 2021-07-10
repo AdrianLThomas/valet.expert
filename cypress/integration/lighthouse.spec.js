@@ -5,5 +5,5 @@ beforeEach(() => {
 });
 
 it('should pass the audits', function () {
-    cy.lighthouse(); // configured in `cypress.json`
+  cy.lighthouse(); // configured in `cypress.json`
 });
