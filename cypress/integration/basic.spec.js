@@ -1,8 +1,6 @@
 describe('Basic Build Check', () => {
-  const url = Cypress.env('endpoint');
-
   beforeEach(() => {
-    cy.visit(url);
+    cy.visit('/');
   });
 
   it('Home Page', () => {
@@ -37,11 +35,11 @@ describe('Basic Build Check', () => {
   });
 
   it('404', () => {
-    cy.visit(`${url}/some-rubbish`, { failOnStatusCode: false });
+    cy.visit(`/some-rubbish`, { failOnStatusCode: false });
     cy.contains('Sorry, we couldn’t find what you were looking for.');
   });
 
   it('robots.txt', () => {
-    cy.request(`${url}/robots.txt`).its('body').should('include', 'Allow: /');
+    cy.request(`/robots.txt`).its('body').should('include', 'Allow: /');
   });
 });

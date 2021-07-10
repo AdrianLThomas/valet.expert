@@ -14,8 +14,9 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "cypress": "cypress run --env endpoint=http://localhost:9000",
-    "cypress:ci": "npx start-server-and-test serve http://localhost:9000 cypress",
+    "cypress:run": "cypress run --browser chrome --headless",
+    "cypress:open": "cypress open",
+    "cypress:ci": "npx start-server-and-test serve http://localhost:9000 cypress:run",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lighthouse": "lighthouse https://www.valet.expert --output-path='./lighthouse.html' --view"
@@ -56,6 +57,7 @@
   },
   "devDependencies": {
     "cypress": "^7.7.0",
+    "cypress-audit": "^1.0.0",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
