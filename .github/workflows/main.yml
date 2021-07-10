@@ -9,7 +9,6 @@ on:
       - "**.bmpr"
 jobs:
   build:
-    name: Build 🧱
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -25,7 +24,6 @@ jobs:
           npm ci
           npm run build --prefix-paths
   test:
-    name: Test 🧪
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -37,7 +35,6 @@ jobs:
         run: |
           npm run cypress:ci
   deploy:
-    name: Deploy 🚀
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: test
