@@ -9,6 +9,7 @@ on:
       - "**.bmpr"
 jobs:
   build:
+    name: Build 🧱
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -32,11 +33,11 @@ jobs:
         run: |
           npm run cypress:ci
   deploy:
+    name: Deploy 🚀
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: build
     steps:
-      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
