@@ -19,6 +19,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci
+          npm run build --prefix-paths
 
       - name: Lint 🧶
         run: |
@@ -31,5 +32,5 @@ jobs:
       - name: Upload Deployment ☝️
         uses: actions/upload-artifact@v2
         with:
-          name: aaa
+          name: ${{ github.sha }}-public
           path: public

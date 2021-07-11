@@ -11,7 +11,7 @@ jobs:
       - name: Download Deployment 👇
         uses: actions/download-artifact@v2
         with:
-          name: aaa
+          name: ${{ github.sha }}-public
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
