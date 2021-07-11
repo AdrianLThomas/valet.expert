@@ -20,7 +20,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci
-          npm run build --prefix-paths
+          npm run build
 
       - name: Lint 🧶
         run: |
