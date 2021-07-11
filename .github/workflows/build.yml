@@ -1,12 +1,9 @@
 name: Build and Test
 on:
-  push:
-    # branches:
-    #   - '!main'
-  # pull_request:
-  #   paths-ignore:
-  #     - "**.md"
-  #     - "**.bmpr"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "**.bmpr"
 jobs:
   build:
     runs-on: ubuntu-latest
