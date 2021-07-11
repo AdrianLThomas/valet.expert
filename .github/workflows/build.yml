@@ -1,14 +1,11 @@
-name: Build, Test and Deploy
+name: Build and Test
 on:
-  push:
-    branches:
-      - main
   pull_request:
     paths-ignore:
       - "**.md"
       - "**.bmpr"
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -32,9 +29,8 @@ jobs:
         run: |
           npm run cypress:ci
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        if: github.ref == 'refs/heads/main'
+      - name: Upload Deployment ☝️
+        uses: actions/upload-artifact@v2
         with:
-          branch: gh-pages
-          folder: public
+          name: ${{ github.sha }}-public
+          path: public
