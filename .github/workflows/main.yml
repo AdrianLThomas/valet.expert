@@ -23,14 +23,28 @@ jobs:
         run: |
           npm ci
           npm run build --prefix-paths
-          echo "pwd..."
+          echo "pwd!!!!!!!!!!!!!!!!"
           pwd
+          echo "ls!!!!!!!!!!!!"
+          ls
+          echo "specific ls!!!!!"
+          ls -la /home/runner/work/valet.expert/
+          echo "another specific ls!!!!!"
+          ls -la /home/runner/work/valet.expert/valet.expert/
   test:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Lint 🧶
         run: |
+          echo "pwd!!!!!!!!!!!!!!!!"
+          pwd
+          echo "ls!!!!!!!!!!!!"
+          ls
+          echo "specific ls!!!!!"
+          ls -la /home/runner/work/valet.expert/
+          echo "another specific ls!!!!!"
+          ls -la /home/runner/work/valet.expert/valet.expert/
           npm run lint
 
       - name: Cypress Test 🇨🇾
