@@ -6,7 +6,7 @@ on:
       - "**.bmpr"
   pull_request:
 jobs:
-  build:
+  build-test-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
