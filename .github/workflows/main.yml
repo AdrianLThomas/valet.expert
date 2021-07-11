@@ -34,12 +34,23 @@ jobs:
       - name: Cypress Test 🇨🇾
         run: |
           npm run cypress:ci
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   if: github.ref == 'refs/heads/main'
-  #   needs: test
-  #   steps:
-  #       uses: JamesIves/github-pages-deploy-action@4.1.4
-  #       with:
-  #         branch: gh-pages
-  #         folder: public
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    steps:
+      - name: Debug...
+        run: |
+          echo "pwd!!!!!!!!!!!!!!!!"
+          pwd
+          echo "ls!!!!!!!!!!!!"
+          ls
+          echo "specific ls!!!!!"
+          ls -la /home/runner/work/valet.expert/
+          echo "another specific ls!!!!!"
+          ls -la /home/runner/work/valet.expert/valet.expert/
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: public
