@@ -6,7 +6,7 @@ it(
   'should pass the audits',
   {
     retries: {
-      runMode: 4,
+      runMode: 9,
     },
   },
   function () {
