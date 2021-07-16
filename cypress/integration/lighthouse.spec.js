@@ -2,10 +2,11 @@ beforeEach(() => {
   cy.visit('/');
 });
 
+// As I'm at the mercy of GHA cloud runners,
+// retries and an overall lower threshold
+// than reality is required (see: `cypress.json`).
+jest.retryTimes(5)
+
 it('should pass the audits', function () {
-  // configured in `cypress.json`
-  // as I'm at the mercy of GHA cloud runners
-  // the performance baseline is much lower than reality
-  // to avoid frequent failing builds.
   cy.lighthouse();
 });

@@ -4,7 +4,6 @@ on:
     paths-ignore:
       - "**.md"
       - "**.bmpr"
-  pull_request:
 jobs:
   build-test-and-deploy:
     runs-on: ubuntu-latest
