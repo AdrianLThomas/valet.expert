@@ -11,7 +11,7 @@ module.exports = {
       facebook: 'mattys.mobilevaleting',
       email: 'MattysMobileValeting@hotmail.com',
       phone: '07963 362 183',
-      address: `Matty's Mobile Valeting, 129 Seamer Road, Scarborough, North Yorkshire, YO12 4EY`,
+      address: `Matty's Mobile Valeting, Seamer Road, Scarborough, North Yorkshire, YO12 4EY`,
     },
   },
   plugins: [

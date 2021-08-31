@@ -28,9 +28,10 @@ describe('Basic Build Check', () => {
     cy.contains('YO12');
   });
 
-  it('Services & Pricing', () => {
+  it('Contact Me', () => {
     cy.contains('Contact Me').click();
     cy.url().should('include', '/contact-me/');
+    cy.contains('Seamer Road');
     cy.contains('@hotmail.com');
   });
 
