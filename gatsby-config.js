@@ -19,7 +19,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.valet.expert',
-        sitemap: 'https://www.valet.expert/sitemap.xml',
+        sitemap: 'https://www.valet.expert/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
