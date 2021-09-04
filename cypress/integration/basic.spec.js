@@ -45,6 +45,8 @@ describe('Basic Build Check', () => {
   });
 
   it('sitemap.xml', () => {
-    cy.request(`/sitemap/sitemap-index.xml`).its('body').should('include', '<sitemap>');
+    cy.request(`/sitemap/sitemap-index.xml`)
+      .its('body')
+      .should('include', '<sitemap>');
   });
 });
