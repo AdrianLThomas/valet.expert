@@ -1,13 +1,11 @@
-name: Build, Test and Deploy
+name: Build, Test & Deploy
 on:
   push:
-    branches:
-      - main
     paths-ignore:
       - "**.md"
       - "**.bmpr"
 jobs:
-  build-and-deploy:
+  build-test-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -21,7 +19,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci
-          npm run build --prefix-paths
+          npm run build
 
       - name: Lint 🧶
         run: |
@@ -31,8 +29,12 @@ jobs:
         run: |
           npm run cypress:ci
 
+      - name: Version File 🗂
+        run: echo ${{ github.sha }} > public/version.txt
+
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: public
