@@ -54,12 +54,12 @@ export default function AboutMe({ location }) {
     alt: x.node.base,
   }));
 
-  const now = new Date();
-  const dateStartedInTrade = new Date(1999, 1);
-  const yearsInTrade = now.getFullYear() - dateStartedInTrade.getFullYear();
+  // const now = new Date();
+  // const dateStartedInTrade = new Date(1999, 1);
+  // const yearsInTrade = now.getFullYear() - dateStartedInTrade.getFullYear();
 
-  const dateBusinessStarted = new Date(2004, 1);
-  const yearsRunning = now.getFullYear() - dateBusinessStarted.getFullYear();
+  // const dateBusinessStarted = new Date(2004, 1);
+  // const yearsRunning = now.getFullYear() - dateBusinessStarted.getFullYear();
 
   return (
     <Layout
@@ -70,7 +70,6 @@ export default function AboutMe({ location }) {
       <Hero type="beading" classOverride={classes.hero}>
         <h2 className={classes.heroTitle}>{'About Me'}</h2>
       </Hero>
-
 
       <div className={classes.root}>
         <Grid container spacing={2}>
