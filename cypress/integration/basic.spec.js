@@ -5,7 +5,7 @@ describe('Basic Build Check', () => {
 
   afterEach(() => {
     cy.percySnapshot();
-  })
+  });
 
   it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
