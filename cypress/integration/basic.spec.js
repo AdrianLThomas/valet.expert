@@ -5,7 +5,7 @@ describe('Basic Build Check', () => {
 
   afterEach(() => {
     // @ts-ignore
-    const testTitle = Cypress.mocha.getRunner().suite.ctx.test.title
+    const testTitle = Cypress.mocha.getRunner().suite.ctx.test.title;
     cy.percySnapshot(testTitle);
   });
 
