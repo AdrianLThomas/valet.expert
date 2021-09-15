@@ -3,6 +3,10 @@ describe('Basic Build Check', () => {
     cy.visit('/');
   });
 
+  afterEach(() => {
+    cy.percySnapshot();
+  })
+
   it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
     cy.get('body')

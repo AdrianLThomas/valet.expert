@@ -14,7 +14,7 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "cypress:run": "cypress run --browser chrome --headless",
+    "cypress:run": "percy exec -- cypress run --browser chrome --headless",
     "cypress:open": "cypress open",
     "cypress:ci": "npx start-server-and-test serve http://localhost:9000 cypress:run",
     "lint": "eslint .",
@@ -49,6 +49,8 @@
     "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
+    "@percy/cli": "^1.0.0-beta.68",
+    "@percy/cypress": "^3.1.1",
     "@types/jest": "^27.0.1",
     "babel-jest": "^27.1.0",
     "cypress": "^8.3.1",
