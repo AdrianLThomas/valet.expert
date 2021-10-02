@@ -1,4 +1,4 @@
-describe('Basic Build Check', () => {
+describe('Basic Checks', () => {
   beforeEach(() => {
     cy.visit('/');
   });
