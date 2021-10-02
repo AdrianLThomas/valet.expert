@@ -7,7 +7,7 @@ snapshot:
   percyCSS: ""
 discovery:
   allowedHostnames: []
-  networkIdleTimeout: 2000
+  networkIdleTimeout: 50
 static:
   cleanUrls: false
 upload:

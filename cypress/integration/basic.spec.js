@@ -43,14 +43,4 @@ describe('Basic Build Check', () => {
     cy.visit(`/some-rubbish`, { failOnStatusCode: false });
     cy.contains('Sorry, we couldn’t find what you were looking for.');
   });
-
-  it('robots.txt', () => {
-    cy.request(`/robots.txt`).its('body').should('include', 'Allow: /');
-  });
-
-  it('sitemap.xml', () => {
-    cy.request(`/sitemap/sitemap-index.xml`)
-      .its('body')
-      .should('include', '<sitemap>');
-  });
 });
