@@ -1,10 +1,15 @@
-describe('Basic Build Check', () => {
+describe('Basic Checks', () => {
   beforeEach(() => {
     cy.visit('/');
   });
 
+  const isHeroImageVisible = () => {
+    cy.get('body').find('img[data-main-image]').and('be.visible');
+  };
+
   afterEach(() => {
-    cy.percySnapshot(Cypress.currentTest.title, {});
+    isHeroImageVisible();
+    cy.percySnapshot(Cypress.currentTest.title);
   });
 
   it('Home Page', () => {
@@ -37,20 +42,5 @@ describe('Basic Build Check', () => {
     cy.url().should('include', '/contact-me/');
     cy.contains('Seamer Road');
     cy.contains('@hotmail.com');
-  });
-
-  it('404', () => {
-    cy.visit(`/some-rubbish`, { failOnStatusCode: false });
-    cy.contains('Sorry, we couldn’t find what you were looking for.');
-  });
-
-  it('robots.txt', () => {
-    cy.request(`/robots.txt`).its('body').should('include', 'Allow: /');
-  });
-
-  it('sitemap.xml', () => {
-    cy.request(`/sitemap/sitemap-index.xml`)
-      .its('body')
-      .should('include', '<sitemap>');
   });
 });

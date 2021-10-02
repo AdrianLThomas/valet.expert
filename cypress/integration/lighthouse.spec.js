@@ -3,7 +3,7 @@ beforeEach(() => {
 });
 
 it(
-  'should pass the audits',
+  'Should pass the audits',
   {
     retries: {
       runMode: 9,
