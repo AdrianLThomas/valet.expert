@@ -4,7 +4,7 @@ describe('Basic Build Check', () => {
   });
 
   afterEach(() => {
-    cy.percySnapshot(Cypress.currentTest.title);
+    cy.percySnapshot(Cypress.currentTest.title, {});
   });
 
   it('Home Page', () => {
@@ -17,7 +17,7 @@ describe('Basic Build Check', () => {
   it('About Me', () => {
     cy.contains('About Me').click();
     cy.url().should('include', '/about-me/');
-    // cy.contains('My business was established in 2004');
+    cy.contains('My business was established in 2004');
   });
 
   it('Services & Pricing', () => {
