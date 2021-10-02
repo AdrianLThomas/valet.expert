@@ -3,15 +3,23 @@ describe('Basic Checks', () => {
     cy.visit('/');
   });
 
+  const isHeroImageVisible = () => {
+    cy.get('body')
+      .find('img[data-main-image]')
+      .and('be.visible');
+  }
+  
   afterEach(() => {
+    isHeroImageVisible()
     cy.percySnapshot(Cypress.currentTest.title);
   });
+
 
   it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
     cy.get('body')
       .find('img[data-main-image]')
-      .should('have.attr', 'alt', 'Hero image of my van');
+      .should('have.attr', 'alt', 'Hero image of my van')
   });
 
   it('About Me', () => {
@@ -37,10 +45,5 @@ describe('Basic Checks', () => {
     cy.url().should('include', '/contact-me/');
     cy.contains('Seamer Road');
     cy.contains('@hotmail.com');
-  });
-
-  it('404', () => {
-    cy.visit(`/some-rubbish`, { failOnStatusCode: false });
-    cy.contains('Sorry, we couldn’t find what you were looking for.');
   });
 });
