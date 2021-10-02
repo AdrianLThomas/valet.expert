@@ -4,22 +4,19 @@ describe('Basic Checks', () => {
   });
 
   const isHeroImageVisible = () => {
-    cy.get('body')
-      .find('img[data-main-image]')
-      .and('be.visible');
-  }
-  
+    cy.get('body').find('img[data-main-image]').and('be.visible');
+  };
+
   afterEach(() => {
-    isHeroImageVisible()
+    isHeroImageVisible();
     cy.percySnapshot(Cypress.currentTest.title);
   });
-
 
   it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
     cy.get('body')
       .find('img[data-main-image]')
-      .should('have.attr', 'alt', 'Hero image of my van')
+      .should('have.attr', 'alt', 'Hero image of my van');
   });
 
   it('About Me', () => {
