@@ -52,7 +52,7 @@ module.exports = {
       __key: 'pages',
     },
     {
-      resolve: `gatsby-plugin-material-ui`
+      resolve: `gatsby-plugin-material-ui`,
     },
   ],
 };
