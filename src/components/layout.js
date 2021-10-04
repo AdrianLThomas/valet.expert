@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
-import MapIcon from '@material-ui/icons/Map';
-import PaymentIcon from '@material-ui/icons/Payment';
+import { Container } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import MapIcon from '@mui/icons-material/Map';
+import PaymentIcon from '@mui/icons-material/Payment';
 
 import Footer from '../components/footer';
 import Navigation from '../components/navigation';
@@ -15,20 +16,20 @@ import FloatingNavigation from './floating-navigation';
 import { container, root } from './layout.module.scss';
 
 const useStyles = makeStyles((theme) => {
-  const mobile = theme.breakpoints.down('xs');
-  const notMobile = theme.breakpoints.up('sm');
+  // const mobile = theme.breakpoints.down('sm');
+  // const notMobile = theme.breakpoints.up('sm');
   return {
     topNav: {
-      [mobile]: {
-        '& #top-nav-links': {
-          display: 'none',
-        },
-      },
+      // [mobile]: {
+      //   '& #top-nav-links': {
+      //     display: 'none',
+      //   },
+      // },
     },
     bottomNav: {
-      [notMobile]: {
-        display: 'none',
-      },
+      // [notMobile]: {
+      //   display: 'none',
+      // },
     },
   };
 });

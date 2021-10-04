@@ -12,7 +12,7 @@
   "scripts": {
     "start": "gatsby develop --host=0.0.0.0",
     "build": "gatsby build --prefix-paths",
-    "serve": "gatsby serve --prefix-paths",
+    "serve": "gatsby serve --prefix-paths  --host=0.0.0.0",
     "clean": "gatsby clean",
     "cypress:run": "percy exec -- cypress run --browser chrome --headless",
     "cypress:open": "CYPRESS_BASE_URL=http://localhost:8000 cypress open",
