@@ -1,8 +1,8 @@
 {
   "ignore": {
     "gatsby-plugin-material-ui": {
-      "versions": "4.0.3",
-      "reason": ""
+      "versions": "^4.0.3",
+      "reason": "Breaking changes, need to remove dependency."
     }
   }
 }
