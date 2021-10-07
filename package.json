@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "@fontsource/dm-sans": "^4.5.0",
     "@fontsource/oswald": "^4.5.1",
