@@ -45,7 +45,7 @@ jobs:
   save-test-results:
     runs-on: ubuntu-latest
     needs: build-test-and-deploy
-    if: always()
+    if: failure()
     steps:
       - name: Save Test Results 💾
         uses: actions/upload-artifact@v2
