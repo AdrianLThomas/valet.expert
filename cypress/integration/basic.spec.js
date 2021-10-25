@@ -14,9 +14,9 @@ describe('Basic Checks', () => {
 
   it('Home Page', () => {
     cy.contains("Matty's Mobile Valeting & Detailing");
+
     cy.get('body')
-      .find('img[data-main-image]')
-      .should('have.attr', 'alt', 'Hero image of my van');
+    .find('img[alt="Hero image of my van"]')
   });
 
   it('About Me', () => {
