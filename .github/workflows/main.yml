@@ -43,6 +43,8 @@ jobs:
           folder: public
   
   save-test-results:
+    runs-on: ubuntu-latest
+    steps:
       - name: Save Test Results 💾
         if: always()
         needs: build-test-and-deploy
