@@ -3,6 +3,10 @@
     "gatsby-plugin-material-ui": {
       "versions": "^4.0.3",
       "reason": "Breaking changes, need to remove dependency."
+    },
+    "babel-preset-gatsby": {
+      "versions": "2.0.0",
+      "reason": "Breaking changes, need to remove deps."
     }
   }
 }
