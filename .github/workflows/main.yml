@@ -31,6 +31,12 @@ jobs:
         run: |
           npm run cypress:ci
 
+      - name: Save Test Results 💾
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-report
+          path: cypress/{screenshots,videos}/**/*
+
       - name: Version File 🗂
         run: echo ${{ github.sha }} > public/version.txt
 
