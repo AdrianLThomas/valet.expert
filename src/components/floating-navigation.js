@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import makeStyles from '@mui/styles/makeStyles';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import { makeStyles } from '@material-ui/core/styles';
 import { Link, withPrefix } from 'gatsby';
 
 const useStyles = makeStyles({

@@ -1,41 +1,41 @@
 import React from 'react';
 
-import makeStyles from '@mui/styles/makeStyles';
+import { makeStyles } from '@material-ui/core/styles';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useStyles = makeStyles((theme) => {
   const border = '1px lightgrey solid';
-  // const mobile = theme.breakpoints.down('sm');
+  const mobile = theme.breakpoints.down('xs');
   return {
     footer: {
       borderTop: border,
       marginTop: '10px',
       backgroundColor: '#f5f5f5',
 
-      // [mobile]: {
-      //   // push up footer when mobile nav hides it
-      //   marginBottom: '50px',
-      // },
+      [mobile]: {
+        // push up footer when mobile nav hides it
+        marginBottom: '50px',
+      },
     },
     divider: {
       borderTop: border,
     },
     left: {
-      // [theme.breakpoints.up('md')]: {
-      //   float: 'left',
-      // },
-      // [theme.breakpoints.down('lg')]: {
-      //   textAlign: 'center',
-      // },
+      [theme.breakpoints.up('md')]: {
+        float: 'left',
+      },
+      [theme.breakpoints.down('md')]: {
+        textAlign: 'center',
+      },
       paddingLeft: '20px',
     },
     right: {
-      // [theme.breakpoints.up('md')]: {
-      //   float: 'right',
-      // },
-      // [theme.breakpoints.down('lg')]: {
-      //   textAlign: 'center',
-      // },
+      [theme.breakpoints.up('md')]: {
+        float: 'right',
+      },
+      [theme.breakpoints.down('md')]: {
+        textAlign: 'center',
+      },
       paddingRight: '20px',
     },
     link: {

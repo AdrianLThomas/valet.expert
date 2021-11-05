@@ -1,10 +1,10 @@
 import React from 'react';
 
-import makeStyles from '@mui/styles/makeStyles';
-import ChatIcon from '@mui/icons-material/Chat';
-import MapIcon from '@mui/icons-material/Map';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import { makeStyles } from '@material-ui/core/styles';
+import ChatIcon from '@material-ui/icons/Chat';
+import MapIcon from '@material-ui/icons/Map';
+import SettingsIcon from '@material-ui/icons/Settings';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 
 import CardGrid from '../card-grid.js';
 

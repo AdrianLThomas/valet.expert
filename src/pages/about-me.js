@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Grid } from '@mui/material';
-import makeStyles from '@mui/styles/makeStyles';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 
