@@ -80,7 +80,7 @@ export default function AboutMe({ location }) {
         as a valeter for Arundale Peugeot, Scarborough. I then assisted the
         running of a local valeting business, before seeing the opportunity to
         work for myself as a mobile valeter. The business has gone from strength
-        to strength and continues it's success to this day.
+        to strength and continues its success to this day.
       </p>
 
       <p>
