@@ -54,7 +54,7 @@
     "@percy/cypress": "^3.1.1",
     "@types/jest": "^27.0.2",
     "babel-jest": "^27.3.1",
-    "cypress": "^8.6.0",
+    "cypress": "^9.2.0",
     "cypress-audit": "^1.1.0",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
