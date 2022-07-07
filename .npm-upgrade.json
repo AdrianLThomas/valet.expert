@@ -5,52 +5,52 @@
       "reason": "Breaking changes, need to remove dependency."
     },
     "babel-preset-gatsby": {
-      "versions": "2",
-      "reason": ""
+      "versions": "2.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby": {
-      "versions": "4",
-      "reason": ""
+      "versions": "4.0.1",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-google-analytics": {
-      "versions": "4",
-      "reason": ""
+      "versions": "4.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-image": {
-      "versions": "2",
-      "reason": ""
+      "versions": "2.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-manifest": {
-      "versions": "4",
-      "reason": ""
+      "versions": "4.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-react-helmet": {
-      "versions": "5",
-      "reason": ""
+      "versions": "5.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-robots-txt": {
       "versions": "1.6.13",
       "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-sass": {
-      "versions": "5",
-      "reason": ""
+      "versions": "5.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-sharp": {
-      "versions": "4",
-      "reason": ""
+      "versions": "4.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-plugin-sitemap": {
-      "versions": "5",
-      "reason": ""
+      "versions": "5.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-source-filesystem": {
-      "versions": "4",
-      "reason": ""
+      "versions": "4.0.0",
+      "reason": "Possible lighthouse seo impact"
     },
     "gatsby-transformer-sharp": {
-      "versions": "4",
-      "reason": ""
+      "versions": "4.0.0",
+      "reason": "Possible lighthouse seo impact"
     }
   }
 }
