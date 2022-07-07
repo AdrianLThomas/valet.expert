@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Introduction({ className }) {
+export default function ({ className }) {
   const { icon } = useStyles();
   const established = 2004;
   const now = new Date().getFullYear();
