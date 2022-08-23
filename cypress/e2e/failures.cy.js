@@ -1,4 +1,4 @@
-describe('Basic Checks', () => {
+describe('Basic Failures', () => {
   beforeEach(() => {
     cy.visit('/');
   });
