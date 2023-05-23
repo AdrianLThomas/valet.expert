@@ -28,19 +28,6 @@ const useStyles = makeStyles({
   },
 });
 
-const postcodes = [
-  'YO11',
-  'YO12',
-  'YO13',
-  'YO14',
-  'YO15',
-  'YO16',
-  'YO17',
-  'YO18',
-  'YO21',
-  'YO22',
-];
-
 export default function AreasCovered({ location }) {
   const { heroTitle, hero, map, button } = useStyles();
   return (
@@ -70,16 +57,9 @@ export default function AreasCovered({ location }) {
         ></iframe>
       </div>
 
-      <p>Postcodes covered: </p>
-      <address>
-        {postcodes.slice(0, postcodes.length - 1).map((pc) => pc + ', ')}
-        {'and '}
-        {postcodes.slice(-1)}
-      </address>
-
       <p>
-        <b>Please note:</b> Beyond YO14 incurs an additional charge of £40 to
-        cover time, travel and running expenses.
+        <b>Please note:</b> There is a travel charge of £45 outside of the
+        Scarborough area.
       </p>
     </Layout>
   );

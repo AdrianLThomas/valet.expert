@@ -5,8 +5,8 @@ import CardGrid from '../card-grid';
 export default function Services({ className }) {
   const services = [
     {
-      title: 'Mini Valet',
-      button: { text: 'Book a mini valet', href: '/contact-me/' },
+      title: 'Maintenance Valet',
+      button: { text: 'Book a maintenance valet', href: '/contact-me/' },
       size: {
         xs: 12,
         sm: 6,
@@ -15,7 +15,7 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Starting from £45</h4>
+          <h4>Starting from £60</h4>
           <ul>
             <li>{'Wash & Wax then hand dried'}</li>
             <li>{'Alloys'}</li>
@@ -28,7 +28,7 @@ export default function Services({ className }) {
             <li>{'Air freshener'}</li>
           </ul>
 
-          <span>4x4 and 7 seaters start from £55.</span>
+          <span>4x4 and 7 seaters start from £70.</span>
         </>
       ),
     },
@@ -43,7 +43,7 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Starting from £70</h4>
+          <h4>Starting from £90</h4>
           <p>
             <strong>Includes Mini Valet</strong>, plus:
           </p>
@@ -61,7 +61,7 @@ export default function Services({ className }) {
             <li>{'Outside polished/waxed'}</li>
           </ul>
 
-          <span>4x4 and 7 seaters start from £90.</span>
+          <span>4x4 and 7 seaters start from £120.</span>
         </>
       ),
     },
@@ -96,7 +96,7 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Starting from £120</h4>
+          <h4>Starting from £160</h4>
           <ul>
             <li>Paint Correction</li>
             <li>Swirl Mark Removal</li>
@@ -121,11 +121,9 @@ export default function Services({ className }) {
             manufacturers
           </p>
           <ul>
-            <li>Lifeshine by Autoglym</li>
-            <li>DiamondBrite Jewelultra</li>
-            <li>Supagard</li>
-            <li>GEN-3 Glasscoat</li>
-            <li>Gtechniq Hybrid Coating</li>
+            <li>Crystal Serum Light from Gtechniq</li>
+            <li>Exo V4 from Gtechniq</li>
+            <li>Halo Flexible Film coating for PPF from Gtechniq</li>
           </ul>
         </>
       ),
@@ -142,7 +140,7 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Starting from £40</h4>
+          <h4>Starting from £50</h4>
           <p>
             The engine bay is steam cleaned and dressed to a high standard.
             Whilst the upmost care is taken to ensure electrical components are
