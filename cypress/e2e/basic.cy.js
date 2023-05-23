@@ -33,7 +33,7 @@ describe('Basic Checks', () => {
   it('Areas Covered', () => {
     cy.contains('Areas Covered').click();
     cy.url().should('include', '/areas-covered/');
-    cy.contains('YO12');
+    cy.contains('Scarborough area');
   });
 
   it('Contact Me', () => {
