@@ -27,7 +27,7 @@ describe('Basic Checks', () => {
   it('Services & Pricing', () => {
     cy.contains('Services & Pricing').click();
     cy.url().should('include', '/services-and-pricing/');
-    cy.contains('Mini Valet');
+    cy.contains('Maintenance Valet');
   });
 
   it('Areas Covered', () => {

@@ -25,7 +25,7 @@ export default function ServicesAndPricing({ location }) {
   return (
     <Layout
       currentPath={location.pathname}
-      description="I offer a variety of services for your vehicle, such as: mini valet, full valet, hand polishing and waxing, machine polish, ceramic coating and engine bay/steam cleaning."
+      description="I offer a variety of services for your vehicle, such as: maintenance valet, full valet, hand polishing and waxing, machine polish, ceramic coating and engine bay/steam cleaning."
     >
       <Hero type="beading" classOverride={classes.hero}>
         <h2 className={classes.heroTitle}>{'Services & Pricing'}</h2>
