@@ -45,7 +45,7 @@ export default function Services({ className }) {
         <>
           <h4>Starting from £90</h4>
           <p>
-            <strong>Includes Mini Valet</strong>, plus:
+            <strong>Includes Maintenance Valet</strong>, plus:
           </p>
           <ul>
             <li>{'Glove compartment'}</li>
