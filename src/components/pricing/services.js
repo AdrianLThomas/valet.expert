@@ -29,6 +29,11 @@ export default function Services({ className }) {
           </ul>
 
           <span>4x4 and 7 seaters start from £70.</span>
+
+          <br />
+          <br />
+
+          <i>For existing customers only, to keep your previous valet in top condition.</i>
         </>
       ),
     },
