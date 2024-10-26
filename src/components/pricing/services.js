@@ -33,7 +33,10 @@ export default function Services({ className }) {
           <br />
           <br />
 
-          <i>For existing customers only, to keep your previous valet in top condition.</i>
+          <i>
+            For existing customers only, to keep your previous valet in top
+            condition.
+          </i>
         </>
       ),
     },
