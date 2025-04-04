@@ -51,7 +51,7 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Starting from £90</h4>
+          <h4>Starting from £120</h4>
           <p>
             <strong>Includes Maintenance Valet</strong>, plus:
           </p>
@@ -69,7 +69,7 @@ export default function Services({ className }) {
             <li>{'Outside polished/waxed'}</li>
           </ul>
 
-          <span>4x4 and 7 seaters start from £120.</span>
+          <span>4x4 and 7 seaters start from £160.</span>
         </>
       ),
     },
@@ -84,8 +84,8 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Waxing starts from £40</h4>
-          <h4>Polishing starts from £40</h4>
+          <h4>Waxing starts from £80</h4>
+          <h4>Polishing starts from £80</h4>
           <p>
             Waxing and polishing are for an already prepared car, ready to be
             protected.
@@ -148,7 +148,7 @@ export default function Services({ className }) {
       },
       description: (
         <>
-          <h4>Starting from £50</h4>
+          <h4>Starting from £65</h4>
           <p>
             The engine bay is steam cleaned and dressed to a high standard.
             Whilst the upmost care is taken to ensure electrical components are
