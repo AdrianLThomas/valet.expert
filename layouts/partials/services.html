@@ -1,0 +1,19 @@
+<div class="card-grid">
+  {{- range .Site.Data.services.service -}}
+    <div class="card-item {{ .sizeClass }}">
+      <div class="card">
+        <div class="card-content">
+          <h2 class="card-header">{{ .title }}</h2>
+          <div class="card-description">
+            {{ .content | safeHTML }}
+          </div>
+        </div>
+        {{ if .buttonText }}
+        <div class="card-actions">
+          <a href="{{ .buttonHref }}" class="card-button">{{ .buttonText }}</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  {{- end -}}
+</div>

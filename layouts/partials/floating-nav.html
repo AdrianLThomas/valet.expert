@@ -1,0 +1,15 @@
+<nav class="floating-nav" aria-label="Mobile navigation">
+  {{- $navItems := slice
+    (dict "href" "/" "label" "Home" "icon" "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z")
+    (dict "href" "/about-me/" "label" "About" "icon" "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z")
+    (dict "href" "/services-and-pricing/" "label" "Pricing" "icon" "M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z")
+    (dict "href" "/areas-covered/" "label" "Areas" "icon" "M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z")
+    (dict "href" "/contact-me/" "label" "Contact" "icon" "M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z")
+  -}}
+  {{- range $navItems -}}
+    <a href="{{ .href }}" class="floating-nav__item{{ if eq $.RelPermalink .href }} active{{ end }}" aria-label="{{ .label }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="{{ .icon }}"/></svg>
+      <span class="floating-nav__label">{{ .label }}</span>
+    </a>
+  {{- end -}}
+</nav>

@@ -8,8 +8,8 @@ describe('SEO Checks', () => {
   });
 
   it('sitemap.xml', () => {
-    cy.request(`/sitemap/sitemap-index.xml`)
+    cy.request(`/sitemap.xml`)
       .its('body')
-      .should('include', '<sitemap>');
+      .should('include', '<urlset');
   });
 });

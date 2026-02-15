@@ -10,45 +10,47 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.5
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo 🔧
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build 🏗️
+        run: hugo --minify
 
       - name: Setup Node.js 🤖
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build
-
-      - name: Lint 🧶
-        run: |
-          npm run lint
+      - name: Install Test Dependencies 📦
+        run: npm ci
 
       - name: Cypress Test 🇨🇾
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: |
-          npm run cypress:ci
+        run: npm run cypress:ci
 
       - name: Version File 🗂
         run: echo ${{ github.sha }} > public/version.txt
 
       - name: Deploy 🚀
         if: github.ref == 'refs/heads/main'
-        uses: JamesIves/github-pages-deploy-action@4.1.8
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: public
-  
+
   save-test-results:
     runs-on: ubuntu-latest
     needs: build-test-and-deploy
     if: failure()
     steps:
       - name: Save Test Results 💾
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-report
           path: cypress/{screenshots,videos}/**/*

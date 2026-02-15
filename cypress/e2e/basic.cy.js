@@ -4,7 +4,7 @@ describe('Basic Checks', () => {
   });
 
   const isHeroImageVisible = () => {
-    cy.get('body').find('img[data-main-image]').and('be.visible');
+    cy.get('body').find('img[data-main-image]').should('be.visible');
   };
 
   afterEach(() => {

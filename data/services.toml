@@ -1,0 +1,99 @@
+[[service]]
+title = "Maintenance Valet"
+sizeClass = "card-item--service-md4"
+buttonText = "Book a maintenance valet"
+buttonHref = "/contact-me/"
+content = """
+<h4>Starting from &pound;60</h4>
+<ul>
+  <li>Wash &amp; Wax then hand dried</li>
+  <li>Alloys</li>
+  <li>Tyres shined &amp; protected</li>
+  <li>Inside door shuts cleaned &amp; dried</li>
+  <li>Windows polished inside &amp; out</li>
+  <li>Inside hoovered</li>
+  <li>Plastic &amp; vinyl's cleaned and dressed</li>
+  <li>Pockets &amp; ash trays</li>
+  <li>Air freshener</li>
+</ul>
+<span>4x4 and 7 seaters start from &pound;70.</span>
+<br><br>
+<i>For existing customers only, to keep your previous valet in top condition.</i>
+"""
+
+[[service]]
+title = "Full Valet"
+sizeClass = "card-item--service-md4"
+buttonText = "Book a full valet"
+buttonHref = "/contact-me/"
+content = """
+<h4>Starting from &pound;120</h4>
+<p><strong>Includes Maintenance Valet</strong>, plus:</p>
+<ul>
+  <li>Glove compartment</li>
+  <li>Carpets, door cards &amp; rooflining all shampooed and dried</li>
+  <li>Seats shampooed and dried, or if leather interior, then a luxorious leather treatment is applied</li>
+  <li>Full car deodorising system</li>
+  <li>Outside polished/waxed</li>
+</ul>
+<span>4x4 and 7 seaters start from &pound;160.</span>
+"""
+
+[[service]]
+title = "Hand Polishing & Waxing"
+sizeClass = "card-item--service-md4"
+buttonText = "Book a hand polish & wax"
+buttonHref = "/contact-me/"
+content = """
+<h4>Waxing starts from &pound;80</h4>
+<h4>Polishing starts from &pound;80</h4>
+<p>Waxing and polishing are for an already prepared car, ready to be protected.</p>
+"""
+
+[[service]]
+title = "Machine Polish"
+sizeClass = "card-item--service-lg3"
+buttonText = "Book a machine polish"
+buttonHref = "/contact-me/"
+content = """
+<h4>Starting from &pound;160</h4>
+<ul>
+  <li>Paint Correction</li>
+  <li>Swirl Mark Removal</li>
+  <li>Light Scratch Removal</li>
+</ul>
+"""
+
+[[service]]
+title = "Ultimate Paint and Fabric Protection"
+sizeClass = "card-item--service-lg3"
+buttonText = "Book paint & fabric protection"
+buttonHref = "/contact-me/"
+content = """
+<h4>Please contact me for prices</h4>
+<p>Paint and fabric protection from premium valeting product manufacturers</p>
+<ul>
+  <li>Crystal Serum Light from Gtechniq</li>
+  <li>Exo V4 from Gtechniq</li>
+  <li>Halo Flexible Film coating for PPF from Gtechniq</li>
+</ul>
+"""
+
+[[service]]
+title = "Engine Bay Steam Clean & Detail"
+sizeClass = "card-item--service-lg3"
+buttonText = "Book an engine bay steam clean"
+buttonHref = "/contact-me/"
+content = """
+<h4>Starting from &pound;65</h4>
+<p>The engine bay is steam cleaned and dressed to a high standard. Whilst the upmost care is taken to ensure electrical components are protected, it is the customers risk to undertake this procedure.</p>
+"""
+
+[[service]]
+title = "Other"
+sizeClass = "card-item--service-other"
+buttonText = "Contact me"
+buttonHref = "/contact-me/"
+content = """
+<p>Can't find what you're looking for? I offer a variety of valeting and detailing services, so don't hestiate to contact me for further details.</p>
+"""

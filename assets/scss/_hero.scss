@@ -1,0 +1,61 @@
+@import 'colours';
+
+@mixin full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.hero-container {
+  @include full-width;
+  $border: 1px solid $level8;
+  border-top: $border;
+  border-bottom: $border;
+  line-height: 0;
+}
+
+.hero-container > img,
+.hero-container > picture > img {
+  display: block;
+}
+
+.hero-background {
+  height: 380px;
+  position: relative;
+  background-color: rgb(100, 100, 100);
+  overflow: hidden;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-background--short {
+  height: 100px;
+}
+
+.hero-textbox {
+  width: 75%;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-shadow: 2px 2px black;
+  line-height: initial;
+}
+
+.hero-title {
+  color: white;
+  font-size: 32px;
+}
+
+.hero-title--narrow {
+  width: 100px;
+}

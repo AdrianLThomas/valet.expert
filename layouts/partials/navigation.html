@@ -1,0 +1,25 @@
+<header>
+  <div class="nav-grid">
+    <div class="nav-logo-area">
+      <a class="header-text" href="/">
+        {{ $logo := resources.Get "images/Logo.png" }}
+        {{ if $logo }}
+          {{ $logo = $logo.Resize "40x40" }}
+          <img src="{{ $logo.RelPermalink }}" alt="Matty's Mobile Valeting Logo" width="40" height="40">
+        {{ end }}
+        <h1>Matty's Mobile Valeting &amp; Detailing</h1>
+      </a>
+    </div>
+    {{- $navItems := slice
+      (dict "href" "/about-me/" "label" "About Me")
+      (dict "href" "/services-and-pricing/" "label" "Services & Pricing")
+      (dict "href" "/areas-covered/" "label" "Areas Covered")
+      (dict "href" "/contact-me/" "label" "Contact Me")
+    -}}
+    {{- range $navItems -}}
+      <div class="nav-link-item">
+        <a href="{{ .href }}" class="nav-link{{ if eq $.RelPermalink .href }} selected{{ end }}">{{ .label }}</a>
+      </div>
+    {{- end -}}
+  </div>
+</header>

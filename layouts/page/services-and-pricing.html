@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ partial "hero.html" (dict "Page" . "type" "beading" "title" "Services & Pricing" "short" true) }}
+
+  <div class="service-spacing">
+    {{ partial "services.html" . }}
+  </div>
+{{ end }}

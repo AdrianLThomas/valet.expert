@@ -1,0 +1,130 @@
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.card-grid .card-item {
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.card-header {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 0.35em 0;
+}
+
+.card-icon {
+  display: block;
+  margin: 0 auto 8px auto;
+  width: 50px;
+  height: 50px;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.card-description p {
+  margin: 0 0 0.5em 0;
+}
+
+.card-actions {
+  padding: 8px;
+}
+
+.card-button {
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  transition: transform 500ms;
+  will-change: transform;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(33, 33, 33);
+  display: block;
+  box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  transform: translateY(3px);
+}
+
+// Grid sizing: xs=12, sm=6, md=3 (intro cards)
+.card-item--intro {
+  flex: 0 0 100%;
+
+  @media (min-width: 600px) {
+    flex: 0 0 calc(50% - 4px);
+  }
+
+  @media (min-width: 960px) {
+    flex: 0 0 calc(25% - 6px);
+  }
+}
+
+// Grid sizing: xs=12, sm=6, md=4 (service cards default)
+.card-item--service-md4 {
+  flex: 0 0 100%;
+
+  @media (min-width: 600px) {
+    flex: 0 0 calc(50% - 4px);
+  }
+
+  @media (min-width: 960px) {
+    flex: 0 0 calc(33.333% - 6px);
+  }
+}
+
+// Grid sizing: xs=12, sm=6, md=4, lg=3
+.card-item--service-lg3 {
+  flex: 0 0 100%;
+
+  @media (min-width: 600px) {
+    flex: 0 0 calc(50% - 4px);
+  }
+
+  @media (min-width: 960px) {
+    flex: 0 0 calc(33.333% - 6px);
+  }
+
+  @media (min-width: 1280px) {
+    flex: 0 0 calc(25% - 6px);
+  }
+}
+
+// Grid sizing: xs=12, sm=12, md=6, lg=3 (Other card)
+.card-item--service-other {
+  flex: 0 0 100%;
+
+  @media (min-width: 960px) {
+    flex: 0 0 calc(50% - 4px);
+  }
+
+  @media (min-width: 1280px) {
+    flex: 0 0 calc(25% - 6px);
+  }
+}

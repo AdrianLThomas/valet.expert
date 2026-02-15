@@ -1,0 +1,4 @@
+{{ define "main" }}
+  {{ partial "hero.html" (dict "Page" . "type" (.Params.heroType | default "beading") "title" .Params.heroTitle "short" true) }}
+  {{ .Content }}
+{{ end }}
