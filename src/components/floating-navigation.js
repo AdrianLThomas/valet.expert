@@ -11,15 +11,16 @@ const useStyles = makeStyles({
     left: 0,
     bottom: 0,
     width: '100%',
-    borderTop: '1px lightgrey solid',
-    padding: 0,
+    boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.08)',
+    padding: '4px 0',
     margin: 0,
+    backgroundColor: '#ffffff',
   },
   action: {
     '&$selected': {
-      color: 'black',
+      color: 'rgba(52, 152, 219, 1)',
     },
-    padding: 0,
+    padding: '4px 0',
   },
   selected: {
     // intentionally empty

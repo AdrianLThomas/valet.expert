@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { container, background, heroTextbox } from './hero.module.scss';
+import { container, background, heroTextbox, overlay } from './hero.module.scss';
 
 export default function Hero({ children, type, classOverride }) {
   const getHeroImage = () => {
@@ -30,6 +30,7 @@ export default function Hero({ children, type, classOverride }) {
   return (
     <div className={container}>
       {getHeroImage()}
+      <div className={overlay} />
       <div className={heroTextbox}>{children}</div>
     </div>
   );

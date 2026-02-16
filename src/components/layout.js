@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => {
         display: 'none',
       },
     },
+    mainContainer: {
+      paddingTop: '16px',
+      paddingBottom: '24px',
+    },
   };
 });
 
@@ -68,7 +72,7 @@ export default function Layout({ children, currentPath, description }) {
     <>
       <SEO descriptionOverride={description} />
       <div className={root}>
-        <Container className={container}>
+        <Container maxWidth="md" className={`${container} ${classes.mainContainer}`}>
           <Navigation
             className={classes.topNav}
             currentPath={currentPath}

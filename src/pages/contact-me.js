@@ -9,16 +9,26 @@ import Layout from '../components/layout';
 const useStyles = makeStyles({
   heroTitle: {
     color: 'white',
-    fontSize: '32px',
+    fontSize: '36px',
+    fontWeight: 700,
   },
   hero: {
-    height: '100px',
+    height: '120px',
     position: 'relative',
   },
   address: {
     fontStyle: 'normal',
+    backgroundColor: '#ffffff',
+    borderRadius: '12px',
+    padding: '28px 32px',
+    boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+    marginTop: '24px',
     '& a': {
-      color: 'darkred',
+      color: 'rgba(34, 128, 191, 1)',
+      transition: 'color 0.2s ease',
+      '&:hover': {
+        color: 'rgba(24, 93, 139, 1)',
+      },
     },
     '& * span': {
       color: 'initial',
@@ -26,6 +36,11 @@ const useStyles = makeStyles({
     },
     '& svg': {
       margin: '10px 10px 0 0',
+      fill: 'rgba(52, 152, 219, 1)',
+      transition: 'fill 0.2s ease',
+      '&:hover': {
+        fill: 'rgba(34, 128, 191, 1)',
+      },
     },
   },
 });

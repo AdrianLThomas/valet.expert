@@ -1,4 +1,9 @@
 html, body, #gatsby-focus-wrapper, #___gatsby {
     height: 100%;
   }
-  
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

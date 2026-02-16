@@ -9,14 +9,15 @@ import Services from '../components/pricing/services';
 const useStyles = makeStyles(() => ({
   heroTitle: {
     color: 'white',
-    fontSize: '32px',
+    fontSize: '36px',
+    fontWeight: 700,
   },
   hero: {
-    height: '100px',
+    height: '120px',
     position: 'relative',
   },
   service: {
-    paddingTop: '20px',
+    paddingTop: '32px',
   },
 }));
 

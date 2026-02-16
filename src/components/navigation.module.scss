@@ -1,9 +1,13 @@
-@import "~@fontsource/oswald/index.css"; // Weight 400.
+@import "~@fontsource/oswald/index.css";
 
-$navSelected: 5px solid black;
-$navBorder: 1px solid transparent;
 header {
   text-align: center;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 12px 0;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
 .headerText {
@@ -12,7 +16,7 @@ header {
 }
 
 .headerText > h1 {
-  margin-left: 8px; /* make some space between logo and header title */
+  margin-left: 10px;
   font-family: "Oswald";
   font-weight: 200;
   line-height: 1;
@@ -23,20 +27,22 @@ header {
 }
 
 .navLink {
-  border-top: $navBorder;
   display: block;
   font-family: "DM Sans";
   font-size: 1em;
-  padding: 0.2em;
-  margin: 0 5px 0 5px;
-  will-change: auto;
-  transition: border-width 0.2s linear;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 6px;
+  color: #1a1a2e;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .navLink:hover {
-  border-top: $navSelected;
+  color: rgba(52, 152, 219, 1);
+  background-color: rgba(238, 246, 252, 0.8);
 }
 
 .navLink.selected {
-  border-top: $navSelected;
-} 
+  color: rgba(52, 152, 219, 1);
+  font-weight: 600;
+}

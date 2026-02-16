@@ -11,25 +11,37 @@ import buttonStyle from '../components/styles/button';
 const useStyles = makeStyles({
   heroTitle: {
     color: 'white',
-    fontSize: '32px',
+    fontSize: '36px',
+    fontWeight: 700,
   },
   hero: {
-    height: '100px',
+    height: '120px',
     position: 'relative',
   },
   map: {
-    width: '80%',
-    margin: '20px 0 10px 0',
+    width: '100%',
+    margin: '24px 0 16px 0',
     border: 0,
+    borderRadius: '12px',
   },
   button: {
     ...buttonStyle,
     width: 'initial',
   },
+  travelNotice: {
+    backgroundColor: 'rgba(238, 246, 252, 1)',
+    borderLeft: '4px solid rgba(52, 152, 219, 1)',
+    padding: '16px 20px',
+    borderRadius: '0 8px 8px 0',
+    marginTop: '16px',
+    '& b': {
+      color: 'rgba(15, 58, 87, 1)',
+    },
+  },
 });
 
 export default function AreasCovered({ location }) {
-  const { heroTitle, hero, map, button } = useStyles();
+  const { heroTitle, hero, map, button, travelNotice } = useStyles();
   return (
     <Layout
       currentPath={location.pathname}
@@ -57,7 +69,7 @@ export default function AreasCovered({ location }) {
         ></iframe>
       </div>
 
-      <p>
+      <p className={travelNotice}>
         <b>Please note:</b> There is a travel charge of £45 outside of the
         Scarborough area.
       </p>

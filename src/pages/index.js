@@ -8,12 +8,19 @@ import Layout from '../components/layout';
 
 const useStyles = makeStyles(() => ({
   heroTitle: {
-    width: '100px',
     color: 'white',
-    fontSize: '32px',
+    fontSize: '40px',
+    fontWeight: 700,
+    letterSpacing: '0.02em',
+  },
+  heroSubtitle: {
+    color: 'rgba(255,255,255,0.9)',
+    fontSize: '18px',
+    fontWeight: 400,
+    marginTop: '8px',
   },
   introSpacing: {
-    marginTop: 10,
+    marginTop: 32,
   },
 }));
 
@@ -24,6 +31,7 @@ export default function Home({ location }) {
     <Layout currentPath={location.pathname}>
       <Hero type="van">
         <h2 className={classes.heroTitle}>Friendly. Professional. Reliable.</h2>
+        <p className={classes.heroSubtitle}>{'Premium mobile valeting & detailing in Scarborough'}</p>
       </Hero>
 
       <Introduction className={classes.introSpacing} />

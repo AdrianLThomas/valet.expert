@@ -14,13 +14,18 @@ const useStyles = makeStyles(() => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
+    marginTop: '24px',
+    '& img': {
+      borderRadius: '8px',
+    },
   },
   heroTitle: {
     color: 'white',
-    fontSize: '32px',
+    fontSize: '36px',
+    fontWeight: 700,
   },
   hero: {
-    height: '100px',
+    height: '120px',
     position: 'relative',
   },
 }));

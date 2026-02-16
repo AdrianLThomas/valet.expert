@@ -11,9 +11,6 @@
 
 .container {
     @include full-width;
-    $border: 1px solid colours.$level8;
-    border-top: $border;
-    border-bottom: $border;
     line-height: 0; // remove 'invisible' padding due to browser treatment of img being typography
 }
 
@@ -22,19 +19,36 @@
 }
 
 .background {
-    height: 380px;
+    height: 450px;
     position: relative;
     background-color: rgb(100 100 100); // fix load flicker
 }
 
 .heroTextbox {
     width: 75%;
-    border-radius: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    text-shadow: 2px 2px black;
+    padding: 24px 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     line-height: initial; // reset from container
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 58, 87, 0.3) 0%,
+        rgba(15, 58, 87, 0.55) 100%
+    );
+    z-index: 1;
+}
+
+.heroTextbox {
+    z-index: 2;
 }
