@@ -42,7 +42,11 @@ export default function ({ className }) {
         now - established
       } years. The quality of my work is reflected by my 5 star reviews on Google and Facebook.`,
       button: { text: 'About Me', href: '/about-me/' },
-      icon: <div className={iconWrapper}><ThumbUpIcon className={icon} /></div>,
+      icon: (
+        <div className={iconWrapper}>
+          <ThumbUpIcon className={icon} />
+        </div>
+      ),
       size,
     },
     {
@@ -50,7 +54,11 @@ export default function ({ className }) {
       description:
         'I provide a range of services and with the correct package, I will get your pride and joy looking as good as the day it came out of the showroom.',
       button: { text: 'Services & Pricing', href: '/services-and-pricing/' },
-      icon: <div className={iconWrapper}><MapIcon className={icon} /></div>,
+      icon: (
+        <div className={iconWrapper}>
+          <MapIcon className={icon} />
+        </div>
+      ),
       size,
     },
     {
@@ -59,7 +67,11 @@ export default function ({ className }) {
         "I can come to you, whether it's your place of work or home. I'm available Monday - Saturday and I cover the entire Scarborough area, including most of North Yorkshire.",
 
       button: { text: 'Areas Covered', href: '/areas-covered/' },
-      icon: <div className={iconWrapper}><SettingsIcon className={icon} /></div>,
+      icon: (
+        <div className={iconWrapper}>
+          <SettingsIcon className={icon} />
+        </div>
+      ),
       size,
     },
     {
@@ -67,7 +79,11 @@ export default function ({ className }) {
       description:
         "I'm easy to get hold of, just call or leave me a message at your convenience.",
       button: { text: 'Contact Me', href: '/contact-me/' },
-      icon: <div className={iconWrapper}><ChatIcon className={icon} /></div>,
+      icon: (
+        <div className={iconWrapper}>
+          <ChatIcon className={icon} />
+        </div>
+      ),
       size,
     },
   ];

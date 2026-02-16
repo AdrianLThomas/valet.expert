@@ -2,7 +2,12 @@ import * as React from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { container, background, heroTextbox, overlay } from './hero.module.scss';
+import {
+  container,
+  background,
+  heroTextbox,
+  overlay,
+} from './hero.module.scss';
 
 export default function Hero({ children, type, classOverride }) {
   const getHeroImage = () => {

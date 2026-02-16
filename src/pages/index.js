@@ -31,7 +31,9 @@ export default function Home({ location }) {
     <Layout currentPath={location.pathname}>
       <Hero type="van">
         <h2 className={classes.heroTitle}>Friendly. Professional. Reliable.</h2>
-        <p className={classes.heroSubtitle}>{'Premium mobile valeting & detailing in Scarborough'}</p>
+        <p className={classes.heroSubtitle}>
+          {'Premium mobile valeting & detailing in Scarborough'}
+        </p>
       </Hero>
 
       <Introduction className={classes.introSpacing} />

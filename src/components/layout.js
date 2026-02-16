@@ -72,7 +72,10 @@ export default function Layout({ children, currentPath, description }) {
     <>
       <SEO descriptionOverride={description} />
       <div className={root}>
-        <Container maxWidth="md" className={`${container} ${classes.mainContainer}`}>
+        <Container
+          maxWidth="md"
+          className={`${container} ${classes.mainContainer}`}
+        >
           <Navigation
             className={classes.topNav}
             currentPath={currentPath}
