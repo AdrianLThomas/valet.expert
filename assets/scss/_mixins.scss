@@ -1,0 +1,21 @@
+@mixin hover-lift {
+  transition: transform 500ms;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(3px);
+  }
+}
+
+%button-base {
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid black;
+  text-decoration: none;
+  color: $color-text;
+  background: none;
+  cursor: pointer;
+  @include hover-lift;
+}

@@ -3,14 +3,14 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  border-top: 1px lightgrey solid;
+  border-top: 1px $color-border solid;
   padding: 0;
   margin: 0;
   background-color: #fff;
   display: flex;
   z-index: 1000;
 
-  @media (min-width: 600px) {
+  @media (min-width: $bp-sm) {
     display: none;
   }
 }
@@ -23,7 +23,7 @@
   justify-content: center;
   padding: 6px 0;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.54);
+  color: $color-icon-muted;
   font-size: 0.75rem;
   min-width: 0;
   transition: color 0.2s;
@@ -41,7 +41,7 @@
 }
 
 .floating-nav__label {
-  font-family: -apple-system, Roboto, sans-serif;
+  font-family: $font-system;
   font-size: 0.75rem;
   line-height: 1;
 }

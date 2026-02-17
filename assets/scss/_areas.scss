@@ -5,20 +5,6 @@
 }
 
 .areas-button {
-  text-align: center;
-  font-size: 1rem;
-  padding: 10px;
-  font-weight: bold;
-  transition: transform 500ms;
-  will-change: transform;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(33, 33, 33);
+  @extend %button-base;
   display: inline-block;
-  background: none;
-  cursor: pointer;
-}
-
-.areas-button:hover {
-  transform: translateY(3px);
 }

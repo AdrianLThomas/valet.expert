@@ -15,7 +15,7 @@
   justify-content: space-between;
   height: 100%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
-  background-color: #fafafa;
+  background-color: $color-card-bg;
   box-sizing: border-box;
 }
 
@@ -53,35 +53,21 @@
 }
 
 .card-button {
-  text-align: center;
-  font-size: 1rem;
-  padding: 10px;
+  @extend %button-base;
   width: 100%;
-  font-weight: bold;
-  transition: transform 500ms;
-  will-change: transform;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(33, 33, 33);
   display: block;
   box-sizing: border-box;
-  background: none;
-  cursor: pointer;
-}
-
-.card-button:hover {
-  transform: translateY(3px);
 }
 
 // Grid sizing: xs=12, sm=6, md=3 (intro cards)
 .card-item--intro {
   flex: 0 0 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: $bp-sm) {
     flex: 0 0 calc(50% - 4px);
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: $bp-md) {
     flex: 0 0 calc(25% - 6px);
   }
 }
@@ -90,11 +76,11 @@
 .card-item--service-md4 {
   flex: 0 0 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: $bp-sm) {
     flex: 0 0 calc(50% - 4px);
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: $bp-md) {
     flex: 0 0 calc(33.333% - 6px);
   }
 }
@@ -103,15 +89,15 @@
 .card-item--service-lg3 {
   flex: 0 0 100%;
 
-  @media (min-width: 600px) {
+  @media (min-width: $bp-sm) {
     flex: 0 0 calc(50% - 4px);
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: $bp-md) {
     flex: 0 0 calc(33.333% - 6px);
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: $bp-lg) {
     flex: 0 0 calc(25% - 6px);
   }
 }
@@ -120,11 +106,11 @@
 .card-item--service-other {
   flex: 0 0 100%;
 
-  @media (min-width: 960px) {
+  @media (min-width: $bp-md) {
     flex: 0 0 calc(50% - 4px);
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: $bp-lg) {
     flex: 0 0 calc(25% - 6px);
   }
 }

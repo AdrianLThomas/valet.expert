@@ -1,4 +1,6 @@
+@import 'variables';
 @import 'colours';
+@import 'mixins';
 
 // Font-face declarations (self-hosted)
 @font-face {
@@ -32,7 +34,7 @@ html, body {
 
 * {
   text-decoration: none;
-  font-family: -apple-system, Roboto, sans-serif, serif;
+  font-family: $font-system;
 }
 
 body {
@@ -44,7 +46,7 @@ body {
 }
 
 a, p {
-  color: rgb(33, 33, 33);
+  color: $color-text;
   font-size: 14px;
 }
 
