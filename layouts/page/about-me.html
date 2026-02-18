@@ -37,7 +37,7 @@ sub $year 1999 }} {{ $yearsRunning := sub $year 2004 }}
     <div class="about-gallery-thumbs">
       {{- $vans := resources.Match "images/vans/*" -}} {{- range $vans |
       collections.Reverse -}} {{- if not (strings.Contains .Name "2022 Transit")
-      -}} {{ $thumb := .Resize "200x Webp q80" }}
+      -}} {{ $thumb := .Resize "600x Webp q85" }}
       <div class="about-gallery-thumb">
         <img
           src="{{ $thumb.RelPermalink }}"
