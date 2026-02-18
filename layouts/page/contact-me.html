@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "hero.html" (dict "Page" . "type" "beading" "title" "Contact Me" "short" true) }}
+  {{ partial "hero.html" (dict "Page" . "type" "beading" "title" .Title "short" true) }}
 
   {{ $contact := .Site.Params.contact }}
   {{ $phone := $contact.phone }}

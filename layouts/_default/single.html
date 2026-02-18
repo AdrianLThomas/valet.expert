@@ -1,4 +1,4 @@
 {{ define "main" }}
-  {{ partial "hero.html" (dict "Page" . "type" (.Params.heroType | default "beading") "title" .Params.heroTitle "short" true) }}
+  {{ partial "hero.html" (dict "Page" . "type" (.Params.heroType | default "beading") "title" .Title "short" true) }}
   {{ .Content }}
 {{ end }}
