@@ -1,6 +1,6 @@
 [[service]]
 title = "Maintenance Valet"
-sizeClass = "card-item--service-md4"
+size = "md4"
 buttonText = "Book a maintenance valet"
 buttonHref = "/contact-me/"
 content = """
@@ -23,7 +23,7 @@ content = """
 
 [[service]]
 title = "Full Valet"
-sizeClass = "card-item--service-md4"
+size = "md4"
 buttonText = "Book a full valet"
 buttonHref = "/contact-me/"
 content = """
@@ -41,7 +41,7 @@ content = """
 
 [[service]]
 title = "Hand Polishing & Waxing"
-sizeClass = "card-item--service-md4"
+size = "md4"
 buttonText = "Book a hand polish & wax"
 buttonHref = "/contact-me/"
 content = """
@@ -52,7 +52,7 @@ content = """
 
 [[service]]
 title = "Machine Polish"
-sizeClass = "card-item--service-lg3"
+size = "lg3"
 buttonText = "Book a machine polish"
 buttonHref = "/contact-me/"
 content = """
@@ -66,7 +66,7 @@ content = """
 
 [[service]]
 title = "Ultimate Paint and Fabric Protection"
-sizeClass = "card-item--service-lg3"
+size = "lg3"
 buttonText = "Book paint & fabric protection"
 buttonHref = "/contact-me/"
 content = """
@@ -81,7 +81,7 @@ content = """
 
 [[service]]
 title = "Engine Bay Steam Clean & Detail"
-sizeClass = "card-item--service-lg3"
+size = "lg3"
 buttonText = "Book an engine bay steam clean"
 buttonHref = "/contact-me/"
 content = """
@@ -91,7 +91,7 @@ content = """
 
 [[service]]
 title = "Other"
-sizeClass = "card-item--service-other"
+size = "other"
 buttonText = "Contact me"
 buttonHref = "/contact-me/"
 content = """

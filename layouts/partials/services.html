@@ -1,6 +1,6 @@
 <div class="card-grid">
   {{- range .Site.Data.services.service -}}
-    <div class="card-item {{ .sizeClass }}">
+    <div class="card-item card-item--service-{{ .size }}">
       <div class="card">
         <div class="card-content">
           <h2 class="card-header">{{ .title }}</h2>
