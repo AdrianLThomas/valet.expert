@@ -5,8 +5,6 @@ type: "page"
 url: "/areas-covered/"
 ---
 
-I am based in Scarborough but also cover Filey, Whitby, Pickering, Malton, Bridlington and the majority of North Yorkshire.
-
 <a href="/contact-me/" class="areas-button">Contact me to make a booking &raquo;</a>
 
 <div>

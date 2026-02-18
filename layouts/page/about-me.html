@@ -2,10 +2,7 @@
 "title" .Title "short" true) }} {{ $year := now.Year }} {{ $yearsInTrade :=
 sub $year 1999 }} {{ $yearsRunning := sub $year 2004 }}
 
-<p>
-  My business was established in 2004 in the vibrant seaside town of
-  Scarborough.
-</p>
+{{ with .Description }}<p>{{ . }}</p>{{ end }}
 
 <p>
   I have been in the trade for around {{ $yearsInTrade }} years, starting off as
