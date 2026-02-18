@@ -4,7 +4,7 @@
   "private": true,
   "description": "Matty's Mobile Valeting - Hugo static site with Cypress tests",
   "scripts": {
-    "serve": "hugo server --disableFastRender",
+    "serve": "hugo server --disableFastRender --bind 0.0.0.0",
     "cypress:run": "percy exec -- cypress run --browser chrome --headless",
     "cypress:open": "CYPRESS_BASE_URL=http://localhost:1313 cypress open",
     "cypress:ci": "npx start-server-and-test serve http://localhost:1313 cypress:run",
