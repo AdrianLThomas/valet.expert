@@ -14,10 +14,13 @@
         <h1>Matty's Mobile Valeting &amp; Detailing</h1>
       </a>
     </div>
-    {{- $navItems := slice (dict "href" "/about-me/" "label" "About Me") (dict
-    "href" "/services-and-pricing/" "label" "Services & Pricing") (dict "href"
-    "/areas-covered/" "label" "Areas Covered") (dict "href" "/contact-me/"
-    "label" "Contact Me") -}} {{- range $navItems -}}
+    {{- $navItems := slice
+      (dict "href" (site.GetPage "about-me").RelPermalink "label" "About Me")
+      (dict "href" (site.GetPage "services-and-pricing").RelPermalink "label" "Services & Pricing")
+      (dict "href" (site.GetPage "areas-covered").RelPermalink "label" "Areas Covered")
+      (dict "href" (site.GetPage "contact-me").RelPermalink "label" "Contact Me")
+    -}}
+    {{- range $navItems -}}
     <div class="nav-link-item">
       <a
         href="{{ .href }}"

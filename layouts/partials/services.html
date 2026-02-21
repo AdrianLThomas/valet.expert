@@ -1,4 +1,5 @@
 <div class="card-grid">
+  {{- $contactHref := (site.GetPage "contact-me").RelPermalink -}}
   {{- range .Site.Data.services.service -}}
     <div class="card-item card-item--service-{{ .size }}">
       <div class="card">
@@ -10,7 +11,7 @@
         </div>
         {{ if .buttonText }}
         <div class="card-actions">
-          <a href="{{ .buttonHref }}" class="card-button">{{ .buttonText }}</a>
+          <a href="{{ $contactHref }}" class="card-button">{{ .buttonText }}</a>
         </div>
         {{ end }}
       </div>

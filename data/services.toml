@@ -2,7 +2,6 @@
 title = "Maintenance Valet"
 size = "md4"
 buttonText = "Book a maintenance valet"
-buttonHref = "/contact-me/"
 content = """
 <h4>Starting from &pound;60</h4>
 <ul>
@@ -25,7 +24,6 @@ content = """
 title = "Full Valet"
 size = "md4"
 buttonText = "Book a full valet"
-buttonHref = "/contact-me/"
 content = """
 <h4>Starting from &pound;120</h4>
 <p><strong>Includes Maintenance Valet</strong>, plus:</p>
@@ -43,7 +41,6 @@ content = """
 title = "Hand Polishing & Waxing"
 size = "md4"
 buttonText = "Book a hand polish & wax"
-buttonHref = "/contact-me/"
 content = """
 <h4>Waxing starts from &pound;80</h4>
 <h4>Polishing starts from &pound;80</h4>
@@ -54,7 +51,6 @@ content = """
 title = "Machine Polish"
 size = "lg3"
 buttonText = "Book a machine polish"
-buttonHref = "/contact-me/"
 content = """
 <h4>Starting from &pound;160</h4>
 <ul>
@@ -68,7 +64,6 @@ content = """
 title = "Ultimate Paint and Fabric Protection"
 size = "lg3"
 buttonText = "Book paint & fabric protection"
-buttonHref = "/contact-me/"
 content = """
 <h4>Please contact me for prices</h4>
 <p>Paint and fabric protection from premium valeting product manufacturers</p>
@@ -83,7 +78,6 @@ content = """
 title = "Engine Bay Steam Clean & Detail"
 size = "lg3"
 buttonText = "Book an engine bay steam clean"
-buttonHref = "/contact-me/"
 content = """
 <h4>Starting from &pound;65</h4>
 <p>The engine bay is steam cleaned and dressed to a high standard. Whilst the upmost care is taken to ensure electrical components are protected, it is the customers risk to undertake this procedure.</p>
@@ -93,7 +87,6 @@ content = """
 title = "Other"
 size = "other"
 buttonText = "Contact me"
-buttonHref = "/contact-me/"
 content = """
 <p>Can't find what you're looking for? I offer a variety of valeting and detailing services, so don't hestiate to contact me for further details.</p>
 """
