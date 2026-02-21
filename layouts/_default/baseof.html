@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {{ partial "head.html" . }}
-</head>
-<body>
-  <div class="site-root">
-    <div class="site-container">
-      {{ partial "navigation.html" . }}
-      <main>
-        {{ block "main" . }}{{ end }}
-      </main>
-    </div>
-    {{ partial "footer.html" . }}
-  </div>
-  {{ partial "floating-nav.html" . }}
-</body>
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <div class="site-root">
+            <div class="site-container">
+                {{ partial "navigation.html" . }}
+                <main>{{ block "main" . }}{{ end }}</main>
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "floating-nav.html" . }}
+    </body>
 </html>
