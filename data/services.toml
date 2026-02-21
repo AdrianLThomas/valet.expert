@@ -15,9 +15,8 @@ content = """
   <li>Pockets &amp; ash trays</li>
   <li>Air freshener</li>
 </ul>
-<span>4x4 and 7 seaters start from &pound;70.</span>
-<br><br>
-<i>For existing customers only, to keep your previous valet in top condition.</i>
+<p>4x4 and 7 seaters start from &pound;70.</p>
+<p><i>For existing customers only, to keep your previous valet in top condition.</i></p>
 """
 
 [[service]]
@@ -30,7 +29,7 @@ content = """
 <ul>
   <li>Glove compartment</li>
   <li>Carpets, door cards &amp; rooflining all shampooed and dried</li>
-  <li>Seats shampooed and dried, or if leather interior, then a luxorious leather treatment is applied</li>
+  <li>Seats shampooed and dried, or if leather interior, then a luxurious leather treatment is applied</li>
   <li>Full car deodorising system</li>
   <li>Outside polished/waxed</li>
 </ul>
@@ -88,5 +87,5 @@ title = "Other"
 size = "other"
 buttonText = "Contact me"
 content = """
-<p>Can't find what you're looking for? I offer a variety of valeting and detailing services, so don't hestiate to contact me for further details.</p>
+<p>Can't find what you're looking for? I offer a variety of valeting and detailing services, so don't hesitate to contact me for further details.</p>
 """
