@@ -2,10 +2,13 @@
   <div class="nav-grid">
     <div class="nav-logo-area">
       <a class="header-text" href="/">
-        {{ $logo := resources.Get "images/Logo.png" }} {{ if $logo }} {{ $logo =
-        $logo.Resize "80x80" }}
+        {{ $logo := resources.Get "images/Logo.png" }}
+        {{ if $logo }}
+        {{ $logo1x := $logo.Resize "40x40 Webp" }}
+        {{ $logo2x := $logo.Resize "80x80 Webp" }}
         <img
-          src="{{ $logo.RelPermalink }}"
+          src="{{ $logo1x.RelPermalink }}"
+          srcset="{{ $logo1x.RelPermalink }} 1x, {{ $logo2x.RelPermalink }} 2x"
           alt="Matty's Mobile Valeting Logo"
           width="40"
           height="40"

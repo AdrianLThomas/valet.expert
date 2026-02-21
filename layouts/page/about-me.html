@@ -22,23 +22,37 @@ sub $year 1999 }} {{ $yearsRunning := sub $year 2004 }}
 <div class="about-gallery">
   <div class="about-gallery-grid">
     <div class="about-gallery-main">
-      {{ $mainVan := resources.Get "images/vans/2022 Transit.jpg" }} {{ if
-      $mainVan }} {{ $mainVanResized := $mainVan.Resize "800x q80" }}
-      <img
-        src="{{ $mainVanResized.RelPermalink }}"
-        alt="My 2022 Transit"
-        loading="lazy"
-      />
+      {{ $mainVan := resources.Get "images/vans/2022 Transit.jpg" }}
+      {{ if $mainVan }}
+      {{ $mainVan1x := $mainVan.Resize "800x  Webp q85" }}
+      {{ $mainVan2x := $mainVan.Resize "1600x Webp q85" }}
+      {{ $mainVanFallback := $mainVan.Resize "800x q80" }}
+      <picture>
+        <source
+          type="image/webp"
+          srcset="{{ $mainVan1x.RelPermalink }} 800w, {{ $mainVan2x.RelPermalink }} 1600w"
+          sizes="(min-width: 600px) 50vw, 100vw"
+        />
+        <img
+          src="{{ $mainVanFallback.RelPermalink }}"
+          alt="My 2022 Transit"
+          width="{{ $mainVanFallback.Width }}"
+          height="{{ $mainVanFallback.Height }}"
+          loading="eager"
+        />
+      </picture>
       {{ end }}
     </div>
     <div class="about-gallery-thumbs">
       {{- $vans := resources.Match "images/vans/*" -}} {{- range $vans |
       collections.Reverse -}} {{- if not (strings.Contains .Name "2022 Transit")
-      -}} {{ $thumb := .Resize "600x Webp q85" }}
+      -}} {{ $thumb := .Resize "300x Webp q85" }}
       <div class="about-gallery-thumb">
         <img
           src="{{ $thumb.RelPermalink }}"
           alt="{{ path.BaseName .Name }}"
+          width="{{ $thumb.Width }}"
+          height="{{ $thumb.Height }}"
           loading="lazy"
         />
       </div>
