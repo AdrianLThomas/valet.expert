@@ -59,6 +59,14 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
+{{/* Preload logo to prevent flicker during navigation */}}
+{{ $logo := resources.Get "images/Logo.png" }}
+{{ if $logo }}
+{{ $logo1x := $logo.Resize "40x40 Webp" }}
+{{ $logo2x := $logo.Resize "80x80 Webp" }}
+<link rel="preload" as="image" href="{{ $logo1x.RelPermalink }}" imagesrcset="{{ $logo1x.RelPermalink }} 1x, {{ $logo2x.RelPermalink }} 2x" fetchpriority="high">
+{{ end }}
+
 {{/* Styles */}}
 {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
