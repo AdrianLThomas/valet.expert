@@ -1,6 +1,7 @@
 node_modules/
-.cache/
-public
+public/
+resources/
+.hugo_build.lock
 .DS_STORE
 lighthouse.html
 

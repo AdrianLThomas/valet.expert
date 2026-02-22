@@ -1,0 +1,20 @@
+<div class="card-grid">
+  {{- $contactHref := (site.GetPage "contact-me").RelPermalink -}}
+  {{- range .Site.Data.services.service -}}
+    <div class="card-item card-item--service-{{ .size }}">
+      <div class="card">
+        <div class="card-content">
+          <h2 class="card-header">{{ .title }}</h2>
+          <div class="card-description">
+            {{ .content | safeHTML }}
+          </div>
+        </div>
+        {{ if .buttonText }}
+        <div class="card-actions">
+          <a href="{{ $contactHref }}" class="card-button">{{ .buttonText }}</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  {{- end -}}
+</div>
