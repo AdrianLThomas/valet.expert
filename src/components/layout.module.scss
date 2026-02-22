@@ -1,0 +1,35 @@
+@use './colours.scss';
+
+$linkColor: rgb(33,33,33);
+$defaultFontSize: 14px;
+* {
+  text-decoration: none;
+  font-family: -apple-system, Roboto, sans-serif, serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+a,p {
+  color: $linkColor;
+  font-size: $defaultFontSize;
+}
+
+span {
+  font-size: $defaultFontSize;
+}
+
+.container {
+  flex: 1;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}

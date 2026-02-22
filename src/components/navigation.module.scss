@@ -1,0 +1,42 @@
+@import "~@fontsource/oswald/index.css"; // Weight 400.
+
+$navSelected: 5px solid black;
+$navBorder: 1px solid transparent;
+header {
+  text-align: center;
+}
+
+.headerText {
+  display: flex;
+  align-items: center;
+}
+
+.headerText > h1 {
+  margin-left: 8px; /* make some space between logo and header title */
+  font-family: "Oswald";
+  font-weight: 200;
+  line-height: 1;
+
+  @media only screen and (max-width: 600px) { // mobile only
+    font-size: 6vw;
+  }
+}
+
+.navLink {
+  border-top: $navBorder;
+  display: block;
+  font-family: "DM Sans";
+  font-size: 1em;
+  padding: 0.2em;
+  margin: 0 5px 0 5px;
+  will-change: auto;
+  transition: border-width 0.2s linear;
+}
+
+.navLink:hover {
+  border-top: $navSelected;
+}
+
+.navLink.selected {
+  border-top: $navSelected;
+} 
