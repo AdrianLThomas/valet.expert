@@ -18,7 +18,7 @@
     "@percy/cypress": "^3.1.1",
     "cypress": "^10.3.0",
     "cypress-audit": "^1.1.0",
-    "lighthouse": "^9.2.0",
+    "lighthouse": "^9.6.8",
     "start-server-and-test": "^1.14.0"
   }
 }
