@@ -3,6 +3,12 @@ describe('SEO Checks', () => {
     cy.visit('/');
   });
 
+  it('og:url uses production domain from hugo.toml baseURL', () => {
+    cy.get('meta[property="og:url"]')
+      .should('have.attr', 'content')
+      .and('include', 'valet.expert');
+  });
+
   it('robots.txt', () => {
     cy.request(`/robots.txt`).its('body').should('include', 'Allow: /');
   });
@@ -11,7 +17,8 @@ describe('SEO Checks', () => {
     // Hugo generates the sitemap at /sitemap.xml (previously /sitemap/sitemap-index.xml in Gatsby)
     cy.request(`/sitemap.xml`)
       .its('body')
-      .should('include', '<urlset');
+      .should('include', '<urlset')
+      .and('include', 'valet.expert');
   });
 
   it('old sitemap url still resolves', () => {
