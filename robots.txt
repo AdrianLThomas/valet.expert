@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.valet.expert/sitemap/sitemap-index.xml
-Host: https://www.valet.expert
+
+Sitemap: http://localhost:1313/sitemap.xml
