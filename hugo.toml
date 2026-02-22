@@ -1,0 +1,26 @@
+baseURL = "https://www.valet.expert"
+languageCode = "en-gb"
+title = "Matty's Mobile Valeting & Detailing, Scarborough"
+
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "A mobile valeting service in Scarborough that will arrive to your location; ensuring your pride and joy looks as good as the day it left the showroom."
+  image = "/images/Van.jpg"
+
+[params.contact]
+  instagram = "valet.expert"
+  facebook = "mattys.mobilevaleting"
+  email = "MattysMobileValeting@hotmail.com"
+  phone = "07963 362 183"
+  address = "Matty's Mobile Valeting, Seamer Road, Scarborough, North Yorkshire, YO12 4EY"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

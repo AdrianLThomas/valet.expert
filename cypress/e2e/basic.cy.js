@@ -34,6 +34,7 @@ describe('Basic Checks', () => {
     cy.contains('Areas Covered').click();
     cy.url().should('include', '/areas-covered/');
     cy.contains('Scarborough area');
+    cy.contains('a', 'Make a booking').should('have.attr', 'href', '/contact-me/');
   });
 
   it('Contact Me', () => {

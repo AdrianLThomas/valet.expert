@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{- $pageName := "" -}}
+{{- if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+  {{- $pageName = .Site.Title -}}
+{{- else -}}
+  {{- $pageName = .Title -}}
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+{{- end -}}
+
+{{- $description := .Description | default .Site.Params.description -}}
+{{- $image := printf "%s%s" (.Site.BaseURL | strings.TrimSuffix "/") .Site.Params.image -}}
+{{- $url := .Permalink -}}
+{{- $contact := .Site.Params.contact -}}
+
+<meta name="description" content="{{ $description }}">
+<meta name="robots" content="index, follow">
+
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ $pageName }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:locale" content="en_GB">
+
+<meta name="twitter:title" content="{{ $pageName }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $image }}">
+
+<meta property="fb:app_id" content="1401488693436528">
+<meta property="article:author" content="https://www.facebook.com/{{ $contact.facebook }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "{{ $url }}",
+  "name": "{{ $pageName }}",
+  "email": "{{ $contact.email }}",
+  "telephone": "{{ $contact.phone }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ $contact.phone }}",
+    "contactType": "Enquiries",
+    "email": "{{ $contact.email }}",
+    "areaServed": "Scarborough and surrounding areas"
+  }
+}
+</script>
+
+{{/* Favicons - Generated with: https://realfavicongenerator.net/ */}}
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+{{/* Preload logo to prevent flicker during navigation */}}
+{{ $logo := resources.Get "images/Logo.png" }}
+{{ if $logo }}
+{{ $logo1x := $logo.Resize "40x40 Webp" }}
+{{ $logo2x := $logo.Resize "80x80 Webp" }}
+<link rel="preload" as="image" href="{{ $logo1x.RelPermalink }}" imagesrcset="{{ $logo1x.RelPermalink }} 1x, {{ $logo2x.RelPermalink }} 2x" fetchpriority="high">
+{{ end }}
+
+{{/* Styles */}}
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
