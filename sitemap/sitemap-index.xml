@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- This file exists to redirect search engines from the old sitemap URL
-     (/sitemap/sitemap-index.xml) to the new one (/sitemap.xml).
-     As the site is statically hosted, this sitemap index acts as the XML
-     equivalent of a redirect, pointing bots to the correct location. -->
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://www.valet.expert/sitemap.xml</loc>
-  </sitemap>
-</sitemapindex>
+<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://www.valet.expert/sitemap/sitemap-0.xml</loc></sitemap></sitemapindex>
