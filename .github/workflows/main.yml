@@ -50,7 +50,7 @@ jobs:
     if: failure()
     steps:
       - name: Save Test Results 💾
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: cypress-report
           path: cypress/screenshots/**/*
