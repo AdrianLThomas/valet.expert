@@ -1,17 +1,29 @@
-// Blue scale
-$level1: rgba(238, 246, 252, 1);
-$level2: rgba(203, 229, 246, 1);
-$level3: rgba(151, 202, 237, 1);
-$level4: rgba(99, 176, 227, 1);
-$level5: rgba(52, 152, 219, 1);
-$level6: rgba(34, 128, 191, 1);
-$level7: rgba(24, 93, 139, 1);
-$level8: rgba(15, 58, 87, 1);
+// Background scale
+$bg-body:     #09090a;
+$bg-surface:  #111113;
+$bg-card:     #17171a;
+$bg-elevated: #1e1e22;
 
-// UI colours
-$color-text:        rgb(33, 33, 33);
-$color-link-accent: darkred;
-$color-border:      lightgrey;
-$color-card-bg:     #fafafa;
-$color-footer-bg:   #f5f5f5;
-$color-icon-muted:  rgba(0, 0, 0, 0.54);
+// Gold accent
+$gold:        #c9a84c;
+$gold-light:  #e8d49a;
+$gold-dark:   #8a6e28;
+$gold-alpha:  rgba(201, 168, 76, 0.12);
+$gold-border: rgba(201, 168, 76, 0.28);
+
+// Text
+$text-primary:   #f0ece5;
+$text-secondary: #9a907e;
+$text-muted:     #5a5248;
+
+// Borders
+$border:     #232018;
+$border-mid: #2e2b24;
+
+// Legacy aliases
+$color-text:        $text-primary;
+$color-link-accent: $gold;
+$color-border:      $border;
+$color-card-bg:     $bg-card;
+$color-footer-bg:   $bg-surface;
+$color-icon-muted:  $text-secondary;

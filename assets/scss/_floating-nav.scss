@@ -3,10 +3,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  border-top: 1px $color-border solid;
+  border-top: 1px solid $border;
   padding: 0;
   margin: 0;
-  background-color: #fff;
+  background: $bg-surface;
   display: flex;
   z-index: 1000;
 
@@ -21,27 +21,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6px 0;
+  padding: 8px 0;
   text-decoration: none;
-  color: $color-icon-muted;
-  font-size: 0.75rem;
+  color: $text-muted;
   min-width: 0;
-  transition: color 0.2s;
-}
+  transition: color 0.2s ease;
 
-.floating-nav__item.active {
-  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $gold;
+  }
 }
 
 .floating-nav__item svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   fill: currentColor;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .floating-nav__label {
-  font-family: $font-system;
-  font-size: 0.75rem;
+  font-family: $font-heading;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   line-height: 1;
 }

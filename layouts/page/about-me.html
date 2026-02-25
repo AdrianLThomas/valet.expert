@@ -1,63 +1,62 @@
-{{ define "main" }} {{ partial "hero.html" (dict "Page" . "type" "beading"
-"title" .Title "short" true) }} {{ $year := now.Year }} {{ $yearsInTrade :=
-sub $year 1999 }} {{ $yearsRunning := sub $year 2004 }}
+{{ define "main" }}
+  {{ partial "hero.html" (dict "Page" . "type" "beading" "title" .Title "short" true) }}
+  {{ $year := now.Year }}
+  {{ $yearsInTrade := sub $year 1999 }}
+  {{ $yearsRunning := sub $year 2004 }}
 
-{{ with .Description }}<p>{{ . }}</p>{{ end }}
+  <div class="page-body">
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
 
-<p>
-  I have been in the trade for around {{ $yearsInTrade }} years, starting off as
-  a valeter for Arundale Peugeot, Scarborough. I then assisted the running of a
-  local valeting business, before seeing the opportunity to work for myself as a
-  mobile valeter. The business has gone from strength to strength and continues
-  its success to this day.
-</p>
+    <p>
+      I have been in the trade for around {{ $yearsInTrade }} years, starting off as a valeter for Arundale Peugeot, Scarborough. I then assisted the running of a local valeting business, before seeing the opportunity to work for myself as a mobile valeter. The business has gone from strength to strength and continues its success to this day.
+    </p>
 
-<p>
-  It's now {{ $year }} and I've been running my own business for around {{
-  $yearsRunning }} years, operating within the area to provide a high quality,
-  professional valeting service for thousands of customers throughout the
-  region.
-</p>
+    <p>
+      It's now {{ $year }} and I've been running my own business for around {{ $yearsRunning }} years, operating within the area to provide a high quality, professional valeting service for thousands of customers throughout the region.
+    </p>
 
-<div class="about-gallery">
-  <div class="about-gallery-grid">
-    <div class="about-gallery-main">
-      {{ $mainVan := resources.Get "images/vans/2022 Transit.jpg" }}
-      {{ if $mainVan }}
-      {{ $mainVan1x := $mainVan.Resize "800x  Webp q85" }}
-      {{ $mainVan2x := $mainVan.Resize "1600x Webp q85" }}
-      {{ $mainVanFallback := $mainVan.Resize "800x q80" }}
-      <picture>
-        <source
-          type="image/webp"
-          srcset="{{ $mainVan1x.RelPermalink }} 800w, {{ $mainVan2x.RelPermalink }} 1600w"
-          sizes="(min-width: 600px) 50vw, 100vw"
-        />
-        <img
-          src="{{ $mainVanFallback.RelPermalink }}"
-          alt="My 2022 Transit"
-          width="{{ $mainVanFallback.Width }}"
-          height="{{ $mainVanFallback.Height }}"
-          loading="eager"
-        />
-      </picture>
-      {{ end }}
-    </div>
-    <div class="about-gallery-thumbs">
-      {{- $vans := resources.Match "images/vans/*" -}} {{- range $vans |
-      collections.Reverse -}} {{- if not (strings.Contains .Name "2022 Transit")
-      -}} {{ $thumb := .Resize "300x Webp q85" }}
-      <div class="about-gallery-thumb">
-        <img
-          src="{{ $thumb.RelPermalink }}"
-          alt="{{ path.BaseName .Name }}"
-          width="{{ $thumb.Width }}"
-          height="{{ $thumb.Height }}"
-          loading="lazy"
-        />
+    <div class="about-gallery">
+      <div class="about-gallery-grid">
+        <div class="about-gallery-main">
+          {{ $mainVan := resources.Get "images/vans/2022 Transit.jpg" }}
+          {{ if $mainVan }}
+          {{ $mainVan1x := $mainVan.Resize "800x  Webp q85" }}
+          {{ $mainVan2x := $mainVan.Resize "1600x Webp q85" }}
+          {{ $mainVanFallback := $mainVan.Resize "800x q80" }}
+          <picture>
+            <source
+              type="image/webp"
+              srcset="{{ $mainVan1x.RelPermalink }} 800w, {{ $mainVan2x.RelPermalink }} 1600w"
+              sizes="(min-width: 600px) 50vw, 100vw"
+            />
+            <img
+              src="{{ $mainVanFallback.RelPermalink }}"
+              alt="My 2022 Transit"
+              width="{{ $mainVanFallback.Width }}"
+              height="{{ $mainVanFallback.Height }}"
+              loading="eager"
+            />
+          </picture>
+          {{ end }}
+        </div>
+        <div class="about-gallery-thumbs">
+          {{- $vans := resources.Match "images/vans/*" -}}
+          {{- range $vans | collections.Reverse -}}
+          {{- if not (strings.Contains .Name "2022 Transit") -}}
+          {{ $thumb := .Resize "300x Webp q85" }}
+          <div class="about-gallery-thumb">
+            <img
+              src="{{ $thumb.RelPermalink }}"
+              alt="{{ path.BaseName .Name }}"
+              width="{{ $thumb.Width }}"
+              height="{{ $thumb.Height }}"
+              loading="lazy"
+            />
+          </div>
+          {{- end -}}
+          {{- end -}}
+        </div>
       </div>
-      {{- end -}} {{- end -}}
     </div>
   </div>
-</div>
 {{ end }}

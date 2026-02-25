@@ -1,7 +1,7 @@
 .card-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   align-items: stretch;
 }
 
@@ -14,49 +14,89 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
-  background-color: $color-card-bg;
-  box-sizing: border-box;
+  background: $bg-card;
+  border: 1px solid $border;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: $gold-border;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .card-content {
-  padding: 16px;
+  padding: 24px;
   flex: 1;
 }
 
 .card-header {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $text-primary;
   text-align: center;
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 0 0.35em 0;
+  margin: 0 0 0.6em 0;
 }
 
 .card-icon {
   display: block;
-  margin: 0 auto 8px auto;
-  width: 50px;
-  height: 50px;
+  margin: 0 auto 18px auto;
+  width: 42px;
+  height: 42px;
+  fill: $gold;
 }
 
 .card-description {
-  font-size: 0.875rem;
-  line-height: 1.43;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: $text-secondary;
 }
 
 .card-description p {
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.6em 0;
+}
+
+.card-description h4 {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: $gold;
+  margin: 0 0 0.4em 0;
+}
+
+.card-description ul {
+  padding-left: 1.1em;
+  margin: 0.3em 0 0.7em 0;
+}
+
+.card-description li {
+  color: $text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 0.15em;
+}
+
+.card-description span,
+.card-description strong {
+  color: $text-primary;
+}
+
+.card-description i {
+  color: $text-muted;
+  font-size: 0.85rem;
 }
 
 .card-actions {
-  padding: 8px;
+  padding: 0 16px 16px;
 }
 
 .card-button {
   @extend %button-base;
   width: 100%;
   display: block;
-  box-sizing: border-box;
 }
 
 // Grid sizing: xs=12, sm=6, md=3 (intro cards)
@@ -64,24 +104,24 @@
   flex: 0 0 100%;
 
   @media (min-width: $bp-sm) {
-    flex: 0 0 calc(50% - 4px);
+    flex: 0 0 calc(50% - 5px);
   }
 
   @media (min-width: $bp-md) {
-    flex: 0 0 calc(25% - 6px);
+    flex: 0 0 calc(25% - 8px);
   }
 }
 
-// Grid sizing: xs=12, sm=6, md=4 (service cards default)
+// Grid sizing: xs=12, sm=6, md=4
 .card-item--service-md4 {
   flex: 0 0 100%;
 
   @media (min-width: $bp-sm) {
-    flex: 0 0 calc(50% - 4px);
+    flex: 0 0 calc(50% - 5px);
   }
 
   @media (min-width: $bp-md) {
-    flex: 0 0 calc(33.333% - 6px);
+    flex: 0 0 calc(33.333% - 7px);
   }
 }
 
@@ -90,15 +130,15 @@
   flex: 0 0 100%;
 
   @media (min-width: $bp-sm) {
-    flex: 0 0 calc(50% - 4px);
+    flex: 0 0 calc(50% - 5px);
   }
 
   @media (min-width: $bp-md) {
-    flex: 0 0 calc(33.333% - 6px);
+    flex: 0 0 calc(33.333% - 7px);
   }
 
   @media (min-width: $bp-lg) {
-    flex: 0 0 calc(25% - 6px);
+    flex: 0 0 calc(25% - 8px);
   }
 }
 
@@ -107,10 +147,10 @@
   flex: 0 0 100%;
 
   @media (min-width: $bp-md) {
-    flex: 0 0 calc(50% - 4px);
+    flex: 0 0 calc(50% - 5px);
   }
 
   @media (min-width: $bp-lg) {
-    flex: 0 0 calc(25% - 6px);
+    flex: 0 0 calc(25% - 8px);
   }
 }
