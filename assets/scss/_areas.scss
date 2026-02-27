@@ -5,8 +5,7 @@
   border: 1px solid $border;
   display: block;
 
-  // Site is always dark; invert the map to match regardless of system color scheme.
-  filter: invert(1) hue-rotate(180deg) saturate(0.85) brightness(0.9);
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.6);
 }
 
 .areas-button {
