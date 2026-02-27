@@ -20,6 +20,7 @@ false -}} {{- $narrow := .narrow | default false -}}
                 src="{{ $imgFallback.RelPermalink }}"
                 alt="Hero image of my van"
                 loading="eager"
+                fetchpriority="high"
                 data-main-image
             />
         </picture>
@@ -40,6 +41,7 @@ false -}} {{- $narrow := .narrow | default false -}}
                 src="{{ $imgFallback.RelPermalink }}"
                 alt="Hero image of beading"
                 loading="eager"
+                fetchpriority="high"
                 data-main-image
             />
         </picture>
