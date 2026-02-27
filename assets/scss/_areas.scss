@@ -5,12 +5,8 @@
   border: 1px solid $border;
   display: block;
 
-  // Google Maps natively goes dark when the OS is in dark mode.
-  // Only apply the CSS inversion when the system is in light mode,
-  // otherwise we'd invert an already-dark map back to bright.
-  @media (prefers-color-scheme: light) {
-    filter: invert(1) hue-rotate(180deg) saturate(0.85) brightness(0.9);
-  }
+  // Site is always dark; invert the map to match regardless of system color scheme.
+  filter: invert(1) hue-rotate(180deg) saturate(0.85) brightness(0.9);
 }
 
 .areas-button {
