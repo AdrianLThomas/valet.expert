@@ -41,6 +41,10 @@
 
 .about-gallery-thumb {
   flex: 0 0 calc(50% - 5px);
+
+  @media (min-width: $bp-sm) {
+    flex: 0 0 calc(25% - 8px);
+  }
 }
 
 .about-gallery-thumb img {
