@@ -3,7 +3,7 @@ title = "Maintenance Valet"
 size = "md4"
 buttonText = "Book a maintenance valet"
 content = """
-<h4>Starting from &pound;60</h4>
+<h3>Starting from &pound;60</h3>
 <ul>
   <li>Wash &amp; Wax then hand dried</li>
   <li>Alloys</li>
@@ -24,7 +24,7 @@ title = "Full Valet"
 size = "md4"
 buttonText = "Book a full valet"
 content = """
-<h4>Starting from &pound;120</h4>
+<h3>Starting from &pound;120</h3>
 <p><strong>Includes Maintenance Valet</strong>, plus:</p>
 <ul>
   <li>Glove compartment</li>
@@ -41,8 +41,8 @@ title = "Hand Polishing & Waxing"
 size = "md4"
 buttonText = "Book a hand polish & wax"
 content = """
-<h4>Waxing starts from &pound;80</h4>
-<h4>Polishing starts from &pound;80</h4>
+<h3>Waxing starts from &pound;80</h3>
+<h3>Polishing starts from &pound;80</h3>
 <p>Waxing and polishing are for an already prepared car, ready to be protected.</p>
 """
 
@@ -51,7 +51,7 @@ title = "Machine Polish"
 size = "lg3"
 buttonText = "Book a machine polish"
 content = """
-<h4>Starting from &pound;160</h4>
+<h3>Starting from &pound;160</h3>
 <ul>
   <li>Paint Correction</li>
   <li>Swirl Mark Removal</li>
@@ -64,7 +64,7 @@ title = "Ultimate Paint and Fabric Protection"
 size = "lg3"
 buttonText = "Book paint & fabric protection"
 content = """
-<h4>Please contact me for prices</h4>
+<h3>Please contact me for prices</h3>
 <p>Paint and fabric protection from premium valeting product manufacturers</p>
 <ul>
   <li>Crystal Serum Light from Gtechniq</li>
@@ -78,7 +78,7 @@ title = "Engine Bay Steam Clean & Detail"
 size = "lg3"
 buttonText = "Book an engine bay steam clean"
 content = """
-<h4>Starting from &pound;65</h4>
+<h3>Starting from &pound;65</h3>
 <p>The engine bay is steam cleaned and dressed to a high standard. Whilst the upmost care is taken to ensure electrical components are protected, it is the customers risk to undertake this procedure.</p>
 """
 

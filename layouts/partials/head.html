@@ -67,6 +67,16 @@
 <link rel="preload" as="image" href="{{ $logo1x.RelPermalink }}" imagesrcset="{{ $logo1x.RelPermalink }} 1x, {{ $logo2x.RelPermalink }} 2x">
 {{ end }}
 
+{{/* Preload about-me gallery main image to improve LCP */}}
+{{ if eq .RelPermalink "/about-me/" }}
+  {{ $vanImg := resources.Get "images/vans/2022 Transit.jpg" }}
+  {{ if $vanImg }}
+    {{ $v800  := $vanImg.Resize "800x  Webp q85" }}
+    {{ $v1600 := $vanImg.Resize "1600x Webp q85" }}
+    <link rel="preload" as="image" imagesrcset="{{ $v800.RelPermalink }} 800w, {{ $v1600.RelPermalink }} 1600w" imagesizes="(min-width: 600px) 50vw, 100vw">
+  {{ end }}
+{{ end }}
+
 {{/* Preload hero image to improve LCP */}}
 {{ if .IsHome }}
   {{ $heroImg := resources.Get "images/Hero.jpg" }}
