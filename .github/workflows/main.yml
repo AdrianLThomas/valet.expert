@@ -29,6 +29,9 @@ jobs:
       - name: Install Test Dependencies 📦
         run: npm ci
 
+      - name: Install WebKit 🌐
+        run: npx playwright install --with-deps webkit
+
       - name: Cypress Test 🇨🇾
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
