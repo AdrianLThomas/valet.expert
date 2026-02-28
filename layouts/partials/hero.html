@@ -91,7 +91,7 @@
   var img = document.querySelector('[data-parallax-img]');
   if (!img || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   function onScroll() {
-    img.style.transform = 'translateY(' + (window.scrollY * 0.12) + 'px)';
+    img.style.transform = 'translateY(' + (window.scrollY * 0.2) + 'px)';
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 })();

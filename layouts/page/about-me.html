@@ -18,7 +18,7 @@
     <div class="about-gallery">
       <div class="about-gallery-grid">
         <div class="about-gallery-main">
-          {{ $mainVan := resources.Get "images/vans/2022 Transit.jpg" }}
+          {{ $mainVan := resources.Get "images/vans/2025 Transit.jpg" }}
           {{ if $mainVan }}
           {{ $mainVan1x := $mainVan.Resize "800x  Webp q85" }}
           {{ $mainVan2x := $mainVan.Resize "1600x Webp q85" }}
@@ -31,7 +31,7 @@
             />
             <img
               src="{{ $mainVanFallback.RelPermalink }}"
-              alt="My 2022 Transit"
+              alt="My 2025 Transit"
               width="{{ $mainVanFallback.Width }}"
               height="{{ $mainVanFallback.Height }}"
               loading="eager"
@@ -42,8 +42,8 @@
         </div>
         <div class="about-gallery-thumbs">
           {{- $vans := resources.Match "images/vans/*" -}}
-          {{- range $vans | collections.Reverse -}}
-          {{- if not (strings.Contains .Name "2022 Transit") -}}
+          {{- range sort $vans "Name" "desc" -}}
+          {{- if not (strings.Contains .Name "2025 Transit") -}}
           {{ $thumb := .Resize "300x Webp q85" }}
           <div class="about-gallery-thumb">
             <img

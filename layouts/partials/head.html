@@ -69,7 +69,7 @@
 
 {{/* Preload about-me gallery main image to improve LCP */}}
 {{ if eq .RelPermalink "/about-me/" }}
-  {{ $vanImg := resources.Get "images/vans/2022 Transit.jpg" }}
+  {{ $vanImg := resources.Get "images/vans/2025 Transit.jpg" }}
   {{ if $vanImg }}
     {{ $v800  := $vanImg.Resize "800x  Webp q85" }}
     {{ $v1600 := $vanImg.Resize "1600x Webp q85" }}
