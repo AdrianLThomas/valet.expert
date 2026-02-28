@@ -1,0 +1,9 @@
+// Subtle graffiti-style wavy lines on dark background
+// Only visible where the dark body background shows through
+
+body {
+  background-image: url('/images/graffiti-bg.svg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+}

@@ -1,6 +1,8 @@
 {{ define "main" }}
   {{ partial "hero.html" (dict "Page" . "type" "beading" "title" .Title "short" true) }}
-  {{ with .Description }}<p>{{ . }}</p>{{ end }}
-  <a href="{{ (site.GetPage "contact-me").RelPermalink }}" class="areas-button">Make a booking &raquo;</a>
-  {{ .Content }}
+  <div class="page-body">
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    <a href="{{ (site.GetPage "contact-me").RelPermalink }}" class="areas-button">Make a booking &raquo;</a>
+    {{ .Content }}
+  </div>
 {{ end }}

@@ -1,10 +1,37 @@
-{{- $type := .type -}} {{- $title := .title -}} {{- $short := .short | default
-false -}} {{- $narrow := .narrow | default false -}}
+{{- $type := .type -}}
+{{- $title := .title -}}
+{{- $subtitle := .subtitle -}}
+{{- $cta := .cta -}}
+{{- $short := .short | default false -}}
+{{- $narrow := .narrow | default false -}}
+{{- $full := and (eq $type "van") (not $short) -}}
 
 <div class="hero-container">
-    <div class="hero-background{{ if $short }} hero-background--short{{ end }}">
-        {{- if eq $type "van" -}} {{ $img := resources.Get "images/Hero.jpg" }}
+    <div class="hero-background{{ if $short }} hero-background--short{{ else if $full }} hero-background--full{{ end }}">
+        {{- if eq $type "van" -}}
+        {{ $img := resources.Get "images/Hero.jpg" }}
         {{ if $img }}
+        {{ if $full }}
+        {{/* Full-height hero: resize by height to avoid upscaling on tall viewports */}}
+        {{ $imgWebpSm   := $img.Resize "x900  Webp q95" }}
+        {{ $imgWebpMd   := $img.Resize "x1200 Webp q95" }}
+        {{ $imgWebpLg   := $img.Resize "x1600 Webp q95" }}
+        {{ $imgFallback := $img.Resize "x1200 q85" }}
+        <picture>
+            <source
+                type="image/webp"
+                srcset="{{ $imgWebpSm.RelPermalink }} {{ $imgWebpSm.Width }}w, {{ $imgWebpMd.RelPermalink }} {{ $imgWebpMd.Width }}w, {{ $imgWebpLg.RelPermalink }} {{ $imgWebpLg.Width }}w"
+                sizes="100vw"
+            />
+            <img
+                src="{{ $imgFallback.RelPermalink }}"
+                alt="Hero image of my van"
+                loading="eager"
+                fetchpriority="high"
+                data-parallax-img
+            />
+        </picture>
+        {{ else }}
         {{ $imgWebp768  := $img.Resize "768x  Webp q95" }}
         {{ $imgWebp1200 := $img.Resize "1200x Webp q95" }}
         {{ $imgWebp1920 := $img.Resize "1920x Webp q95" }}
@@ -21,10 +48,12 @@ false -}} {{- $narrow := .narrow | default false -}}
                 alt="Hero image of my van"
                 loading="eager"
                 fetchpriority="high"
-                data-main-image
             />
         </picture>
-        {{ end }} {{- else -}} {{ $img := resources.Get "images/Beading.jpg" }}
+        {{ end }}
+        {{ end }}
+        {{- else -}}
+        {{ $img := resources.Get "images/Beading.jpg" }}
         {{ if $img }}
         {{ $imgWebp768  := $img.Resize "768x  Webp q80" }}
         {{ $imgWebp1200 := $img.Resize "1200x Webp q80" }}
@@ -42,14 +71,29 @@ false -}} {{- $narrow := .narrow | default false -}}
                 alt="Hero image of beading"
                 loading="eager"
                 fetchpriority="high"
-                data-main-image
             />
         </picture>
-        {{ end }} {{- end -}}
+        {{ end }}
+        {{- end -}}
         <div class="hero-textbox">
             <h2 class="hero-title{{ if $narrow }} hero-title--narrow{{ end }}">
                 {{ $title }}
             </h2>
+            {{ if $subtitle }}<p class="hero-subtitle">{{ $subtitle }}</p>{{ end }}
+            {{ if $cta }}<a href="{{ $cta.href }}" class="hero-cta">{{ $cta.label }}</a>{{ end }}
         </div>
     </div>
 </div>
+
+{{ if $full }}
+<script>
+(function () {
+  var img = document.querySelector('[data-parallax-img]');
+  if (!img || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function onScroll() {
+    img.style.transform = 'translateY(' + (window.scrollY * 0.2) + 'px)';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+{{ end }}
