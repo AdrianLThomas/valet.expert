@@ -38,11 +38,12 @@
 }
 
 .header-text h1 {
-  font-family: $font-heading;
-  font-weight: 200;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: $font-graffiti;
+  font-weight: 400;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  white-space: nowrap;
   margin: 0;
   line-height: 1.2;
   color: $text-primary;

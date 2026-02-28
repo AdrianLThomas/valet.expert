@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "hero.html" (dict "Page" . "type" "van" "title" "Friendly. Professional. Reliable." "narrow" true) }}
+  {{ partial "hero.html" (dict "Page" . "type" "van" "title" "Friendly. Professional. Reliable." "subtitle" "Mobile valeting & detailing across Scarborough & North Yorkshire" "cta" (dict "href" (site.GetPage "contact-me").RelPermalink "label" "Get a Quote")) }}
 
   <div class="intro-spacing">
     <div class="card-grid">

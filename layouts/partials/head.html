@@ -81,11 +81,10 @@
 {{ if .IsHome }}
   {{ $heroImg := resources.Get "images/Hero.jpg" }}
   {{ if $heroImg }}
-    {{ $h768  := $heroImg.Resize "768x  Webp q95" }}
-    {{ $h1200 := $heroImg.Resize "1200x Webp q95" }}
-    {{ $h1920 := $heroImg.Resize "1920x Webp q95" }}
-    {{ $h2400 := $heroImg.Resize "2400x Webp q95" }}
-    <link rel="preload" as="image" imagesrcset="{{ $h768.RelPermalink }} 768w, {{ $h1200.RelPermalink }} 1200w, {{ $h1920.RelPermalink }} 1920w, {{ $h2400.RelPermalink }} 2400w" imagesizes="100vw">
+    {{ $hSm  := $heroImg.Resize "x900  Webp q95" }}
+    {{ $hMd  := $heroImg.Resize "x1200 Webp q95" }}
+    {{ $hLg  := $heroImg.Resize "x1600 Webp q95" }}
+    <link rel="preload" as="image" imagesrcset="{{ $hSm.RelPermalink }} {{ $hSm.Width }}w, {{ $hMd.RelPermalink }} {{ $hMd.Width }}w, {{ $hLg.RelPermalink }} {{ $hLg.Width }}w" imagesizes="100vw">
   {{ end }}
 {{ else }}
   {{ $heroImg := resources.Get "images/Beading.jpg" }}
