@@ -44,7 +44,7 @@
           {{- $vans := resources.Match "images/vans/*" -}}
           {{- range sort $vans "Name" "desc" -}}
           {{- if not (strings.Contains .Name "2025 Transit") -}}
-          {{ $thumb := .Resize "300x Webp q85" }}
+          {{ $thumb := .Resize "500x Webp q90 Lanczos" }}
           <div class="about-gallery-thumb">
             <img
               src="{{ $thumb.RelPermalink }}"
