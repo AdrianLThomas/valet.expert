@@ -42,7 +42,6 @@ html, body {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 body {
@@ -62,6 +61,7 @@ p {
 
 a {
   color: $gold;
+  text-decoration: none;
 }
 
 a:hover {
