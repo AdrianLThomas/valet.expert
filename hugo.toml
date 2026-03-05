@@ -15,6 +15,10 @@ disableKinds = ["taxonomy", "term"]
   email = "MattysMobileValeting@hotmail.com"
   phone = "07963 362 183"
   address = "Matty's Mobile Valeting, Seamer Road, Scarborough, North Yorkshire, YO12 4EY"
+  street = "Seamer Road"
+  locality = "Scarborough"
+  region = "North Yorkshire"
+  postalCode = "YO12 4EY"
 
 [sitemap]
   changefreq = "monthly"

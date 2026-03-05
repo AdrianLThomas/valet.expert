@@ -25,6 +25,7 @@
 <meta property="og:image" content="{{ $image }}">
 <meta property="og:locale" content="en_GB">
 
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $pageName }}">
 <meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:image" content="{{ $image }}">
@@ -35,11 +36,19 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "{{ $url }}",
-  "name": "{{ $pageName }}",
+  "@type": "LocalBusiness",
+  "url": "{{ .Site.BaseURL | strings.TrimSuffix "/" }}/",
+  "name": "{{ .Site.Title }}",
   "email": "{{ $contact.email }}",
   "telephone": "{{ $contact.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ $contact.street }}",
+    "addressLocality": "{{ $contact.locality }}",
+    "addressRegion": "{{ $contact.region }}",
+    "postalCode": "{{ $contact.postalCode }}",
+    "addressCountry": "GB"
+  },
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "{{ $contact.phone }}",
