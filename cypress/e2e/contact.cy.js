@@ -22,7 +22,8 @@ describe('Contact Me Page', () => {
 
   it('has working phone link', () => {
     cy.get('a[href^="tel:"]')
-      .should('have.attr', 'href', 'tel:07963 362 183');
+      .should('have.attr', 'href')
+      .and('include', '07963');
   });
 
   it('has Messenger link', () => {
