@@ -3,7 +3,6 @@
 {{- $subtitle := .subtitle -}}
 {{- $cta := .cta -}}
 {{- $short := .short | default false -}}
-{{- $narrow := .narrow | default false -}}
 {{- $full := and (eq $type "van") (not $short) -}}
 
 <div class="hero-container">
@@ -76,7 +75,7 @@
         {{ end }}
         {{- end -}}
         <div class="hero-textbox">
-            <h2 class="hero-title{{ if $narrow }} hero-title--narrow{{ end }}">
+            <h2 class="hero-title">
                 {{ $title }}
             </h2>
             {{ if $subtitle }}<p class="hero-subtitle">{{ $subtitle }}</p>{{ end }}
