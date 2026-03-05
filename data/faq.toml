@@ -1,0 +1,43 @@
+[[general]]
+question = "Do I need to provide water or electricity?"
+answer = "Yes, access to an outside tap and a standard plug socket is needed so I can run my equipment."
+
+[[general]]
+question = "How do I book a valet?"
+answer = "You can contact me via phone, email, WhatsApp, or Facebook Messenger. Head over to my contact page for full details."
+
+[[general]]
+question = "What areas do you cover?"
+answer = "I cover Scarborough and surrounding areas across North Yorkshire, including Filey, Whitby, Pickering, Malton, and Bridlington. A £45 travel charge applies outside of Scarborough."
+
+[[general]]
+question = "What happens if it rains on the day?"
+answer = "Light rain is usually manageable if there is some cover available. If heavy rain is forecast, I will reschedule your appointment at no extra charge."
+
+[[general]]
+question = "How long does a valet take?"
+answer = "A maintenance valet typically takes 1–2 hours, while a full valet can take 3–5 hours depending on the size and condition of your vehicle."
+
+[[services]]
+question = "What is the difference between a maintenance valet and a full valet?"
+answer = "A maintenance valet covers an exterior wash and wax plus an interior vacuum and wipe-down. A full valet adds deep shampooing of carpets and upholstery, leather treatment, full deodorising, and an exterior polish and wax. The maintenance valet is for existing customers to keep a previous full valet in top condition."
+
+[[services]]
+question = "Can you remove scratches from my car?"
+answer = "Light scratches and swirl marks can often be removed with machine polishing (starting from £160). Deep scratches that have gone through the clear coat may not be fully removable."
+
+[[services]]
+question = "What is ceramic coating and how long does it last?"
+answer = "Ceramic coating is a liquid polymer that chemically bonds to your paintwork, providing long-lasting protection and a deep gloss finish. I use Gtechniq Crystal Serum Light and Exo V4, which can last several years with proper care and maintenance."
+
+[[services]]
+question = "Is it safe to steam clean my engine bay?"
+answer = "Yes, great care is taken to protect all electrical components during an engine bay steam clean. However, it is undertaken at the customer's own risk. Engine bay cleaning starts from £65."
+
+[[services]]
+question = "Do you charge more for larger vehicles?"
+answer = "Yes, 4x4s and 7-seaters start from £70 for a maintenance valet and £160 for a full valet."
+
+[[services]]
+question = "What products do you use?"
+answer = "I use premium products from manufacturers like Gtechniq, who are industry leaders in paint protection and ceramic coating technology."
