@@ -60,12 +60,12 @@ content = """
 """
 
 [[service]]
-title = "Ceramic Coating and Fabric Protection"
+title = "Ceramic Coating"
 size = "lg3"
-buttonText = "Book ceramic coating & fabric protection"
+buttonText = "Book a ceramic coating"
 content = """
 <h3>Please contact me for prices</h3>
-<p>Ceramic coating, paint and fabric protection from premium detailing and valeting product manufacturers</p>
+<p>Ceramic coating from premium detailing and valeting product manufacturers</p>
 <ul>
   <li>Crystal Serum Light from Gtechniq</li>
   <li>Exo V4 from Gtechniq</li>

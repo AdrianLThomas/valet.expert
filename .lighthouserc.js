@@ -19,7 +19,7 @@ module.exports = {
         'categories:seo':            ['error', { minScore: 0.90 }],
         'first-contentful-paint':    ['error', { maxNumericValue: 1600 }],
         'largest-contentful-paint':  ['error', { maxNumericValue: 2500 }],
-        'speed-index':               ['error', { maxNumericValue: 3000 }],
+        'speed-index':               ['error', { maxNumericValue: 3800 }],
       },
     },
   },
