@@ -1,4 +1,21 @@
 [[service]]
+title = "Full Valet"
+size = "md4"
+buttonText = "Book a full valet"
+content = """
+<h3>Starting from &pound;120</h3>
+<p><strong>Includes Maintenance Valet</strong>, plus:</p>
+<ul>
+  <li>Glove compartment</li>
+  <li>Carpets, door cards &amp; rooflining all shampooed and dried</li>
+  <li>Seats shampooed and dried, or if leather interior, then a luxurious leather treatment is applied</li>
+  <li>Full car deodorising system</li>
+  <li>Outside polished/waxed</li>
+</ul>
+<span>4x4 and 7 seaters start from &pound;160.</span>
+"""
+
+[[service]]
 title = "Maintenance Valet"
 size = "md4"
 buttonText = "Book a maintenance valet"
@@ -17,23 +34,6 @@ content = """
 </ul>
 <p>4x4 and 7 seaters start from &pound;70.</p>
 <p><i>For existing customers only, to keep your previous valet in top condition.</i></p>
-"""
-
-[[service]]
-title = "Full Valet"
-size = "md4"
-buttonText = "Book a full valet"
-content = """
-<h3>Starting from &pound;120</h3>
-<p><strong>Includes Maintenance Valet</strong>, plus:</p>
-<ul>
-  <li>Glove compartment</li>
-  <li>Carpets, door cards &amp; rooflining all shampooed and dried</li>
-  <li>Seats shampooed and dried, or if leather interior, then a luxurious leather treatment is applied</li>
-  <li>Full car deodorising system</li>
-  <li>Outside polished/waxed</li>
-</ul>
-<span>4x4 and 7 seaters start from &pound;160.</span>
 """
 
 [[service]]
