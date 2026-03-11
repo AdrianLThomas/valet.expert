@@ -60,26 +60,27 @@ content = """
 """
 
 [[service]]
-title = "Ultimate Paint and Fabric Protection"
+title = "Ceramic Coating and Fabric Protection"
 size = "lg3"
-buttonText = "Book paint & fabric protection"
+buttonText = "Book ceramic coating & fabric protection"
 content = """
 <h3>Please contact me for prices</h3>
-<p>Paint and fabric protection from premium valeting product manufacturers</p>
+<p>Ceramic coating, paint and fabric protection from premium detailing and valeting product manufacturers</p>
 <ul>
   <li>Crystal Serum Light from Gtechniq</li>
   <li>Exo V4 from Gtechniq</li>
   <li>Halo Flexible Film coating for PPF from Gtechniq</li>
+  <li>Gyeon Q2 Syncro EVO Ceramic Coating</li>
 </ul>
 """
 
 [[service]]
-title = "Engine Bay Steam Clean & Detail"
+title = "Engine Bay Clean & Detail"
 size = "lg3"
-buttonText = "Book an engine bay steam clean"
+buttonText = "Book an engine bay clean"
 content = """
 <h3>Starting from &pound;65</h3>
-<p>The engine bay is steam cleaned and dressed to a high standard. Whilst the upmost care is taken to ensure electrical components are protected, it is the customers risk to undertake this procedure.</p>
+<p>The engine bay is cleaned and dressed to a high standard. Whilst the upmost care is taken to ensure electrical components are protected, it is the customers risk to undertake this procedure.</p>
 """
 
 [[service]]
