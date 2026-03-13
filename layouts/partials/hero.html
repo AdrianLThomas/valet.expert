@@ -11,11 +11,11 @@
         {{ $img := resources.Get "images/Hero.jpg" }}
         {{ if $img }}
         {{ if $full }}
-        {{/* Full-height hero: resize by height to avoid upscaling on tall viewports */}}
-        {{ $imgWebpSm   := $img.Resize "x900  Webp q95" }}
-        {{ $imgWebpMd   := $img.Resize "x1200 Webp q95" }}
-        {{ $imgWebpLg   := $img.Resize "x1600 Webp q95" }}
-        {{ $imgFallback := $img.Resize "x1200 q85" }}
+        {{/* Full-height hero: cap width to avoid oversized images from height-based resizing */}}
+        {{ $imgWebpSm   := $img.Fit "1200x900  Webp q80" }}
+        {{ $imgWebpMd   := $img.Fit "1600x1200 Webp q80" }}
+        {{ $imgWebpLg   := $img.Fit "1920x1200 Webp q80" }}
+        {{ $imgFallback := $img.Fit "1600x1200 q80" }}
         <picture>
             <source
                 type="image/webp"
@@ -31,10 +31,10 @@
             />
         </picture>
         {{ else }}
-        {{ $imgWebp768  := $img.Resize "768x  Webp q95" }}
-        {{ $imgWebp1200 := $img.Resize "1200x Webp q95" }}
-        {{ $imgWebp1920 := $img.Resize "1920x Webp q95" }}
-        {{ $imgWebp2400 := $img.Resize "2400x Webp q95" }}
+        {{ $imgWebp768  := $img.Resize "768x  Webp q80" }}
+        {{ $imgWebp1200 := $img.Resize "1200x Webp q80" }}
+        {{ $imgWebp1920 := $img.Resize "1920x Webp q80" }}
+        {{ $imgWebp2400 := $img.Resize "2400x Webp q80" }}
         {{ $imgFallback := $img.Resize "1920x q80" }}
         <picture>
             <source

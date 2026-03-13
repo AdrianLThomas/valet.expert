@@ -20,8 +20,8 @@
         <div class="about-gallery-main">
           {{ $mainVan := resources.Get "images/vans/2025 Transit.jpg" }}
           {{ if $mainVan }}
-          {{ $mainVan1x := $mainVan.Resize "800x  Webp q85" }}
-          {{ $mainVan2x := $mainVan.Resize "1600x Webp q85" }}
+          {{ $mainVan1x := $mainVan.Resize "800x  Webp q80" }}
+          {{ $mainVan2x := $mainVan.Resize "1000x Webp q80" }}
           {{ $mainVanFallback := $mainVan.Resize "800x q80" }}
           <picture>
             <source
@@ -44,7 +44,7 @@
           {{- $vans := resources.Match "images/vans/*" -}}
           {{- range sort $vans "Name" "desc" -}}
           {{- if not (strings.Contains .Name "2025 Transit") -}}
-          {{ $thumb := .Resize "500x Webp q90 Lanczos" }}
+          {{ $thumb := .Resize "500x Webp q80 Lanczos" }}
           <div class="about-gallery-thumb">
             <img
               src="{{ $thumb.RelPermalink }}"
