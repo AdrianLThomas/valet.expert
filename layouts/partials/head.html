@@ -90,9 +90,9 @@
 {{ if .IsHome }}
   {{ $heroImg := resources.Get "images/Hero.jpg" }}
   {{ if $heroImg }}
-    {{ $hSm  := $heroImg.Resize "x900  Webp q95" }}
-    {{ $hMd  := $heroImg.Resize "x1200 Webp q95" }}
-    {{ $hLg  := $heroImg.Resize "x1600 Webp q95" }}
+    {{ $hSm  := $heroImg.Fit "1200x900  Webp q80" }}
+    {{ $hMd  := $heroImg.Fit "1600x1200 Webp q80" }}
+    {{ $hLg  := $heroImg.Fit "1920x1200 Webp q80" }}
     <link rel="preload" as="image" imagesrcset="{{ $hSm.RelPermalink }} {{ $hSm.Width }}w, {{ $hMd.RelPermalink }} {{ $hMd.Width }}w, {{ $hLg.RelPermalink }} {{ $hLg.Width }}w" imagesizes="100vw">
   {{ end }}
 {{ else }}
