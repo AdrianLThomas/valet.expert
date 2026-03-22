@@ -1,0 +1,97 @@
+{{ define "main" }}
+  {{ partial "hero.html" (dict "Page" . "type" "beading" "title" .Title "short" true) }}
+
+  <div class="page-body">
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+
+    {{ with .Site.Data.faq.ceramic_coating }}
+    <section class="faq-section">
+      <h2 class="faq-section__heading">Ceramic Coating</h2>
+      {{ range . }}
+      <details class="faq-item">
+        <summary class="faq-item__question">{{ .question }}</summary>
+        <div class="faq-item__answer">
+          <p>{{ .answer }}</p>
+        </div>
+      </details>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ with .Site.Data.faq.paint_correction }}
+    <section class="faq-section">
+      <h2 class="faq-section__heading">Paint Correction & Machine Polishing</h2>
+      {{ range . }}
+      <details class="faq-item">
+        <summary class="faq-item__question">{{ .question }}</summary>
+        <div class="faq-item__answer">
+          <p>{{ .answer }}</p>
+        </div>
+      </details>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ with .Site.Data.faq.prestige_new_cars }}
+    <section class="faq-section">
+      <h2 class="faq-section__heading">New & Prestige Cars</h2>
+      {{ range . }}
+      <details class="faq-item">
+        <summary class="faq-item__question">{{ .question }}</summary>
+        <div class="faq-item__answer">
+          <p>{{ .answer }}</p>
+        </div>
+      </details>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ with .Site.Data.faq.general }}
+    <section class="faq-section">
+      <h2 class="faq-section__heading">General</h2>
+      {{ range . }}
+      <details class="faq-item">
+        <summary class="faq-item__question">{{ .question }}</summary>
+        <div class="faq-item__answer">
+          <p>{{ .answer }}</p>
+        </div>
+      </details>
+      {{ end }}
+    </section>
+    {{ end }}
+  </div>
+
+  {{/* FAQPage structured data */}}
+  {{ $allFaqs := slice }}
+  {{ range .Site.Data.faq.ceramic_coating }}
+    {{ $allFaqs = $allFaqs | append . }}
+  {{ end }}
+  {{ range .Site.Data.faq.paint_correction }}
+    {{ $allFaqs = $allFaqs | append . }}
+  {{ end }}
+  {{ range .Site.Data.faq.prestige_new_cars }}
+    {{ $allFaqs = $allFaqs | append . }}
+  {{ end }}
+  {{ range .Site.Data.faq.general }}
+    {{ $allFaqs = $allFaqs | append . }}
+  {{ end }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {{- range $i, $faq := $allFaqs -}}
+      {{ if $i }},{{ end }}
+      {
+        "@type": "Question",
+        "name": {{ .question | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ .answer | jsonify }}
+        }
+      }
+      {{- end -}}
+    ]
+  }
+  </script>
+{{ end }}
