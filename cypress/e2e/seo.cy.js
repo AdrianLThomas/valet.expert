@@ -1,4 +1,20 @@
 describe('SEO Checks', () => {
+  const pages = [
+    { path: '/', canonical: 'https://www.valet.expert/' },
+    { path: '/about-me/', canonical: 'https://www.valet.expert/about-me/' },
+    { path: '/services-and-pricing/', canonical: 'https://www.valet.expert/services-and-pricing/' },
+    { path: '/areas-covered/', canonical: 'https://www.valet.expert/areas-covered/' },
+    { path: '/contact-me/', canonical: 'https://www.valet.expert/contact-me/' },
+  ];
+
+  pages.forEach(({ path, canonical }) => {
+    it(`canonical tag is correct on ${path}`, () => {
+      cy.visit(path);
+      cy.get('link[rel="canonical"]')
+        .should('have.attr', 'href', canonical);
+    });
+  });
+
   beforeEach(() => {
     cy.visit('/');
   });
