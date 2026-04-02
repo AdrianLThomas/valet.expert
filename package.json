@@ -17,7 +17,7 @@
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
     "@percy/cli": "^1.31.9",
-    "@percy/cypress": "^3.1.1",
+    "@percy/cypress": "^3.1.8",
     "cypress": "^15.11.0",
     "lighthouse": "^13.0.3",
     "start-server-and-test": "^2.1.5"
